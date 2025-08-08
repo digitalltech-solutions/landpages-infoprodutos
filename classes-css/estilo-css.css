@@ -26,7 +26,7 @@ body, html{
 
 @font-face {
     font-family: 'fonte-titulos';
-    src: url(../recursos/tipografias/fonte-titulo.ttf);
+    src: url(../recursos/fontes-tipograficas/fonte-titulo.ttf);
 }
 
 :root{
