@@ -4,13 +4,140 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
     <title>DigitallTech - eBook: Arte da Comunicação Oral</title>
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"/>
     <link rel="stylesheet" href="../classes-css/estilo-css.css">
     <link rel="stylesheet" href="../classes-css/responsividade-css.css">
     <link rel="shortcut icon" href="../recursos/imagens/icone-empresa-digitalltech.png" type="image/x-icon">
+    
     <script src="../classes-javascript/configuracao-landpage.js" defer></script>
 </head>
-<body>
+<body onresize="tamanhoBody()">
+    
+    <header class="hidden-um">
+        <nav>
+            <span id="config-span-logo">
+                <img src="../recursos/imagens/icone-empresa-digitalltech-dois.jpg" alt="icone-empresa" id="icone-empresa">
+                <input type="checkbox" name="caixa-dark" id="caixa-dark" onclick="eventoModoDark()">
+                <label for="caixa-dark" id="elemento-pai">
+                    <span id="elemento-filho">
+                        <span class="material-symbols-outlined" id="configuracao-modo-claro">light_mode</span>
+                        <span class="material-symbols-outlined" id="configuracao-modo-escuro">dark_mode</span>
+                    </span>
+                </label>
+            </span>
+            <div id="configurar-icones">
+                <div>
+                    <a href="#" id="config-icone" onclick="eventoSubmenuGrupos()"><span id="tamanho-fonte-grupo">Grupos</span><span id="config-icone-arrow-drop-down">&#x25BE;</span>
+                        <div id="config-submenu-grupos">
+                            <div id="configurar-triangulo"></div>
+                            <a href="#" id="configurar-texto-whatsapp">Participe no <br> WhatsApp e Receba <br> Ofertas VIP!</a>
+                            <a href="#" class="configurar-submenus-estilo-padrao" title="Grupo do WhatsApp sobre Websites">WebSites</a>
+                            <a href="#" class="configurar-submenus-estilo-padrao" title="Grupo do WhatsApp sobre Designs">Designs</a>
+                            <a href="#" class="configurar-submenus-estilo-padrao" title="Grupo do WhatsApp sobre eBooks">eBooks</a>
+                        </div>
+                    </a>
+                </div>
+                <!-- &#x25B4; -->
+                <a href="#">Afiliar</a>
+                <a href="#" onclick="eventoModalAparente()"><span class="material-symbols-outlined tamanho-span-icone">favorite</span></a>
+                <a href="#" onclick="eventoModalAparente()"><span class="material-symbols-outlined tamanho-span-icone">account_circle</span></a>
+            </div>
+        </nav>
+        <div id="configuracao-nav-dois">
+            <div>
+                <a href="#" onclick="eventoSobre()">Sobre<span id="config-icone-arrow-drop-down-dois">&#x25BE;</span></a>
+                <a href="#">Resultados</a>
+                <a href="#">Serviços</a>
+            </div>
+            <div>
+                <a href="#" onclick="eventoBlog()">Blogs<span id="config-icone-arrow-drop-down-tres">&#x25BE;</span></a>
+                <a href="#">Termos</a>
+                <a href="#">Gratis</a>
+                <span class="material-symbols-outlined" id="configurar-icone-duvidas" title="dúvidas - FAQ">help</span>
+            </div>
+        </div>
+        <div id="configuracao-menu-sobre">
+            <div>
+                <div class="configuracao-padrao-opcoes">
+                    <h1>Saiba Mais</h1>
+                    <a href="#">Quem Somos</a>
+                    <a href="#">Saiba Vender Conosco</a>
+                    <a href="#">Sobre Nossos Produtos</a>
+                    <a href="#">Sobre Nossos Serviços</a>
+                    <a href="#">Equipe</a>
+                </div>
+
+                <div class="configuracao-padrao-opcoes">
+                    <h1>Tópicos da Página</h1>
+                    <a href="#">Catálogo de Infoprodutos</a>
+                    <a href="#">Serviços Personalizado</a>
+                    <a href="#">Como Comprar</a>
+                    <a href="#">Rodapé</a>
+                </div>
+
+                <div class="configuracao-padrao-opcoes">
+                    <h1>Cursos Grátis</h1>
+                    <a href="#">Marketing Digital</a>
+                    <a href="#">Educação Financeira</a>
+                    <a href="#">Segurança da Informação</a>
+                    <a href="#">Empreendedorismo</a>
+                    <a href="#">Estudos Bíblicos</a>
+                </div>
+
+                <div class="configuracao-padrao-opcoes">
+                    <h1>Contato</h1>
+                    <a href="#"><span class="material-symbols-outlined">call</span> Telefone: +55 (88) 99761-6313</a>
+                    <a href="#"><span class="material-symbols-outlined">stacked_email</span> PIX: digitalltech100@gmail.com</a>
+                    <a href="#"><span class="material-symbols-outlined">article</span> Formulário de Atendimento</a>
+                    <a href="#"><span class="material-symbols-outlined">diversity_1</span> Mídia: @digitalltech.oficial</a>
+                    <a href="#"><span class="material-symbols-outlined">more_time</span> Seg a sex, 8h às 17h.</a>
+                </div>
+            </div>
+        </div>
+
+        <div id="configuracao-menu-blog">
+            <div>
+                <div class="configuracao-padrao-opcoes">
+                    <h1>Aprendizado</h1>
+                    <a href="#">Dicas e Tutoriais</a>
+                    <a href="#">Atualidades e Tendências</a>
+                    <a href="#">Conteúdos ENEM</a>
+                    <a href="#">Glossários</a>
+                    <a href="#">Concursos</a>
+                </div>
+
+                <div class="configuracao-padrao-opcoes">
+                    <h1>Ferramentas</h1>
+                    <a href="#">Plataformas</a>
+                    <a href="#">Inteligências Artificiais</a>
+                    <a href="#">Sistemas</a>
+                    <a href="#">Editores</a>
+                    <a href="#">Outros</a>
+                </div>
+
+                <div class="configuracao-padrao-opcoes">
+                    <h1>Recomendações</h1>
+                    <a href="#">Análises de Conteúdos</a>
+                    <a href="#">Sugestões de Livros</a>
+                    <a href="#">Sugestões de Filmes</a>
+                    <a href="#">Sugestões de Séries</a>
+                    <a href="#">Feedback</a>
+                </div>
+
+                <div class="configuracao-padrao-opcoes">
+                    <h1>Bastidores do Site</h1>
+                    <a href="#">Bastidores</a>
+                    <a href="#">Forneça seu Feedback</a>
+                    <a href="#">Lançamentos</a>
+                    <a href="#">Novidades</a>
+                    <a href="#">Equipe</a>
+                </div>
+            </div>
+        </div>
+    </header>
 
 </body>
 </html>
