@@ -5,6 +5,23 @@ function tamanhoBody(){
         window.document.querySelectorAll('.sub-menu-padrao').forEach((elementos) => {
             elementos.style.display = 'none'
         })
+    }else{
+        // window.document.getElementById('menu-mobile').style.display = 'none'
+    }
+}
+
+// Configuração do Modo Dark
+
+function eventoModoDark(){
+    let caixaDark = document.getElementById('caixa-dark') 
+    let iconeModoClaro = document.getElementById('configuracao-modo-claro')
+    let iconeModoEscuro = document.getElementById('configuracao-modo-escuro')
+    if(caixaDark.checked){
+        iconeModoClaro.style.display = 'none'
+        iconeModoEscuro.style.display = 'block'
+    }else{
+        iconeModoClaro.style.display = 'block'
+        iconeModoEscuro.style.display = 'none'
     }
 }
 
@@ -98,3 +115,80 @@ function elementosSpan(){
 }
 
 setInterval(elementosSpan, 6000)
+
+//CONFIGURAÇÃO MODAL DE FUNÇÃO INDISPONÍVEL:
+// Configuracão do modal indisponível transparente
+
+function eventoModalAparente(){
+    window.document.getElementById('configurar-display-modal-indisponivel').style.display = 'flex'
+    window.document.getElementsByTagName('body')[0].style.overflowY = 'hidden'
+}
+
+// Configuracão do modal indisponível oculto
+
+function eventoModalOculto(){
+    window.document.getElementById('configurar-display-modal-indisponivel').style.display = 'none'
+    window.document.getElementsByTagName('body')[0].style.overflowY = 'auto'
+}
+
+// Evento open menu mobile
+
+function eventoOpenMenu(){
+    window.document.getElementById('menu-mobile').style.animationName = 'animacaoMenu'
+    window.document.getElementById('menu-mobile').style.display = 'flex'
+}
+
+// Evento close menu mobile
+
+function eventoClose(){
+    window.document.getElementById('menu-mobile').style.animationName = 'animacaoMenuDois'
+    window.document.querySelectorAll('.sub-menu-padrao').forEach((elementos) => {
+            elementos.style.display = 'none'
+    })
+}
+
+// Eventos subsubmenus
+
+function eventoSubmenuSobre(){
+    if(document.getElementById('submenu-sobre').style.display == 'block'){
+        window.document.getElementById('submenu-sobre').style.display = 'none'
+    }else{
+        window.document.getElementById('submenu-sobre').style.display = 'block'
+    }
+}
+
+// function eventoSubmenuResultados(){
+//     window.location = '#'
+// }
+
+function eventoSubmenuServiços(){
+    if(document.getElementById('submenu-serviços').style.display == 'block'){
+        window.document.getElementById('submenu-serviços').style.display = 'none'
+    }else{
+        window.document.getElementById('submenu-serviços').style.display = 'block'
+    }
+}
+
+function eventoSubmenuBlogs(){
+    if(document.getElementById('submenu-blogs').style.display == 'block'){
+        window.document.getElementById('submenu-blogs').style.display = 'none'
+    }else{
+        window.document.getElementById('submenu-blogs').style.display = 'block'
+    }
+}
+
+function eventoSubmenuTermos(){
+    if(document.getElementById('submenu-termos').style.display == 'block'){
+        window.document.getElementById('submenu-termos').style.display = 'none'
+    }else{
+        window.document.getElementById('submenu-termos').style.display = 'block'
+    }
+}
+
+function eventoSubmenuGruposDois(){
+    if(document.getElementById('submenu-grupos').style.display == 'block'){
+        window.document.getElementById('submenu-grupos').style.display = 'none'
+    }else{
+        window.document.getElementById('submenu-grupos').style.display = 'block'
+    }
+}

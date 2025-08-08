@@ -407,11 +407,12 @@ header > nav{
 
 /* CONFIGURAÇÃO PADRÃO: ACTIVE E HOVER */
 
-/* #configuracao-icone-pesquisa:hover, #configuracao-icone-select:hover, 
+#configuracao-icone-pesquisa:hover, #configuracao-icone-select:hover, 
 #configurar-display-modal-indisponivel > div > div > button:hover, 
 #configurar-display-modal-indisponivel > div > div > span:hover,
 #configurar-icone-close > span:last-child:hover, .estilo-botao-padrao:hover,
-#configurar-botao > a > button:hover, #enviar-gmail:hover, .configuracao-botao-padrao:hover{
+#configurar-botao > a > button:hover, #enviar-gmail:hover, .configuracao-botao-padrao:hover,
+#configurar-container-mobile > span:hover{
     transform: scale(1.05);
 }
 
@@ -419,9 +420,9 @@ header > nav{
 #configurar-display-modal-indisponivel > div > div > button:active,
 #configurar-icone-close > span:last-child:active, 
 .configuracao-botoes-menu-padrao:active, #configurar-botao > a > button:active,
-.configuracao-botao-padrao:active, #enviar-gmail:active{
+.configuracao-botao-padrao:active, #enviar-gmail:active, #configurar-container-mobile > span:active{
     transform: scale(0.95);
-} */
+}
 
 /* configurar icones laterais - botões */
 
@@ -449,6 +450,158 @@ header > nav{
 
 #icones-laterais > a > img:active{
     transform: scale(0.9);
+}
+
+/* CONFIGURAÇÃO MENU MOBILE */
+
+@keyframes animacaoMenu{
+    from{
+        transform: translateX(-200%);
+    }
+    to{
+        transform: translateX(0);
+    }
+}
+
+@keyframes animacaoMenuDois{
+    from{
+        transform: translateX(0);
+    }to{
+        transform: translateX(-200%);
+    }
+}
+
+#menu-mobile{
+    background: var(--corterciaria);
+    border-right: 1px solid var(--corsextiaria);
+    display: none;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 80%;
+    height: 100dvh;
+    z-index: 99999;
+    transform: translateX(-200%);
+    animation: animacaoMenu 350ms both ease-in-out;
+}
+
+#menu-mobile > div{
+    height: 90%;
+    width: 85%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+}
+
+#configurar-icone-close{
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+#configurar-icone-close > span:first-child{
+    font: normal normal 25px 'fonte-titulos';
+    display: flex;
+    align-items: center;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+
+#configurar-icone-close > span:last-child{
+    color: var(--corprimaria);
+    font-size: 40px;
+}
+
+#configurar-opcoes-mobile{
+    overflow-y: auto;
+    width: 100%;
+}
+
+#configurar-opcoes-mobile::-webkit-scrollbar{
+    color: var(--corprimaria);
+}
+
+.configuracao-botoes-menu-padrao{
+    cursor: pointer;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-content: center;
+    margin: 20px 0;
+    padding: 5px;
+}
+
+.configuracao-botoes-menu-padrao:hover{
+    background: var(--corprimaria);
+}
+
+.configuracao-botoes-menu-padrao:hover > span:first-child,
+.configuracao-botoes-menu-padrao:hover > span:last-child{
+    color: var(--corterciaria);
+}
+
+.configuracao-botoes-menu-padrao:hover > span{
+    color: var(--corterciaria);
+}
+
+.configuracao-botoes-menu-padrao > span:first-child{
+    font-size: 30px;
+    color: var(--corprimaria);
+}
+
+.configuracao-botoes-menu-padrao > span:last-child{
+    font: normal normal 20px var(--fonteprimaria);
+    color: var(--corsecundaria);
+    line-height: 28px;
+}
+
+/* configuração dos submenus do menu mobile */
+
+.sub-menu-padrao{
+    display: none;
+    margin: auto;
+    width: 80%;
+}
+
+.sub-menu-padrao > details{
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+.sub-menu-padrao > details > summary{
+    font: normal normal 18px var(--fonteprimaria);
+    color: var(--corsecundaria);
+}
+
+.estilo-lista-padrao-dois{
+    list-style-position: inside;
+    margin: 5px 0;
+}
+
+.estilo-lista-padrao-dois > li{
+    margin: 8px 0;
+}
+
+.config-subopcao-padrao{
+    font: normal normal 16px var(--fonteprimaria);
+    color: var(--corquaternaria);
+    text-decoration: none;
+}
+
+.config-subopcao-padrao:hover{
+    text-decoration: underline;
+}
+
+.config-subopcao-padrao:active{
+    transform: scale(0.95);
+}
+
+.config-subopcao-padrao > span{
+    font-size: 15px;
 }
 
 /* CARROSSEL DIVS */

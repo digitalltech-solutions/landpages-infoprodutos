@@ -154,6 +154,162 @@
         </nav>
     </header>
 
+    <!-- CONFIGURAÇÃO DE MENU PARA MOBILE -->
+
+    <div id="menu-mobile">
+        <div>
+            <div id="configurar-icone-close">
+                <span><img src="../recursos/imagens/icone-empresa-digitalltech.png" alt="" width="30px"><span id="configurar-cor-especifica"><b>Digitall</b></span>Tech</span>
+                <span class="material-symbols-outlined" onclick="eventoClose()">close</span>
+            </div>
+            <div id="configurar-opcoes-mobile">
+                <div class="configuracao-botoes-menu-padrao" onclick="eventoSubmenuSobre()">
+                    <span class="material-symbols-outlined">info</span> 
+                    <span>Sobre</span>
+                </div>
+
+                <!-- submenu sobre mobile -->
+
+                <div class="sub-menu-padrao" id="submenu-sobre">
+                    <details><summary>Saiba Mais</summary>
+                        <ul class="estilo-lista-padrao-dois">
+                            <li><a href="#" class="config-subopcao-padrao">Quem Somos</a></li>
+                            <li><a href="#" class="config-subopcao-padrao">Saiba Vender Conosco</a></li>
+                            <li><a href="#" class="config-subopcao-padrao">Sobre Nossos Produtos</a></li>
+                            <li><a href="#" class="config-subopcao-padrao">Sobre Nossos Serviços</a></li>
+                            <li><a href="#" class="config-subopcao-padrao">Equipe</a></li>
+                        </ul>
+                    </details>
+                    <details><summary>Tópicos</summary>
+                        <ul class="estilo-lista-padrao-dois">
+                            <li><a href="#" class="config-subopcao-padrao">Catálogo de Infoprodutos</a></li>
+                            <li><a href="#" class="config-subopcao-padrao">Serviços Personalizados</a></li>
+                            <li><a href="#" class="config-subopcao-padrao">Como Comprar</a></li>
+                            <li><a href="#" class="config-subopcao-padrao">Rodapé</a></li>
+                        </ul>
+                    </details>
+                    <details><summary>Cursos Grátis</summary>
+                        <ul class="estilo-lista-padrao-dois">
+                            <li><a href="#" class="config-subopcao-padrao">Marketing Digital</a></li>
+                            <li><a href="#" class="config-subopcao-padrao">Edicação Financeira</a></li>
+                            <li><a href="#" class="config-subopcao-padrao">Segurança da Informação</a></li>
+                            <li><a href="#" class="config-subopcao-padrao">Empreendedorismo</a></li>
+                            <li><a href="#" class="config-subopcao-padrao">Estudos Bíblicos</a></li>
+                        </ul>
+                    </details>
+                    <details><summary>Contato</summary>
+                        <ul class="estilo-lista-padrao-dois">                            
+                            <li><a href="#" class="config-subopcao-padrao"><span class="material-symbols-outlined">call</span> Telefone: +55 (88) 99761-6313</a></li>
+                            <li><a href="#" class="config-subopcao-padrao"><span class="material-symbols-outlined">stacked_email</span> PIX: digitalltech100@gmail.com</a></li>
+                            <li><a href="#" class="config-subopcao-padrao"><span class="material-symbols-outlined">article</span> Formulário de Atendimento</a></li>
+                            <li><a href="#" class="config-subopcao-padrao"><span class="material-symbols-outlined">diversity_1</span> Mídia: @digitalltech.oficial</a></li>
+                            <li><a href="#" class="config-subopcao-padrao"><span class="material-symbols-outlined">more_time</span> Seg a sex, 8h às 17h.</a></li>
+                        </ul>
+                    </details>
+                </div>
+                
+                <div class="configuracao-botoes-menu-padrao" onclick="eventoModalAparente()">
+                    <span class="material-symbols-outlined">bar_chart</span> 
+                    <span>Resultados</span>
+                </div>
+
+                <div class="configuracao-botoes-menu-padrao" onclick="eventoSubmenuServiços()">
+                    <span class="material-symbols-outlined">design_services</span> 
+                    <span>Serviços</span>
+                </div>
+
+                <!-- submenu serviços mobile -->
+
+                <div class="sub-menu-padrao" id="submenu-serviços">
+                    <ul class="estilo-lista-padrao-dois">
+                        <li><a href="#" class="config-subopcao-padrao">Solicitar Serviço</a></li>
+                        <li><a href="#" class="config-subopcao-padrao">Saiba como Pedir</a></li>
+                    </ul>
+                </div>
+
+                <div class="configuracao-botoes-menu-padrao" onclick="eventoSubmenuBlogs()">
+                    <span class="material-symbols-outlined">breaking_news</span> 
+                    <span>Blogs</span>
+                </div>
+
+                <!-- submenu blogs mobile -->
+
+                <div class="sub-menu-padrao" id="submenu-blogs">
+                    <details><summary>Aprendizado</summary>
+                        <ul class="estilo-lista-padrao-dois">
+                            <li><a href="#" class="config-subopcao-padrao">Dicas e Tutoriais</a></li>
+                            <li><a href="#" class="config-subopcao-padrao">Atualidades e Tendências</a></li>
+                            <li><a href="#" class="config-subopcao-padrao">Conteúdos ENEM</a></li>
+                            <li><a href="#" class="config-subopcao-padrao">Glossários</a></li>
+                            <li><a href="#" class="config-subopcao-padrao">Concursos</a></li>
+                        </ul>
+                    </details>
+                    <details><summary>Ferramentas</summary>
+                        <ul class="estilo-lista-padrao-dois">
+                            <li><a href="#" class="config-subopcao-padrao">Plataformas</a></li>
+                            <li><a href="#" class="config-subopcao-padrao">Inteligências Artificiais</a></li>
+                            <li><a href="#" class="config-subopcao-padrao">Sistemas</a></li>
+                            <li><a href="#" class="config-subopcao-padrao">Editores</a></li>
+                            <li><a href="#" class="config-subopcao-padrao">Outros</a></li>
+                        </ul>
+                    </details>
+                    <details><summary>Recomendações</summary>
+                        <ul class="estilo-lista-padrao-dois">
+                            <li><a href="#" class="config-subopcao-padrao">Análises de Conteúdos</a></li>
+                            <li><a href="#" class="config-subopcao-padrao">Sugestões de Livros</a></li>
+                            <li><a href="#" class="config-subopcao-padrao">Sugestões de Filmes</a></li>
+                            <li><a href="#" class="config-subopcao-padrao">Sugestões de Séries</a></li>
+                            <li><a href="#" class="config-subopcao-padrao">Feedback</a></li>
+                        </ul>
+                    </details>
+                    <details><summary>Bastidores</summary>
+                        <ul class="estilo-lista-padrao-dois">                            
+                            <li><a href="#" class="config-subopcao-padrao">Bastidores</a></li>
+                            <li><a href="#" class="config-subopcao-padrao">Forneça seu Feedback</a></li>
+                            <li><a href="#" class="config-subopcao-padrao">Lançamentos</a></li>
+                            <li><a href="#" class="config-subopcao-padrao">Novidades</a></li>
+                            <li><a href="#" class="config-subopcao-padrao">Equipe</a></li>
+                        </ul>
+                    </details>
+                </div>
+
+                <div class="configuracao-botoes-menu-padrao" onclick="eventoSubmenuTermos()">
+                    <span class="material-symbols-outlined">contract_edit</span> 
+                    <span>Termos</span>
+                </div>
+
+                <!-- submenu termos de uso mobile -->
+
+                <div class="sub-menu-padrao" id="submenu-termos">
+                    <ul class="estilo-lista-padrao-dois">
+                        <li><a href="#" class="config-subopcao-padrao">Acessar pelo Site</a></li>
+                        <li><a href="#" class="config-subopcao-padrao">Abaixar Termos de Uso .txt</a></li>
+                    </ul>
+                </div>
+
+                <div class="configuracao-botoes-menu-padrao" onclick="eventoModalAparente()">
+                    <span class="material-symbols-outlined">money_off</span> 
+                    <span>Grátis</span>
+                </div>
+
+                <div class="configuracao-botoes-menu-padrao" onclick="eventoSubmenuGruposDois()">
+                    <span class="material-symbols-outlined">group</span> 
+                    <span>Grupos</span>
+                </div>
+
+                <!-- submenu grupos mobile -->
+
+                <div class="sub-menu-padrao" id="submenu-grupos">
+                    <ul class="estilo-lista-padrao-dois" id="submenu-grupos">
+                        <li><a href="#" class="config-subopcao-padrao">Grupo dos Designs</a></li>
+                        <li><a href="#" class="config-subopcao-padrao">Grupo dos WebSites</a></li>
+                        <li><a href="#" class="config-subopcao-padrao">Grupo dos eBooks</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- BOTÕES LATERAIS -->
 
     <div id="icones-laterais" class="hidden-um">
