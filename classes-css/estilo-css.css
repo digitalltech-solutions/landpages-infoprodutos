@@ -358,3 +358,124 @@ header > nav{
 .configuracao-padrao-opcoes > a:active{
     transform: scale(1);
 }
+
+/* CONFIGURAR HEADER PARA MOBILE */
+
+#configurar-header-mobile{
+    background: var(--corterciaria);
+    display: none;
+}
+
+#navegador-mobile{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+}
+
+#configurar-container-mobile{
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+#configurar-container-mobile > span{
+    color: var(--corprimaria);
+    font-size: 40px;
+}
+
+#navegador-mobile > img{
+    width: 120px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+#titulo-digitalltech{
+    font: normal bolder 30px 'fonte-titulos';
+}
+
+#configurar-cor-especifica{
+    color: var(--corsecundaria);
+}
+
+#configurar-texto-mobile{
+    text-align: center;
+    width: 95%;
+    font: normal normal 16px var(--fonteprimaria);
+}
+
+/* CONFIGURAÇÃO PADRÃO: ACTIVE E HOVER */
+
+/* #configuracao-icone-pesquisa:hover, #configuracao-icone-select:hover, 
+#configurar-display-modal-indisponivel > div > div > button:hover, 
+#configurar-display-modal-indisponivel > div > div > span:hover,
+#configurar-icone-close > span:last-child:hover, .estilo-botao-padrao:hover,
+#configurar-botao > a > button:hover, #enviar-gmail:hover, .configuracao-botao-padrao:hover{
+    transform: scale(1.05);
+}
+
+#configuracao-icone-pesquisa:active, #configuracao-icone-select:active, .estilo-botao-padrao:active, 
+#configurar-display-modal-indisponivel > div > div > button:active,
+#configurar-icone-close > span:last-child:active, 
+.configuracao-botoes-menu-padrao:active, #configurar-botao > a > button:active,
+.configuracao-botao-padrao:active, #enviar-gmail:active{
+    transform: scale(0.95);
+} */
+
+/* configurar icones laterais - botões */
+
+#icones-laterais{
+    z-index: 9999;
+    position: fixed;
+    bottom: 80px;
+    right: 15px;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+#icones-laterais > a > img{
+    width: 40px;
+}
+
+#icones-laterais > a:first-child > img{
+    background: var(--corterciaria);
+    border-radius: 100px;
+}
+
+#icones-laterais > a > img:hover{
+    transform: scale(1.1);
+}
+
+#icones-laterais > a > img:active{
+    transform: scale(0.9);
+}
+
+/* CARROSSEL DIVS */
+
+.container-carrossel-imagem-dois{
+    display: none;
+    background: var(--corterciaria);
+    width: 100%;
+    overflow: hidden;
+    flex-flow: column nowrap;
+}
+
+.container-carrossel-imagem-dois > div{
+    width: 100%;
+    display: flex;
+}
+
+.container-carrossel-imagem-dois > div > img{
+    width: 100%;
+    margin: auto;
+    scale: 0.8;
+}
+
+#configurar-botoes-span{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}

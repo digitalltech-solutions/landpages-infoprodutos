@@ -16,6 +16,8 @@
 </head>
 <body onresize="tamanhoBody()">
     
+    <!-- MENU - COMPUTADOR -->
+
     <header class="hidden-um">
         <nav>
             <span id="config-span-logo">
@@ -138,6 +140,41 @@
             </div>
         </div>
     </header>
+
+    <!-- MENU - MOBILE -->
+
+    <header id="configurar-header-mobile" class="hidden-um">
+        <nav id="navegador-mobile">
+            <div id="configurar-container-mobile">
+                <span class="material-symbols-outlined" onclick="eventoOpenMenu()">menu</span>
+                <span class="material-symbols-outlined" onclick="eventoModalAparente()">account_circle</span>
+            </div>
+            <img src="../recursos/imagens/icone-digitalltech-mobile.jpg" alt="icone-digitalltech-mobile">
+            <h1 id="titulo-digitalltech"><span id="configurar-cor-especifica">Digitall</span>Tech</h1>
+        </nav>
+    </header>
+
+    <!-- BOTÕES LATERAIS -->
+
+    <div id="icones-laterais" class="hidden-um">
+        <a href="#"><img src="../recursos/imagens/icone-uphome.png" alt="icone"></a>
+        <a href="https://wa.me/88997616313" target="_blank"><img src="../recursos/imagens/icone-whatsapp.png" alt="icone"></a>
+    </div>
+
+    <!-- CARROSSEL - MOBILE -->
+
+    <div class="container-carrossel-imagem-dois hidden-dois">
+        <div id="container-imagem-dois">
+            <img src="./recursos/imagens/card-mensagem-um.jpg" alt="mensagem-card" class="imagens-mensagem-card">
+            <img src="./recursos/imagens/card-mensagem-dois.jpg" alt="mensagem-card" class="imagens-mensagem-card">
+            <img src="./recursos/imagens/card-mensagem-tres.jpg" alt="mensagem-card" class="imagens-mensagem-card">
+        </div>
+        <div id="configurar-botoes-span">
+            <span id="config-espan-um"></span>
+            <span id="config-espan-dois"></span>
+            <span id="config-espan-tres"></span>
+        </div>
+    </div>
 
 </body>
 </html>

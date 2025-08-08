@@ -88,3 +88,13 @@
         font-size: 15px;
     }
 }
+
+@media screen and (max-width: 595px) {
+    header{
+        display: none;
+    }
+
+    #configurar-header-mobile{
+        display: block;
+    }
+}
