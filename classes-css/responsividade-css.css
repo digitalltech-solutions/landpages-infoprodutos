@@ -97,4 +97,8 @@
     #configurar-header-mobile{
         display: block;
     }
+
+    #configurar-submenu-opcoes, .container-carrossel-imagem-dois, #estilo-pesquisa{
+        display: flex;
+    }
 }

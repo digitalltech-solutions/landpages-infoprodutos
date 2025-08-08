@@ -479,3 +479,22 @@ header > nav{
     align-items: center;
     gap: 10px;
 }
+
+#configurar-botoes-span{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#configurar-botoes-span > span{
+    width: 10px;
+    height: 10px;
+    border: 1px solid var(--corquaternaria);
+    border-radius: 100px;
+}
+
+#configurar-botoes-span > span:first-child{
+    background: var(--corprimaria);
+}

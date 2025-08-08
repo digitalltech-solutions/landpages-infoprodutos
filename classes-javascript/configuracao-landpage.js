@@ -61,3 +61,40 @@ function eventoBlog(){
         window.document.getElementById('config-icone-arrow-drop-down-tres').innerHTML = "&#x25B4;"
     }
 }
+
+// Carrossel de cards
+
+let container = window.document.getElementById('container-imagem-dois')
+let imagensCard = window.document.querySelectorAll('.imagens-mensagem-card')
+let xCard = 0
+
+function carrosselSecundario(){
+    xCard ++
+    if(xCard > imagensCard.length - 1){
+        xCard = 0
+    }
+    container.style.transform = `translateX(${-xCard * 100}%)`
+    container.style.transition = '1s'
+}
+
+setInterval(carrosselSecundario, 6000)
+
+let indice = 1
+
+function elementosSpan(){
+    indice++
+
+    if(indice == 1){
+        window.document.getElementById('config-espan-um').style.background = '#00F39F'
+        window.document.getElementById('config-espan-tres').style.background = '#ffffff'
+    }else if(indice == 2){
+        window.document.getElementById('config-espan-dois').style.background = '#00F39F'
+        window.document.getElementById('config-espan-um').style.background = '#ffffff'
+    }else if(indice == 3){
+        window.document.getElementById('config-espan-tres').style.background = '#00F39F'
+        window.document.getElementById('config-espan-dois').style.background = '#ffffff'
+        indice = 0
+    }
+}
+
+setInterval(elementosSpan, 6000)
