@@ -192,3 +192,24 @@ function eventoSubmenuGruposDois(){
         window.document.getElementById('submenu-grupos').style.display = 'block'
     }
 }
+
+// Botões MOBILE Inferiores
+
+function eventoLoja(){
+    window.location = 'https://digitalltech.netlify.app'
+}
+
+//CONFIGURAÇÃO MODAL DE FUNÇÃO INDISPONÍVEL:
+// Configuracão do modal indisponível transparente
+
+function eventoModalAparente(){
+    window.document.getElementById('configurar-display-modal-indisponivel').style.display = 'flex'
+    window.document.getElementsByTagName('body')[0].style.overflowY = 'hidden'
+}
+
+// Configuracão do modal indisponível oculto
+
+function eventoModalOculto(){
+    window.document.getElementById('configurar-display-modal-indisponivel').style.display = 'none'
+    window.document.getElementsByTagName('body')[0].style.overflowY = 'auto'
+}

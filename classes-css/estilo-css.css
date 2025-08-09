@@ -452,6 +452,59 @@ header > nav{
     transform: scale(0.9);
 }
 
+/* configurar modal de função indisponível */
+
+#configurar-display-modal-indisponivel{
+    background: #00000033;
+    position: fixed;
+    height: 100dvh;
+    width: 100dvw;
+    top: 0;
+    display: none;
+    align-items: center;
+    flex-flow: row nowrap;
+    justify-content: center;
+    z-index: 99999;
+}
+
+#configurar-display-modal-indisponivel > div{
+    width: 400px;
+    padding: 10px 0;
+    border-radius: 10px;
+    border-bottom: 5px solid #0000003f;
+    background: var(--corterciaria);
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0px 10px;
+}
+
+#configurar-display-modal-indisponivel > div > div{
+    width: 75%;
+}
+
+#configurar-display-modal-indisponivel > div > div > span{
+    color: var(--corprimaria);
+    font-size: 40px;
+}
+
+#configurar-display-modal-indisponivel > div > div > p{
+    font: normal normal 15px var(--fonteprimaria);
+    color: var(--corquinternaria);
+    margin: 10px 0;
+}
+
+#configurar-display-modal-indisponivel > div > div > button{
+    background: var(--corprimaria);
+    color: var(--corterciaria);
+    font: normal bolder 16px 'fonte-titulos';
+    padding: 3px 40px;
+    cursor: pointer;
+    border: none;
+}
+
 /* CONFIGURAÇÃO MENU MOBILE */
 
 @keyframes animacaoMenu{
@@ -650,6 +703,56 @@ header > nav{
 
 #configurar-botoes-span > span:first-child{
     background: var(--corprimaria);
+}
+
+/* CONFIGURAÇÕES DE TELA PARA MOBILE */
+
+#configurar-submenu-opcoes{
+    border: 1px solid var(--corquaternaria);
+    background: var(--corterciaria);
+    border-right: none;
+    border-left: none;
+    padding: 10px 0;
+    width: 100%;
+    display: none;
+    align-items: center;
+    flex-flow: row nowrap;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    z-index: 9999;
+}
+
+#configurar-submenu-opcoes > div{
+    width: 96%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.configurar-card-padrao-botoes{
+    color: #666666;
+    font: normal normal 12px 'fonte-titulos';
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.configurar-card-padrao-botoes > span{
+    font-size: 30px;
+}
+
+.configurar-card-padrao-botoes:hover, #configurar-container-mobile > span:hover, #navegador-mobile > img:hover{
+    color: var(--corprimaria);
+    transform: scale(1.1);
+}
+
+.configurar-card-padrao-botoes:active, #configurar-container-mobile > span:active{
+    color: var(--corquaternaria);
+    transform: scale(0.9);
 }
 
 /* CONFIGURAÇÃO FOOTER */
