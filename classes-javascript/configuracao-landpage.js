@@ -213,3 +213,7 @@ function eventoModalOculto(){
     window.document.getElementById('configurar-display-modal-indisponivel').style.display = 'none'
     window.document.getElementsByTagName('body')[0].style.overflowY = 'auto'
 }
+
+function eventoCloseMenuDesktop(){
+    window.document.getElementById('configuracao-menu-sobre').style.display = 'none'
+}

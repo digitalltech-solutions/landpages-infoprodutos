@@ -755,6 +755,64 @@ header > nav{
     transform: scale(0.9);
 }
 
+/* CONFIGURAÇÃO DE ESTILO DA SEÇÃO DE APRESENTAÇÃO */
+
+#secao-apresentação{
+    display: flex;
+    align-items: center;
+    flex-flow: row nowrap;
+    justify-content: center;
+    margin: 20vh 0;
+}
+
+#secao-apresentação > div{
+    width: 90%;
+    display: flex;
+    align-items: center;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.configurar-padrao-cards-apresentacao{
+    text-align: center;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    flex-flow: column wrap;
+    justify-content: center;
+}
+
+.configurar-padrao-cards-apresentacao:hover{
+    transform: scale(1.08);
+}
+
+.configurar-padrao-cards-apresentacao > span{
+    color: var(--corprimaria);
+    font-size: 50px;
+}
+
+.configurar-padrao-cards-apresentacao > h1{
+    font: normal bold 20px 'fonte-titulos';
+    color: var(--corquinternaria);
+}
+
+.configurar-padrao-cards-apresentacao > p{
+    font: normal normal 15px var(--fonteprimaria);
+    color: var(--corsecundaria);
+}
+
+#configurar-card-apresentacao-especifica{
+    border: 1px solid var(--corquaternaria);
+    border-bottom: none;
+    border-top: none;
+    padding: 0 20px;
+}
+
+#configurar-link{
+    color: var(--corsecundaria);
+}
+
 /* CONFIGURAÇÃO FOOTER */
 
 footer{

@@ -87,6 +87,13 @@
     #tamanho-fonte-grupo{
         font-size: 15px;
     }
+
+    /* CONFIGURAÇÃO DE RESPONSIVIDADE DA SEÇÃO APRESENTAÇÃO */
+    
+    #secao-apresentação > div{
+        flex-flow: row wrap;
+    }
+
 }
 
 @media screen and (max-width: 595px) {
@@ -100,6 +107,25 @@
 
     #configurar-submenu-opcoes, .container-carrossel-imagem-dois, #estilo-pesquisa{
         display: flex;
+    }
+
+    /* CONFIGURAÇÃO DE RESPONSIVIDADE DA SEÇÃO APRESENTAÇÃO */
+
+    #configurar-card-apresentacao-especifica{
+        border: none;
+        padding: 0;
+    }
+
+    .configurar-padrao-cards-apresentacao > span{
+        font-size: 35px;
+    }
+
+    .configurar-padrao-cards-apresentacao > h1{
+        font-size: 18px;
+    }
+
+    .configurar-padrao-cards-apresentacao > p{
+        font-size: 15px;
     }
 
     /* CENTRALIZAÇÃO FOOTER */
