@@ -816,12 +816,12 @@ header > nav{
 }
 
 #cards-infoproduto-imagens > div > img{
-    width: 95%;
+    height: 90%;
 }
 
 #estilo-fullscreen{
     color: var(--corprimaria);
-    font-size: 45px;
+    font-size: 40px;
 }
 
 /* CONFIGURAÇÃO DE ESTILO DA SEÇÃO DE APRESENTAÇÃO */
