@@ -787,7 +787,7 @@ header > nav{
 }
 
 #capa-infoproduto{
-    width: 45%;
+    width: 60%;
 }
 
 #cards-infoproduto-imagens{
@@ -808,11 +808,15 @@ header > nav{
     align-items: center;
     flex-flow: row nowrap;
     justify-content: center;
+    cursor: pointer;
 }
 
 #cards-infoproduto-imagens > div:hover{
     transform: scale(1.05);
-    cursor: pointer;
+}
+
+#cards-infoproduto-imagens > div:active{
+    transform: scale(0.95);
 }
 
 #cards-infoproduto-imagens > div > img{
