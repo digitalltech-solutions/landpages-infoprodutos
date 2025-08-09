@@ -755,6 +755,75 @@ header > nav{
     transform: scale(0.9);
 }
 
+/* CONFIGURAÇÃO DE ESTILO DA SEÇÃO DE INFOPRODUTO */
+
+#secao-infoproduto{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    margin: 10vh 0;
+}
+
+#secao-infoproduto > div{
+    width: 95%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+#secao-infoproduto > div > div{
+    width: 560px;
+}
+
+#configurar-imagem-infoproduto{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+#capa-infoproduto{
+    width: 45%;
+}
+
+#cards-infoproduto-imagens{
+    display: flex;
+    align-items: center;
+    flex-flow: row nowrap;
+    justify-content: center;
+    gap: 8px;
+}
+
+#cards-infoproduto-imagens > div{
+    border: 2px solid var(--corprimaria);
+    border-radius: 5px;
+    height: 35px;
+    width: 35px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+
+#cards-infoproduto-imagens > div:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+#cards-infoproduto-imagens > div > img{
+    width: 95%;
+}
+
+#estilo-fullscreen{
+    color: var(--corprimaria);
+    font-size: 45px;
+}
+
 /* CONFIGURAÇÃO DE ESTILO DA SEÇÃO DE APRESENTAÇÃO */
 
 #secao-apresentação{
