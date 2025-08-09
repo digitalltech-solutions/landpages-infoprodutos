@@ -101,4 +101,38 @@
     #configurar-submenu-opcoes, .container-carrossel-imagem-dois, #estilo-pesquisa{
         display: flex;
     }
+
+    /* CENTRALIZAÇÃO FOOTER */
+    
+    /* CONFIGURAÇÃO DE RESPONSIVIDADE FOOTER */
+
+    #configurar-segundo-footer > div{
+        flex-flow: column nowrap;
+    }
+
+    #configurar-icones-padrao-contato{
+        gap: 8px;
+    }
+
+    #configurar-texto-gmail{
+        font-size: 18px;
+        text-align: center;
+    }
+    
+    .configurar-padrao-cards-footer{
+        text-align: center;
+    }
+
+    .configurar-padrao-cards-footer > span{
+        display: flex;
+        justify-content: center;
+    }
+
+    .centralizar-cofiguracao{
+        text-align: center;
+    }
+
+    #configurar-segundo-footer{
+        margin-bottom: 70px;
+    }
 }

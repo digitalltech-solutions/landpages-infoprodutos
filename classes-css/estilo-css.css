@@ -651,3 +651,142 @@ header > nav{
 #configurar-botoes-span > span:first-child{
     background: var(--corprimaria);
 }
+
+/* CONFIGURAÇÃO FOOTER */
+
+footer{
+    background: var(--corprimaria);
+    padding: 40px 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-flow: column nowrap;
+    justify-content: center;
+}
+
+footer > div{
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-flow: row wrap;
+    gap: 20px;
+}
+
+footer > div > div:first-child{
+    width: 290px;
+}
+
+.configurar-padrao-cards-footer > span{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.configurar-padrao-cards-footer > span > img{
+    width: 30px;
+}
+
+.configurar-padrao-cards-footer > span > h1, .estilo-titulo-padrao{
+    font: normal normal 30px 'fonte-titulos';
+    color: var(--corterciaria);
+}
+
+.configurar-padrao-cards-footer > p, .estilo-a-padrao{
+    font: normal normal 14px var(--fonteprimaria);
+    color: var(--corterciaria);
+    margin: 10px 0;
+}
+
+#configurar-botao{
+    display: flex;
+    gap: 10px;
+}
+
+#configurar-botao > a > button, #enviar-gmail{
+    font: normal bold 15px var(--fonteprimaria);
+    background: var(--corterciaria);
+    color: var(--corprimaria);
+    border: none;
+    padding: 8px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.estilo-titulo-padrao{
+    font-weight: bold;
+}
+
+.estilo-a-padrao{
+    text-decoration: none;
+}
+
+.estilo-a-padrao:hover{
+    text-decoration: underline;
+    transform: scale(1.05);
+}
+
+#configurar-texto-gmail{
+    font: normal normal 16px var(--fonteprimaria);
+    color: var(--corterciaria);
+}
+
+.configurar-div-especifico{
+    width: 220px;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 10px;
+}
+
+#gmail{
+    padding: 8px 5px;
+    border: none;
+    width: 95%;
+    color: var(--corquinternaria);
+    font: normal normal 15px var(--fonteprimaria);
+}
+
+#label-gmail{
+    width: 100%;
+}
+
+#enviar-gmail{
+    width: 100%;
+}
+
+#configurar-segundo-footer{
+    background: var(--corprimaria);
+    border-top: 1px solid #00000027;
+    padding: 15px 0;
+}
+
+#configurar-segundo-footer > div{
+    padding: 0;
+    width: 90%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#configurar-icones-padrao-contato{
+    display: flex;
+    gap: 10px;
+}
+
+#configurar-icones-padrao-contato > a > img{
+    width: 25px;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 100px;
+    border: 1px solid var(--corterciaria);
+}
+
+#configurar-icones-padrao-contato > a > img:hover{
+    transform: scale(1.1);
+}
+
+#configurar-icones-padrao-contato > a > img:active{
+    transform: scale(0.9);
+}
