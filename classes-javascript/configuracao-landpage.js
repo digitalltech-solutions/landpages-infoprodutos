@@ -6,7 +6,7 @@ function tamanhoBody(){
             elementos.style.display = 'none'
         })
     }else{
-        // window.document.getElementById('menu-mobile').style.display = 'none'
+        window.document.getElementById('menu-mobile').style.display = 'none'
     }
 }
 
