@@ -822,21 +822,20 @@ header > nav{
     justify-content: center;
     align-items: center;
     margin: 10vh 0;
-    /* background: red; */
+    width: 100%;
 }
 
 #secao-infoproduto > div{
-    /* background: pink; */
-    width: 95%;
+    width: 90%;
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     gap: 15px;
 }
 
 #secao-infoproduto > div > div:first-child{
-    width: 400px;
+    width: auto;
 }
 
 #configurar-imagem-infoproduto{

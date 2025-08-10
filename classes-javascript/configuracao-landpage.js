@@ -217,3 +217,33 @@ function eventoModalOculto(){
 function eventoCloseMenuDesktop(){
     window.document.getElementById('configuracao-menu-sobre').style.display = 'none'
 }
+
+// Configuração da Apresentação de Imagem
+
+var imageCapa = window.document.getElementById('capa-infoproduto')
+
+var idImagemUm = window.document.getElementById('imagem-um').src
+var idImagemDois = window.document.getElementById('imagem-dois').src
+var idImagemTres = window.document.getElementById('imagem-tres').src
+var idImagemQuatro = window.document.getElementById('imagem-quatro').src
+var idImagemCinco = window.document.getElementById('imagem-cinco').src
+
+function eventoImagemUm(){
+    imageCapa.src = idImagemUm
+}
+
+function eventoImagemDois(){
+    imageCapa.src = idImagemDois
+}
+
+function eventoImagemTres(){
+    imageCapa.src = idImagemTres
+}
+
+function eventoImagemQuatro(){
+    imageCapa.src = idImagemQuatro
+}
+
+function eventoImagemCinco(){
+    imageCapa.src = idImagemCinco
+}
