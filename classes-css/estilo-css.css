@@ -822,9 +822,11 @@ header > nav{
     justify-content: center;
     align-items: center;
     margin: 10vh 0;
+    /* background: red; */
 }
 
 #secao-infoproduto > div{
+    /* background: pink; */
     width: 95%;
     display: flex;
     flex-flow: row nowrap;
@@ -833,10 +835,14 @@ header > nav{
     gap: 15px;
 }
 
+#secao-infoproduto > div > div:first-child{
+    width: 400px;
+}
+
 #configurar-imagem-infoproduto{
     display: flex;
     flex-flow: column nowrap;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     gap: 20px;
 }
@@ -896,13 +902,13 @@ header > nav{
 }
 
 #estilo-botoes > a > button{
-    font: normal normal 18px var(--fonteprimaria);
+    font: normal normal 15px var(--fonteprimaria);
     background: var(--corprimaria);
     color: var(--corterciaria);
     border-radius: 5px;
     padding: 8px 5px;
     border: none;
-    width: 200px;
+    width: 165px;
     cursor: pointer;
 }
 
@@ -922,6 +928,10 @@ header > nav{
 
 /* configuração da descrição do infoproduto */
 
+#descricao-compra-infoproduto{
+    /* background: blue; */
+    width: 370px;
+}
 
 #descricao-compra-infoproduto > h1{
     font: normal normal 30px 'fonte-titulos';
@@ -942,11 +952,12 @@ header > nav{
     width: 100%;
     display: flex;
     flex-flow: row nowrap;
+    justify-content: space-between;
     align-items: center;
-    justify-content: space-around;
     text-align: center;
     gap: 10px;
     margin: 15px 0;
+    /* background: red; */
 }
 
 #preco-antigo{

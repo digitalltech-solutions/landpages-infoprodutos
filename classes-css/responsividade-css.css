@@ -94,6 +94,111 @@
         flex-flow: row wrap;
     }
 
+    /* RESPONSIVIDADE DA SEÇÃO DE INFOPRODUTO-APRESENTAÇÃO */
+    /* configuração da div-capa do infoproduto */
+
+    #secao-infoproduto > div{
+        width: 97%;
+        gap: 15px;
+    }
+
+    #configurar-imagem-infoproduto > div:first-child{
+        width: 80%;
+        display: flex;
+        justify-content: center;
+    }
+
+    #capa-infoproduto{
+        height: auto;
+        width: 100%;
+    }
+
+    #cards-infoproduto-imagens{
+        gap: 5px;
+        width: 100%;
+        flex-flow: row wrap;
+    }
+
+    #cards-infoproduto-imagens > div{
+        width: 35px;
+        height: 35px;
+        padding: 4px;
+    }
+
+    #cards-infoproduto-imagens > div > img{
+        height: 98%;
+    }
+
+    #estilo-fullscreen{
+        font-size: 40px;
+    }
+    
+    #secao-infoproduto > div > div:first-child{
+        width: 350px;
+    }
+
+    /* configuração da div-capa do infoproduto: texto-descrição */
+
+    #descricao-compra-infoproduto{
+        width: 330px;
+    }
+
+    #descricao-compra-infoproduto > h1{
+        font-size: 24px;
+        line-height: 25px;
+    }
+
+    #descricao-compra-infoproduto > p{
+        font-size: 15px;
+    }
+
+    #configurar-preco-botoes{
+        margin: 12px 0;
+        gap: 8px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #preco-antigo{
+        font-size: 14px;
+    }
+
+    #preco-atual{
+        line-height: 30px;
+        font-size: 60px;
+    }
+
+    #preco-atual > span, #preco-atual > sup{
+        font-size: 20px;
+    }
+
+    #configurar-botoes-span > div:first-child > div{
+        width: 40px;
+        height: 40px;
+    }
+    
+    #configurar-botoes-span > div:first-child > div > span{
+        font-size: 30px;
+    }
+
+    #sistema-estrelas > a > span{
+        font-size: 20px;
+    }
+
+    #estilo-botoes > a{
+        width: 100%;
+    }
+
+    #estilo-botoes > a > button{
+        padding: 10px 0px;
+        font-size: 18px;
+        width: 100%;
+    }
+
+    #estilo-botoes{
+        margin-bottom: 10px;
+    }
+
 }
 
 @media screen and (max-width: 595px) {
@@ -161,4 +266,49 @@
     #configurar-segundo-footer{
         margin-bottom: 70px;
     }
+
+    /* RESPONSIVIDADE DA SEÇÃO DE INFOPRODUTO-APRESENTAÇÃO */
+    /* configuração da div-capa do infoproduto */
+
+    #secao-infoproduto > div{
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    #configurar-imagem-infoproduto > div:first-child{
+        width: 95%;
+        display: flex;
+        justify-content: center;
+    }
+
+    #capa-infoproduto{
+        height: auto;
+        margin: auto;
+        width: 88%;
+    }
+
+    #cards-infoproduto-imagens{
+        width: 100%;
+        gap: 8px;
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    #cards-infoproduto-imagens > div{
+        width: 50px;
+        height: 50px;
+        padding: 5px;
+    }
+
+    #cards-infoproduto-imagens > div > img{
+        height: 96%;
+    }
+
+    #estilo-fullscreen{
+        font-size: 50px;
+    }
+    
 }
