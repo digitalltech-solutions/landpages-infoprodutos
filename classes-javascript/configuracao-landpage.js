@@ -226,7 +226,8 @@ var idImagemUm = window.document.getElementById('imagem-um').src
 var idImagemDois = window.document.getElementById('imagem-dois').src
 var idImagemTres = window.document.getElementById('imagem-tres').src
 var idImagemQuatro = window.document.getElementById('imagem-quatro').src
-var idImagemCinco = window.document.getElementById('imagem-cinco').src
+var idImagemCinco = window.document.getElementById('imagem-sinco').src
+var idImagemSeis = window.document.getElementById('imagem-seis').src
 
 function eventoImagemUm(){
     imageCapa.src = idImagemUm
@@ -246,4 +247,8 @@ function eventoImagemQuatro(){
 
 function eventoImagemCinco(){
     imageCapa.src = idImagemCinco
+}
+
+function eventoImagemSeis(){
+    imageCapa.src = idImagemSeis
 }

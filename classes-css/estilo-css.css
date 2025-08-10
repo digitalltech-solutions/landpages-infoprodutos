@@ -42,6 +42,11 @@ body, html{
 
 /* CONFIGURAÇÕES PADRÕES */
 
+.estilo-titulo-padrao-texto{
+    font: normal bold 35px 'fonte-titulos';
+    color: var(--corprimaria);
+}
+
 .marca-texto-padrao-um{
     color: var(--corprimaria);
 }
@@ -984,48 +989,6 @@ header > nav{
 
 #descricao-infoproduto > div{
     width: 90%;
-}
-
-/* CONFIGURAÇÃO DO CARROSSEL DE IMAGEM */
-
-#carrossel-capas{
-    width: 100dvw;
-    height: 100dvh;
-    background: #00000050;
-    position: fixed;
-    z-index: 99999;
-    left: 0;
-    top: 0;
-
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center;
-}
-
-#carrossel-capas > div{
-    width: 90%;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    align-items: center;
-}
-
-#capa-infoproduto-dois{
-    height: 450px;
-}
-
-.configurar-tamanho-botao{
-    cursor: pointer;
-    width: 40px;
-}
-
-.configurar-tamanho-botao:hover{
-    transform: scale(1.05);
-}
-
-.configurar-tamanho-botao:active{
-    transform: scale(0.9);
 }
 
 /* CONFIGURAÇÃO DE ESTILO DA SEÇÃO DE APRESENTAÇÃO */
