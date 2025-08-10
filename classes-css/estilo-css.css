@@ -684,15 +684,7 @@ header > nav{
     scale: 0.8;
 }
 
-#configurar-botoes-span{
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-    gap: 0px;
-}
-
-#configurar-botoes-span > span{
+#configurar-botoes-span-dois > span{
     width: 10px;
     height: 10px;
     border: 1px solid var(--corquaternaria);
@@ -1167,4 +1159,9 @@ footer > div > div:first-child{
 
 #configurar-icones-padrao-contato > a > img:active{
     transform: scale(0.9);
+}
+
+#configurar-botoes-span-dois{
+    display: flex;
+    justify-content: center;
 }
