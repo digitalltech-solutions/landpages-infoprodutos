@@ -252,3 +252,29 @@ function eventoImagemCinco(){
 function eventoImagemSeis(){
     imageCapa.src = idImagemSeis
 }
+
+// Animação de Aparecimento
+
+window.document.addEventListener('DOMContentLoaded', function(){
+    var elementosPrimarios = window.document.querySelectorAll('.hidden-um')
+    var observadorPrimario = new IntersectionObserver((observar) => {
+        observar.forEach((cadaElemento) => {
+            if(cadaElemento.isIntersecting){
+                cadaElemento.target.classList.add('show-um')
+            }
+        })
+    })
+    
+    elementosPrimarios.forEach((elementosPrimarios) => {observadorPrimario.observe(elementosPrimarios)})
+
+    var elementosSecundarios = window.document.querySelectorAll('.hidden-dois')
+    var observadorSecundario = new IntersectionObserver((observar) => {
+        observar.forEach((cadaElemento) => {
+            if(cadaElemento.isIntersecting){
+                cadaElemento.target.classList.add('show-dois')
+            }
+        })
+    })
+
+    elementosSecundarios.forEach((elementosSecundarios) => {observadorSecundario.observe(elementosSecundarios)})
+})
