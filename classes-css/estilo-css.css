@@ -47,8 +47,34 @@ body, html{
     color: var(--corprimaria);
 }
 
+.texto-padrao{
+    font: normal normal 16px var(--fonteprimaria);
+    color: var(--corquinternaria);
+    margin: 10px 0;
+}
+
 .marca-texto-padrao-um{
     color: var(--corprimaria);
+}
+
+.estilo-lista-padrao-um{
+    list-style: circle inside none;
+    margin: 18px 0;
+}
+
+.estilo-lista-padrao-um > li{
+    font: normal normal 16px var(--fonteprimaria);
+    color: var(--corquinternaria);
+    margin: 8px 0;
+}
+
+.marcador-texto{
+    color: var(--corsecundaria);
+    font-weight: bold;
+}
+
+.marcador-texto-dois{
+    color: var(--corsecundaria);
 }
 
 /* configuração de opacidade */
