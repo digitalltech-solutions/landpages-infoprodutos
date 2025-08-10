@@ -40,6 +40,12 @@ body, html{
     --fonteprimaria: arial;
 }
 
+/* CONFIGURAÇÕES PADRÕES */
+
+.marca-texto-padrao-um{
+    color: var(--corprimaria);
+}
+
 /* configuração de opacidade */
 
 /* .hidden-um{
@@ -686,14 +692,6 @@ header > nav{
     gap: 10px;
 }
 
-#configurar-botoes-span{
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-}
-
 #configurar-botoes-span > span{
     width: 10px;
     height: 10px;
@@ -703,6 +701,59 @@ header > nav{
 
 #configurar-botoes-span > span:first-child{
     background: var(--corprimaria);
+}
+
+#configurar-botoes-span{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#configurar-botoes-span > div{
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 5px;
+}
+
+#configurar-botoes-span > div > div{
+    width: 45px;
+    height: 45px;
+    border: 1px solid var(--corprimaria);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#configurar-botoes-span > div > div > span{
+    color: var(--corprimaria);
+    font-size: 30px;
+}
+
+#configurar-botoes-span > div > div:hover{
+    transform: scale(1.05);
+}
+
+#configurar-botoes-span > div > div:active{
+    transform: scale(0.95);
+}
+
+#configurar-botoes-span{
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+#termo-de-uso{
+    font: normal normal 20px var(--fonteprimaria);
+    color: var(--corsextiaria);
+    text-decoration: none;
+}
+
+#termo-de-uso:hover{
+    color: var(--corquinternaria);
+    text-decoration: underline;
 }
 
 /* CONFIGURAÇÕES DE TELA PARA MOBILE */
@@ -769,13 +820,13 @@ header > nav{
     width: 95%;
     display: flex;
     flex-flow: row nowrap;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
-    gap: 20px;
+    gap: 15px;
 }
 
 #secao-infoproduto > div > div{
-    width: 560px;
+    width: 380px;   
 }
 
 #configurar-imagem-infoproduto{
@@ -787,7 +838,11 @@ header > nav{
 }
 
 #capa-infoproduto{
-    width: 60%;
+    width: 350px;
+}
+
+#capa-infoproduto:hover{
+    transform: scale(1.08);
 }
 
 #cards-infoproduto-imagens{
@@ -826,6 +881,53 @@ header > nav{
 #estilo-fullscreen{
     color: var(--corprimaria);
     font-size: 40px;
+}
+
+/* configuração da descrição do infoproduto */
+
+#descricao-compra-infoproduto{
+    /* background: red; */
+}
+
+#descricao-compra-infoproduto > h1{
+    font: normal normal 30px 'fonte-titulos';
+    line-height: 28px;
+}
+
+#descricao-compra-infoproduto > p{
+    font: normal normal 18px var(--fonteprimaria);
+    color: var(--corsecundaria);
+    margin: 0;
+}
+
+#descricao-compra-infoproduto > p > span{
+    color: var(--corprimaria);
+}
+
+#configurar-preco-botoes{
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+#preco-antigo{
+    color: var(--corquaternaria);
+    font: normal normal 20px var(--fonteprimaria);
+}
+
+#preco-atual{
+    font: normal normal 70px 'fonte-titulos';
+    color: var(--corquinternaria);
+    line-height: 45px;
+}
+
+#preco-atual > span, #preco-atual > sup{
+    font-size: 30px;
 }
 
 /* CONFIGURAÇÃO DE ESTILO DA SEÇÃO DE APRESENTAÇÃO */
