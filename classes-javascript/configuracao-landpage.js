@@ -278,3 +278,15 @@ window.document.addEventListener('DOMContentLoaded', function(){
 
     elementosSecundarios.forEach((elementosSecundarios) => {observadorSecundario.observe(elementosSecundarios)})
 })
+
+function dispositivoMovel(){
+    return /Mobi|Android|iPhone|iPad|iPod|Windows Phone/i.test(navigator.userAgent)
+}
+
+function eventoMovel(){
+    if(dispositivoMovel() == true){
+        window.location = 'digitalltech100@gmail.com'
+    }else{
+        window.location = 'https://mail.google.com/mail/?view=cm&fs=1&to=digitalltech100@gmail.com&su=Interesse%20em%20Produto%20ou%20Servi%C3%A7o%20-%20DigitallTech'
+    }
+}
