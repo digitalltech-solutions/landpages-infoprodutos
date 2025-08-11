@@ -279,6 +279,8 @@ window.document.addEventListener('DOMContentLoaded', function(){
     elementosSecundarios.forEach((elementosSecundarios) => {observadorSecundario.observe(elementosSecundarios)})
 })
 
+// Condição de Dispositivo Móvel
+
 function dispositivoMovel(){
     return /Mobi|Android|iPhone|iPad|iPod|Windows Phone/i.test(navigator.userAgent)
 }
