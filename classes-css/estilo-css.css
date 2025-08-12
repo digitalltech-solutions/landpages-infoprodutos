@@ -434,6 +434,7 @@ header > nav{
 
 #configurar-cor-especifica{
     color: var(--corsecundaria);
+    cursor: pointer;
 }
 
 #configurar-texto-mobile{

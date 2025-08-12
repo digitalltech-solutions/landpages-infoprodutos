@@ -292,3 +292,9 @@ function eventoMovel(){
         window.location = 'https://mail.google.com/mail/?view=cm&fs=1&to=digitalltech100@gmail.com&su=Interesse%20em%20Produto%20ou%20Servi%C3%A7o%20-%20DigitallTech'
     }
 }
+
+// Evento Icone Empresa
+
+function eventoEmpresa(){
+    window.location = 'https://digitalltech.netlify.app'
+}

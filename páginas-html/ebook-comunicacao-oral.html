@@ -77,7 +77,7 @@
     <header class="hidden-um">
         <nav>
             <span id="config-span-logo">
-                <img src="../recursos/imagens/icone-empresa-digitalltech-dois.jpg" alt="icone-empresa" id="icone-empresa">
+                <img src="../recursos/imagens/icone-empresa-digitalltech-dois.jpg" alt="icone-empresa" id="icone-empresa" onclick="eventoEmpresa()">
                 <input type="checkbox" name="caixa-dark" id="caixa-dark" onclick="eventoModoDark()">
                 <label for="caixa-dark" id="elemento-pai">
                     <span id="elemento-filho">
@@ -205,7 +205,7 @@
                 <span class="material-symbols-outlined" onclick="eventoOpenMenu()">menu</span>
                 <span class="material-symbols-outlined" onclick="eventoModalAparente()">account_circle</span>
             </div>
-            <img src="../recursos/imagens/icone-digitalltech-mobile.jpg" alt="icone-digitalltech-mobile">
+            <img src="../recursos/imagens/icone-digitalltech-mobile.jpg" alt="icone-digitalltech-mobile" onclick="eventoEmpresa()">
             <h1 id="titulo-digitalltech"><span id="configurar-cor-especifica">Digitall</span>Tech</h1>
         </nav>
     </header>
@@ -215,7 +215,7 @@
     <div id="menu-mobile">
         <div>
             <div id="configurar-icone-close">
-                <span><img src="../recursos/imagens/icone-empresa-digitalltech.png" alt="" width="30px"><span id="configurar-cor-especifica"><b>Digitall</b></span>Tech</span>
+                <span><img src="../recursos/imagens/icone-empresa-digitalltech.png" alt="" width="30px" onclick="eventoEmpresa()"><span id="configurar-cor-especifica"><b>Digitall</b></span>Tech</span>
                 <span class="material-symbols-outlined" onclick="eventoClose()">close</span>
             </div>
             <div id="configurar-opcoes-mobile">
