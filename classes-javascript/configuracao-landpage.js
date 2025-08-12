@@ -19,9 +19,15 @@ function eventoModoDark(){
     if(caixaDark.checked){
         iconeModoClaro.style.display = 'none'
         iconeModoEscuro.style.display = 'block'
+
+        // Site Modo Escuro:
+        window.document.getElementsByTagName('body')[0].style.backgroundColor = 'black'
+
     }else{
         iconeModoClaro.style.display = 'block'
         iconeModoEscuro.style.display = 'none'
+        // Site Modo Claro:
+        window.location = window.document.URL
     }
 }
 
