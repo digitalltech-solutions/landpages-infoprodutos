@@ -63,7 +63,8 @@ function eventoModoDark(){
         iconeModoEscuro.style.display = 'none'
         
         // Site Modo Claro:
-        window.location = window.document.URL.replace('#', '')
+        // split: pega os valores antes do valor atribuído nos parênteses ('valor')[0]
+        window.location = window.location.href.split('#')[0];
     }
 }
 
