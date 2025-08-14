@@ -20,17 +20,42 @@ function eventoModoDark(){
         iconeModoClaro.style.display = 'none'
         iconeModoEscuro.style.display = 'block'
 
-        // Site Modo Escuro:
+        // Site Modo Escuro (Desktop):
         window.document.getElementById('icone-empresa').src = "../recursos/imagens/icone-empresa-dark.jpg"
         window.document.getElementsByTagName('body')[0].style.backgroundColor = 'black'
-
         window.document.querySelectorAll('.estilo-texto-modo-dark').forEach((elementosDark) => {
             elementosDark.style.color = '#7F7F7F'
         })
-
         window.document.querySelectorAll('.estilo-fundo-modo-dark-um').forEach((elementosDark) => {
             elementosDark.style.backgroundColor = '#303030'
         })
+        window.document.getElementById('estilo-borda-dark-um').style.borderColor = '#7F7F7F'
+        window.document.getElementById('estilo-borda-dark-dois').style.borderColor = '#7F7F7F'
+
+        window.document.querySelectorAll('.estilo-borda-dark').forEach((elementos) =>{
+            elementos.style.borderColor = '#303030'
+        })
+
+        window.document.querySelectorAll('.destaque-padrao').forEach((elementos) =>{
+            elementos.style.color = '#004aad'
+        })
+
+        window.document.querySelectorAll('.texto-padrao-dois').forEach((elementos) =>{
+            elementos.style.color = '#ffffff'
+        })
+
+        window.document.querySelectorAll('.estilo-botao-dark-um').forEach((botoes) =>{
+            botoes.style.backgroundColor = '#303030'
+            botoes.style.color = '#ffffff'
+        })
+
+        window.document.querySelectorAll('.estilo-botao-dark-dois').forEach((botoes) =>{
+            botoes.style.backgroundColor = 'transparent'
+            botoes.style.color = '#ffffff'
+            botoes.style.borderColor = '#303030'
+        })
+        
+        // Site Modo Escuro (Mobile):
 
     }else{
         iconeModoClaro.style.display = 'block'

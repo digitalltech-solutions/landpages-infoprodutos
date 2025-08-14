@@ -105,12 +105,12 @@
             </div>
         </nav>
         <div id="configuracao-nav-dois" class="estilo-fundo-modo-dark-um">
-            <div>
+            <div id="estilo-borda-dark-um">
                 <a href="#" onclick="eventoSobre()">Sobre<span id="config-icone-arrow-drop-down-dois">&#x25BE;</span></a>
                 <a href="#">Resultados</a>
                 <a href="#">Serviços</a>
             </div>
-            <div>
+            <div id="estilo-borda-dark-dois">
                 <a href="#" onclick="eventoBlog()">Blogs<span id="config-icone-arrow-drop-down-tres">&#x25BE;</span></a>
                 <a href="#">Termos</a>
                 <a href="#">Gratis</a>
@@ -147,11 +147,11 @@
 
                 <div class="configuracao-padrao-opcoes">
                     <h1>Contato</h1>
-                    <a href="#"><span class="material-symbols-outlined estilo-texto-modo-dark estilo-texto-modo-dark-hover">call</span> Telefone: +55 (88) 99761-6313</a>
-                    <a href="#"><span class="material-symbols-outlined estilo-texto-modo-dark estilo-texto-modo-dark-hover">stacked_email</span> PIX: digitalltech100@gmail.com</a>
-                    <a href="#"><span class="material-symbols-outlined estilo-texto-modo-dark estilo-texto-modo-dark-hover">article</span> Formulário de Atendimento</a>
-                    <a href="#"><span class="material-symbols-outlined estilo-texto-modo-dark estilo-texto-modo-dark-hover">diversity_1</span> Mídia: @digitalltech.oficial</a>
-                    <a href="#"><span class="material-symbols-outlined estilo-texto-modo-dark estilo-texto-modo-dark-hover">more_time</span> Seg a sex, 8h às 17h.</a>
+                    <a href="#"><span class="material-symbols-outlined estilo-texto-modo-dark">call</span> Telefone: +55 (88) 99761-6313</a>
+                    <a href="#"><span class="material-symbols-outlined estilo-texto-modo-dark">stacked_email</span> PIX: digitalltech100@gmail.com</a>
+                    <a href="#"><span class="material-symbols-outlined estilo-texto-modo-dark">article</span> Formulário de Atendimento</a>
+                    <a href="#"><span class="material-symbols-outlined estilo-texto-modo-dark">diversity_1</span> Mídia: @digitalltech.oficial</a>
+                    <a href="#"><span class="material-symbols-outlined estilo-texto-modo-dark">more_time</span> Seg a sex, 8h às 17h.</a>
                 </div>
             </div>
         </div>
@@ -449,56 +449,58 @@
                     <img src="https://digitalltech-solutions.github.io/infoprodutos-imagens/capas-ebooks/comunicacao-oral/capa-ebook-arte-da-comunicacao-oral.png" alt="capa do infoproduto" id="capa-infoproduto">
                 </div>
                 <div id="cards-infoproduto-imagens">
-                    <div onclick="eventoImagemUm()">
+                    <div onclick="eventoImagemUm()" class="estilo-borda-dark">
                         <img src="https://digitalltech-solutions.github.io/infoprodutos-imagens/capas-ebooks/comunicacao-oral/capa-ebook-arte-da-comunicacao-oral.png" alt="capa-infoproduto" id="imagem-um">
                     </div>
-                    <div onclick="eventoImagemDois()">
+                    <div onclick="eventoImagemDois()" class="estilo-borda-dark">
                         <img src="https://digitalltech-solutions.github.io/infoprodutos-imagens/capas-ebooks/comunicacao-oral/capa-ebook-um.png" alt="capa-infoproduto" id="imagem-dois">
                     </div>
-                    <div onclick="eventoImagemTres()">
+                    <div onclick="eventoImagemTres()" class="estilo-borda-dark">
                         <img src="https://digitalltech-solutions.github.io/infoprodutos-imagens/capas-ebooks/comunicacao-oral/capa-ebook-dois.png" alt="capa-infoproduto" id="imagem-tres">
                     </div>                    
-                    <div onclick="eventoImagemQuatro()">
+                    <div onclick="eventoImagemQuatro()" class="estilo-borda-dark">
                         <img src="https://digitalltech-solutions.github.io/infoprodutos-imagens/capas-ebooks/comunicacao-oral/capa-frente.png" alt="capa-infoproduto" id="imagem-quatro">
                     </div>
-                    <div onclick="eventoImagemCinco()">
+                    <div onclick="eventoImagemCinco()" class="estilo-borda-dark">
                         <img src="https://digitalltech-solutions.github.io/infoprodutos-imagens/capas-ebooks/comunicacao-oral/capa-verso.png" alt="capa-infoproduto" id="imagem-sinco">
                     </div>
-                    <div onclick="eventoImagemSeis()">
+                    <div onclick="eventoImagemSeis()" class="estilo-borda-dark">
                         <img src="https://digitalltech-solutions.github.io/infoprodutos-imagens/capas-ebooks/comunicacao-oral/capa-lateral.png" alt="capa-infoproduto" id="imagem-seis">
                     </div>
                 </div>
             </div>
             <div id="descricao-compra-infoproduto">
-                <h1><b>eBook</b> <br> Arte da Comunicação Oral</h1>
-                <p>Parcele em até <span>2x de R$ 9,94</span> sem juros</p>
+                <h1 class="estilo-texto-modo-dark"><b>eBook</b> <br> Arte da Comunicação Oral</h1>
+                <p class="estilo-texto-modo-dark">Parcele em até <span class="destaque-padrao">2x de R$ 9,94</span> sem juros</p>
                 <div id="configurar-preco-botoes">
                     <div id="configurar-preco">
-                        <span id="preco-antigo"><del>R$ 25,00</del> <span class="marca-texto-padrao-um"><b>18% OFF</b></span></span>
+                        <span id="preco-antigo"><del>R$ 25,00</del> <span class="marca-texto-padrao-um destaque-padrao"><b>18% OFF</b></span></span>
                         <br>
-                        <span id="preco-atual">
+                        <span id="preco-atual" class="estilo-texto-modo-dark">
                             <span>R$</span><b>17</b><sup>,99</sup>
                         </span>
                     </div>
                     <div id="configurar-botoes-span">
                         <div>
-                            <div onclick="eventoModalAparente()"><span class="material-symbols-outlined" title="Marcar como Favorito">favorite</span></div>
-                            <div onclick="eventoModalAparente()"><span class="material-symbols-outlined" title="Comentar Sobre Esse Infoproduto">chat</span></div>
-                            <div onclick="eventoModalAparente()"><span class="material-symbols-outlined" title="Compartilhar">send</span></div>
+                            <div onclick="eventoModalAparente()" class="estilo-borda-dark"><span class="material-symbols-outlined estilo-texto-modo-dark" title="Marcar como Favorito">favorite</span></div>
+                            <div onclick="eventoModalAparente()" class="estilo-borda-dark"><span class="material-symbols-outlined estilo-texto-modo-dark" title="Comentar">chat</span></div>
+                            <div onclick="eventoModalAparente()" class="estilo-borda-dark"><span class="material-symbols-outlined estilo-texto-modo-dark" title="Compartilhar">send</span></div>
                         </div>
                         <a href="#" id="termo-de-uso">Termos de Uso</a>
                         <div id="sistema-estrelas">
-                            <a href="#" onclick="eventoModalAparente()"><span class="material-symbols-outlined">star</span></a>
-                            <a href="#" onclick="eventoModalAparente()"><span class="material-symbols-outlined">star</span></a>
-                            <a href="#" onclick="eventoModalAparente()"><span class="material-symbols-outlined">star</span></a>
-                            <a href="#" onclick="eventoModalAparente()"><span class="material-symbols-outlined">star</span></a>
-                            <a href="#" onclick="eventoModalAparente()"><span class="material-symbols-outlined">star</span></a>
+                            <a href="#" onclick="eventoModalAparente()"><span class="material-symbols-outlined estilo-texto-modo-dark">star</span></a>
+                            <a href="#" onclick="eventoModalAparente()"><span class="material-symbols-outlined estilo-texto-modo-dark">star</span></a>
+                            <a href="#" onclick="eventoModalAparente()"><span class="material-symbols-outlined estilo-texto-modo-dark">star</span></a>
+                            <a href="#" onclick="eventoModalAparente()"><span class="material-symbols-outlined estilo-texto-modo-dark">star</span></a>
+                            <a href="#" onclick="eventoModalAparente()"><span class="material-symbols-outlined estilo-texto-modo-dark">star</span></a>
                         </div>
                     </div>
                 </div>
                 <div id="estilo-botoes">
-                    <a href="https://pay.hotmart.com/M100428296U"><button>Comprar Agora</button></a>
-                    <a href="https://wa.me/5588997616313?text=Ol%C3%A1!%20Tenho%20interesse%20no%20eBook%20Arte%20da%20Comunica%C3%A7%C3%A3o%20Oral%20que%20vi%20no%20site%20DigitallTech.%20Segue%20o%20link%20para%20mais%20detalhes:%20https://l1nq.com/ebook-arte-da-comunicacao-oral"><button>Comprar no WhatsApp</button></a>
+                    <a href="https://pay.hotmart.com/M100428296U"><button class="estilo-botao-dark-um">Comprar Agora</button></a>
+                    <a href="https://wa.me/5588997616313?text=Ol%C3%A1!%20Tenho%20interesse%20no%20eBook%20Arte%20da%20Comunica%C3%A7%C3%A3o%20Oral%20que%20vi%20no%20site%20DigitallTech.%20Segue%20o%20link%20para%20mais%20detalhes:%20https://l1nq.com/ebook-arte-da-comunicacao-oral">
+                        <button class="estilo-botao-dark-dois">Comprar no WhatsApp</button>
+                    </a>
                 </div>
                 <p>Aqui, sua compra é 100% segura!</p>
             </div>

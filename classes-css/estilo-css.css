@@ -77,10 +77,6 @@ body, html{
     color: var(--corsecundaria);
 }
 
-.estilo-texto-modo-dark-hover{
-    color: var(--corterciaria);
-}
-
 /* configuração de opacidade */
 
 .hidden-um{
@@ -392,7 +388,7 @@ header > nav{
 }
 
 .configuracao-padrao-opcoes > a:hover{
-    color: var(--corquinternaria);
+    color: var(--corsecundaria);
     transform: scale(1.03);
 }
 
@@ -1222,4 +1218,8 @@ footer > div > div:first-child{
 #configurar-botoes-span-dois{
     display: flex;
     justify-content: center;
+}
+
+.teste{
+    color: red;
 }
