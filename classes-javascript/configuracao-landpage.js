@@ -21,7 +21,16 @@ function eventoModoDark(){
         iconeModoEscuro.style.display = 'block'
 
         // Site Modo Escuro:
+        window.document.getElementById('icone-empresa').src = "../recursos/imagens/icone-empresa-dark.jpg"
         window.document.getElementsByTagName('body')[0].style.backgroundColor = 'black'
+
+        window.document.querySelectorAll('.estilo-texto-modo-dark').forEach((elementosDark) => {
+            elementosDark.style.color = '#7F7F7F'
+        })
+
+        window.document.querySelectorAll('.estilo-fundo-modo-dark-um').forEach((elementosDark) => {
+            elementosDark.style.backgroundColor = '#303030'
+        })
 
     }else{
         iconeModoClaro.style.display = 'block'
