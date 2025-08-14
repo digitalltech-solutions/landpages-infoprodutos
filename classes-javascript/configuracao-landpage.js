@@ -51,8 +51,8 @@ function eventoModoDark(){
 
         window.document.querySelectorAll('.estilo-botao-dark-dois').forEach((botoes) =>{
             botoes.style.backgroundColor = 'transparent'
+            botoes.style.borderColor = '#ffffff'
             botoes.style.color = '#ffffff'
-            botoes.style.borderColor = '#303030'
         })
         
         // Site Modo Escuro (Mobile):
