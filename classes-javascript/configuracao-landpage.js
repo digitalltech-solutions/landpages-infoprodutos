@@ -60,8 +60,9 @@ function eventoModoDark(){
     }else{
         iconeModoClaro.style.display = 'block'
         iconeModoEscuro.style.display = 'none'
+        
         // Site Modo Claro:
-        window.location = window.document.URL
+        window.location = window.document.URL.replace('#', '')
     }
 }
 
