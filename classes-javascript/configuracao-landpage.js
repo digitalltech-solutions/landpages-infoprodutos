@@ -23,6 +23,7 @@ function eventoModoDark(){
         // Site Modo Escuro (Desktop):
         window.document.getElementById('icone-empresa').src = "../recursos/imagens/icone-empresa-dark.jpg"
         window.document.getElementsByTagName('body')[0].style.backgroundColor = 'black'
+        window.document.getElementById('configurar-header-mobile').style.backgroundColor = 'black'
         window.document.querySelectorAll('.estilo-texto-modo-dark').forEach((elementosDark) => {
             elementosDark.style.color = '#7F7F7F'
         })
