@@ -30,6 +30,11 @@ function eventoModoDark(){
         window.document.querySelectorAll('.estilo-fundo-modo-dark-um').forEach((elementosDark) => {
             elementosDark.style.backgroundColor = '#303030'
         })
+
+        window.document.querySelectorAll('.estilo-fundo-modo-dark-dois').forEach((elementosDark) => {
+            elementosDark.style.backgroundColor = 'black'
+        })
+
         window.document.getElementById('estilo-borda-dark-um').style.borderColor = '#7F7F7F'
         window.document.getElementById('estilo-borda-dark-dois').style.borderColor = '#7F7F7F'
 
@@ -45,6 +50,10 @@ function eventoModoDark(){
             elementos.style.color = '#ffffff'
         })
 
+        window.document.querySelectorAll('.configurar-fundo-branco').forEach((elementos) =>{
+            elementos.style.backgroundColor = '#000000ffff'
+        })
+
         window.document.querySelectorAll('.estilo-botao-dark-um').forEach((botoes) =>{
             botoes.style.backgroundColor = '#303030'
             botoes.style.color = '#ffffff'
@@ -55,6 +64,11 @@ function eventoModoDark(){
             botoes.style.borderColor = '#ffffff'
             botoes.style.color = '#ffffff'
         })
+
+        window.document.getElementById('icone-mobile').src = '../recursos/imagens/icone-digitalltech-mobile-dark.jpg'
+        window.document.getElementById('imagem-carrossel-um').src = '../recursos/imagens/card-mensagem-um-dark.jpg'
+        window.document.getElementById('imagem-carrossel-dois').src = '../recursos/imagens/card-mensagem-dois-dark.jpg'
+        window.document.getElementById('imagem-carrossel-tres').src = '../recursos/imagens/card-mensagem-tres-dark.jpg'
         
         // Site Modo Escuro (Mobile):
 
