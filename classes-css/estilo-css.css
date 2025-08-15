@@ -112,6 +112,8 @@ body, html{
     width: 150px;
 }
 
+/* Configuração Modo Dark */
+
 #caixa-dark{
     display: none;
 }
@@ -414,7 +416,13 @@ header > nav{
     width: 100%;
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+}
+
+.config-elemento{
+    margin-right: auto;
+    scale: 1.05;
 }
 
 #configurar-container-mobile > span{

@@ -204,10 +204,18 @@
         <nav id="navegador-mobile">
             <div id="configurar-container-mobile">
                 <span class="material-symbols-outlined" onclick="eventoOpenMenu()">menu</span>
+
+                <label for="caixa-dark" id="elemento-pai" class="config-elemento">
+                    <span id="elemento-filho">
+                        <span class="material-symbols-outlined" id="configuracao-modo-claro">light_mode</span>
+                        <span class="material-symbols-outlined" id="configuracao-modo-escuro">dark_mode</span>
+                    </span>
+                </label>
+                
                 <span class="material-symbols-outlined" onclick="eventoModalAparente()">account_circle</span>
             </div>
             <img src="../recursos/imagens/icone-digitalltech-mobile.jpg" alt="icone-digitalltech-mobile" onclick="eventoEmpresa()">
-            <h1 id="titulo-digitalltech"><span id="configurar-cor-especifica">Digitall</span>Tech</h1>
+            <h1 id="titulo-digitalltech" class="texto-padrao-dois"><span id="configurar-cor-especifica" class="texto-padrao-dois">Digitall</span>Tech</h1>
         </nav>
     </header>
 
