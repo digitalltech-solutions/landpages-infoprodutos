@@ -114,7 +114,7 @@ body, html{
 
 /* Configuração Modo Dark */
 
-#caixa-dark{
+#caixa-dark, #caixa-dark-dois{
     display: none;
 }
 
@@ -147,7 +147,7 @@ body, html{
     background: #303030;
 }
 
-#caixa-dark:checked ~ #elemento-pai > #elemento-filho{
+#caixa-dark:checked ~ #elemento-pai > #elemento-filho, #caixa-dark-dois:checked ~ #elemento-pai > #elemento-filho{
     transform: translateX(80%);
 }
 

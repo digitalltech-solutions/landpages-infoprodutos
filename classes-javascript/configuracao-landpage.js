@@ -12,13 +12,27 @@ function tamanhoBody(){
 
 // Configuração do Modo Dark
 
-function eventoModoDark(){
-    let caixaDark = document.getElementById('caixa-dark') 
-    let iconeModoClaro = document.getElementById('configuracao-modo-claro')
-    let iconeModoEscuro = document.getElementById('configuracao-modo-escuro')
-    if(caixaDark.checked){
-        iconeModoClaro.style.display = 'none'
-        iconeModoEscuro.style.display = 'block'
+function eventoModoDark() {
+    let caixa1 = document.getElementById('caixa-dark');
+    let caixa2 = document.getElementById('caixa-dark-dois');
+
+    caixa2.checked = caixa1.checked;
+
+    if(caixa1.checked == true){
+        window.document.querySelectorAll('.configurar-fundo-dark').forEach((elementosDark) => {
+            elementosDark.style.backgroundColor = '#303030'
+        })
+
+        window.document.querySelectorAll('.configurar-icone-dark').forEach((elementosDark) => {
+            elementosDark.style.color = '#303030'
+            elementosDark.style.display = 'block'
+        })
+
+        window.document.querySelectorAll('.configurar-icone-light').forEach((elementosDark) => {
+            elementosDark.style.display = 'none'
+        })
+
+        // Configuração Dark
 
         // Site Modo Escuro (Desktop):
         window.document.getElementById('icone-empresa').src = "../recursos/imagens/icone-empresa-dark.jpg"
@@ -70,18 +84,93 @@ function eventoModoDark(){
         window.document.getElementById('imagem-carrossel-dois').src = '../recursos/imagens/card-mensagem-dois-dark.jpg'
         window.document.getElementById('imagem-carrossel-tres').src = '../recursos/imagens/card-mensagem-tres-dark.jpg'
         window.document.getElementById('icone-ecommerce').src = '../recursos/imagens/icone-ecommerce-claro.png'
-        
-        // Site Modo Escuro (Mobile):
 
     }else{
-        iconeModoClaro.style.display = 'block'
-        iconeModoEscuro.style.display = 'none'
-        
-        // Site Modo Claro:
-        // split: pega os valores antes do valor atribuído nos parênteses ('valor')[0]
         window.location = window.location.href.split('#')[0];
     }
 }
+
+function eventoModoDarkDois() {
+    let caixa1 = document.getElementById('caixa-dark');
+    let caixa2 = document.getElementById('caixa-dark-dois');
+
+    caixa1.checked = caixa2.checked;
+
+    
+    if(caixa1.checked == true){
+        window.document.querySelectorAll('.configurar-fundo-dark').forEach((elementosDark) => {
+            elementosDark.style.backgroundColor = '#303030'
+        })
+        
+        window.document.querySelectorAll('.configurar-icone-dark').forEach((elementosDark) => {
+            elementosDark.style.color = '#303030'
+            elementosDark.style.display = 'block'
+        })
+
+        window.document.querySelectorAll('.configurar-icone-light').forEach((elementosDark) => {
+            elementosDark.style.display = 'none'
+        })
+
+        // Configuração Dark
+
+        // Site Modo Escuro (Desktop):
+        window.document.getElementById('icone-empresa').src = "../recursos/imagens/icone-empresa-dark.jpg"
+        window.document.getElementsByTagName('body')[0].style.backgroundColor = 'black'
+        window.document.getElementById('configurar-header-mobile').style.backgroundColor = 'black'
+        window.document.querySelectorAll('.estilo-texto-modo-dark').forEach((elementosDark) => {
+            elementosDark.style.color = '#7F7F7F'
+        })
+        window.document.querySelectorAll('.estilo-fundo-modo-dark-um').forEach((elementosDark) => {
+            elementosDark.style.backgroundColor = '#303030'
+        })
+
+        window.document.querySelectorAll('.estilo-fundo-modo-dark-dois').forEach((elementosDark) => {
+            elementosDark.style.backgroundColor = 'black'
+        })
+
+        window.document.getElementById('estilo-borda-dark-um').style.borderColor = '#7F7F7F'
+        window.document.getElementById('estilo-borda-dark-dois').style.borderColor = '#7F7F7F'
+
+        window.document.querySelectorAll('.estilo-borda-dark').forEach((elementos) =>{
+            elementos.style.borderColor = '#303030'
+        })
+
+        window.document.querySelectorAll('.destaque-padrao').forEach((elementos) =>{
+            elementos.style.color = '#004aad'
+        })
+
+        window.document.querySelectorAll('.texto-padrao-dois').forEach((elementos) =>{
+            elementos.style.color = '#ffffff'
+        })
+
+        window.document.querySelectorAll('.configurar-fundo-branco').forEach((elementos) =>{
+            elementos.style.backgroundColor = '#000000ffff'
+        })
+
+        window.document.querySelectorAll('.estilo-botao-dark-um').forEach((botoes) =>{
+            botoes.style.backgroundColor = '#303030'
+            botoes.style.color = '#ffffff'
+        })
+
+        window.document.querySelectorAll('.estilo-botao-dark-dois').forEach((botoes) =>{
+            botoes.style.backgroundColor = 'transparent'
+            botoes.style.borderColor = '#ffffff'
+            botoes.style.color = '#ffffff'
+        })
+
+        window.document.getElementById('icone-mobile').src = '../recursos/imagens/icone-digitalltech-mobile-dark.jpg'
+        window.document.getElementById('imagem-carrossel-um').src = '../recursos/imagens/card-mensagem-um-dark.jpg'
+        window.document.getElementById('imagem-carrossel-dois').src = '../recursos/imagens/card-mensagem-dois-dark.jpg'
+        window.document.getElementById('imagem-carrossel-tres').src = '../recursos/imagens/card-mensagem-tres-dark.jpg'
+        window.document.getElementById('icone-ecommerce').src = '../recursos/imagens/icone-ecommerce-claro.png'
+
+    }else{
+        window.location = window.location.href.split('#')[0];
+    }
+}
+
+
+
 
 function eventoSubmenuGrupos(){
     if(document.getElementById('config-submenu-grupos').style.display == 'flex'){

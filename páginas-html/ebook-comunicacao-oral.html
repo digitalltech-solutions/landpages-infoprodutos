@@ -79,12 +79,14 @@
         <nav>
             <span id="config-span-logo">
                 <img src="../recursos/imagens/icone-empresa-digitalltech-dois.jpg" alt="icone-empresa" id="icone-empresa" onclick="eventoEmpresa()">
-                <input type="checkbox" name="caixa-dark" id="caixa-dark" onclick="eventoModoDark()">
-                <label for="caixa-dark" id="elemento-pai">
-                    <span id="elemento-filho">
-                        <span class="material-symbols-outlined" id="configuracao-modo-claro">light_mode</span>
-                        <span class="material-symbols-outlined" id="configuracao-modo-escuro">dark_mode</span>
+                
+                <input type="checkbox" name="caixa-dark" id="caixa-dark" onchange="eventoModoDark()">
+                <label for="caixa-dark" id="elemento-pai" class="configurar-fundo-dark">
+                    <span id="elemento-filho" class="configuraca-padrao-elemento-filho">
+                        <span class="material-symbols-outlined configurar-icone-light" id="configuracao-modo-claro">light_mode</span>
+                        <span class="material-symbols-outlined configurar-icone-dark" id="configuracao-modo-escuro">dark_mode</span>
                     </span>
+                
                 </label>
             </span>
             <div id="configurar-icones">
@@ -200,15 +202,18 @@
 
     <!-- MENU - MOBILE -->
 
+    <!-- TESTOU -->
+
     <header id="configurar-header-mobile" class="hidden-um">
         <nav id="navegador-mobile">
             <div id="configurar-container-mobile">
                 <span class="material-symbols-outlined texto-padrao-dois" onclick="eventoOpenMenu()">menu</span>
 
-                <label for="caixa-dark" id="elemento-pai" class="config-elemento">
-                    <span id="elemento-filho">
-                        <span class="material-symbols-outlined" id="configuracao-modo-claro">light_mode</span>
-                        <span class="material-symbols-outlined" id="configuracao-modo-escuro">dark_mode</span>
+                <input type="checkbox" name="caixa-dark-dois" id="caixa-dark-dois" onchange="eventoModoDarkDois()">
+                <label for="caixa-dark-dois" id="elemento-pai" class="config-elemento configurar-fundo-dark">
+                    <span id="elemento-filho" class="configuraca-padrao-elemento-filho">
+                        <span class="material-symbols-outlined configurar-icone-light" id="configuracao-modo-claro">light_mode</span>
+                        <span class="material-symbols-outlined configurar-icone-dark" id="configuracao-modo-escuro">dark_mode</span>
                     </span>
                 </label>
                 
