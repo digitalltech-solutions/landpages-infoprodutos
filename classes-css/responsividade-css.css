@@ -199,6 +199,19 @@
         margin-bottom: 10px;
     }
 
+    /* CONFIGURAÇÃO DE ESPONSIVIDADE DE COMO COMPRAR INFOPRODUTOS */
+
+    .display-none{
+        display: none;
+    }
+
+    #como-comprar > div > div:first-child > h1{
+        font-size: 24px;
+    }
+
+    .estilo-texto-padrao{
+        font-size: 14px;
+    }
 }
 
 @media screen and (max-width: 595px) {
@@ -366,5 +379,33 @@
         padding: 12px 0px;
         font-size: 22px;
         width: 100%;
+    }
+
+        /* CONFIGURAÇÃO DE ESPONSIVIDADE DE COMO COMPRAR INFOPRODUTOS */
+
+    #como-comprar, #como-comprar > div > div{
+        width: 100%;
+        text-align: center;
+    }
+
+    #config-botao{
+        margin: auto;
+    }
+
+    #como-comprar > div{
+        width: 90%;
+        display: flex;
+        align-items: center;
+        flex-flow: column-reverse nowrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .estilo-texto-padrao{
+        margin: 10px 0;
+    }
+
+    #como-comprar > div > div:first-child > h1{
+        font-size: 20px;
     }
 }
