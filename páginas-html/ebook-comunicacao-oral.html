@@ -89,12 +89,12 @@
             <div id="configurar-icones">
                 <div>
                     <a href="#" id="config-icone" onclick="eventoSubmenuGrupos()"><span id="tamanho-fonte-grupo">Grupos</span><span id="config-icone-arrow-drop-down">&#x25BE;</span>
-                        <div id="config-submenu-grupos">
-                            <div id="configurar-triangulo"></div>
+                        <div id="config-submenu-grupos" class="configurar-fundo-dark">
+                            <div id="configurar-triangulo" class="configurar-fundo-dark"></div>
                             <a href="#" id="configurar-texto-whatsapp">Participe no <br> WhatsApp e Receba <br> Ofertas VIP!</a>
-                            <a href="#" class="configurar-submenus-estilo-padrao" title="Grupo do WhatsApp sobre Websites">WebSites</a>
-                            <a href="#" class="configurar-submenus-estilo-padrao" title="Grupo do WhatsApp sobre Designs">Designs</a>
-                            <a href="#" class="configurar-submenus-estilo-padrao" title="Grupo do WhatsApp sobre eBooks">eBooks</a>
+                            <a href="#" class="configurar-submenus-estilo-padrao texto-padrao-dois" title="Grupo do WhatsApp sobre Websites">WebSites</a>
+                            <a href="#" class="configurar-submenus-estilo-padrao texto-padrao-dois" title="Grupo do WhatsApp sobre Designs">Designs</a>
+                            <a href="#" class="configurar-submenus-estilo-padrao texto-padrao-dois" title="Grupo do WhatsApp sobre eBooks">eBooks</a>
                         </div>
                     </a>
                 </div>
@@ -125,6 +125,7 @@
                     <a href="#">Saiba Vender Conosco</a>
                     <a href="#">Sobre Nossos Produtos</a>
                     <a href="#">Sobre Nossos Serviços</a>
+                    <a href="#">Página de Cursos</a>
                     <a href="#">Equipe</a>
                 </div>
 
@@ -138,18 +139,18 @@
 
                 <div class="configuracao-padrao-opcoes">
                     <h1>Cursos Grátis</h1>
-                    <a href="#">Marketing Digital</a>
-                    <a href="#">Educação Financeira</a>
-                    <a href="#">Segurança da Informação</a>
-                    <a href="#">Empreendedorismo</a>
-                    <a href="#">Estudos Bíblicos</a>
-                    <a href="#">Investimentos</a>
+                    <a href="https://www.youtube.com/playlist?list=PLgm_pWyXvC8c7BuVzGj81kIM9mMj0Phdi">Marketing Digital</a>
+                    <a href="https://www.youtube.com/playlist?list=PLgm_pWyXvC8cUWSMRnaujmfuPBBqm7HAB">Educação Financeira</a>
+                    <a href="https://www.youtube.com/playlist?list=PLgm_pWyXvC8duqYAOcsf6zbK9rpPclhaN">Segurança da Informação</a>
+                    <a href="https://www.youtube.com/playlist?list=PLgm_pWyXvC8fPkpBBtJJXF6nuQ3dSiNmv">Empreendedorismo</a>
+                    <a href="https://www.youtube.com/playlist?list=PLgm_pWyXvC8dwYE8p7Wddm4Cww-w3t1j6">Estudos Bíblicos</a>
+                    <a href="https://www.youtube.com/playlist?list=PLgm_pWyXvC8c7DwuNu3vj9C01rsNRZpPG">Investimentos</a>
                 </div>
 
                 <div class="configuracao-padrao-opcoes">
                     <h1>Contato</h1>
                     <a href="#"><span class="material-symbols-outlined estilo-texto-modo-dark">call</span> Telefone: +55 (88) 99761-6313</a>
-                    <a href="#"><span class="material-symbols-outlined estilo-texto-modo-dark">stacked_email</span> PIX: digitalltech100@gmail.com</a>
+                    <a href="#" onclick="eventoMovel()"><span class="material-symbols-outlined estilo-texto-modo-dark">stacked_email</span> PIX: digitalltech100@gmail.com</a>
                     <a href="#"><span class="material-symbols-outlined estilo-texto-modo-dark">article</span> Formulário de Atendimento</a>
                     <a href="#"><span class="material-symbols-outlined estilo-texto-modo-dark">diversity_1</span> Mídia: @digitalltech.oficial</a>
                     <a href="#"><span class="material-symbols-outlined estilo-texto-modo-dark">more_time</span> Seg a sex, 8h às 17h.</a>
@@ -245,10 +246,11 @@
                             <li><a href="#" class="config-subopcao-padrao">Saiba Vender Conosco</a></li>
                             <li><a href="#" class="config-subopcao-padrao">Sobre Nossos Produtos</a></li>
                             <li><a href="#" class="config-subopcao-padrao">Sobre Nossos Serviços</a></li>
+                            <li><a href="#" class="config-subopcao-padrao">Página de Cursos</a></li>
                             <li><a href="#" class="config-subopcao-padrao">Equipe</a></li>
                         </ul>
                     </details>
-                    <details><summary>Tópicos</summary>
+                    <details><summary>Tópicos da Página</summary>
                         <ul class="estilo-lista-padrao-dois">
                             <li><a href="#secao-infoproduto" onclick="eventoClose()" class="config-subopcao-padrao">Seção de Compra</a></li>
                             <li><a href="#descricao-infoproduto" onclick="eventoClose()" class="config-subopcao-padrao">Detalhes do Infoproduto</a></li>
@@ -258,18 +260,18 @@
                     </details>
                     <details><summary>Cursos Grátis</summary>
                         <ul class="estilo-lista-padrao-dois">
-                            <li><a href="#" class="config-subopcao-padrao">Marketing Digital</a></li>
-                            <li><a href="#" class="config-subopcao-padrao">Edicação Financeira</a></li>
-                            <li><a href="#" class="config-subopcao-padrao">Segurança da Informação</a></li>
-                            <li><a href="#" class="config-subopcao-padrao">Empreendedorismo</a></li>
-                            <li><a href="#" class="config-subopcao-padrao">Estudos Bíblicos</a></li>
-                            <li><a href="#" class="config-subopcao-padrao">Investimentos</a></li>
+                            <li><a href="https://www.youtube.com/playlist?list=PLgm_pWyXvC8c7BuVzGj81kIM9mMj0Phdi" class="config-subopcao-padrao">Marketing Digital</a></li>
+                            <li><a href="https://www.youtube.com/playlist?list=PLgm_pWyXvC8cUWSMRnaujmfuPBBqm7HAB" class="config-subopcao-padrao">Edicação Financeira</a></li>
+                            <li><a href="https://www.youtube.com/playlist?list=PLgm_pWyXvC8duqYAOcsf6zbK9rpPclhaN" class="config-subopcao-padrao">Segurança da Informação</a></li>
+                            <li><a href="https://www.youtube.com/playlist?list=PLgm_pWyXvC8fPkpBBtJJXF6nuQ3dSiNmv" class="config-subopcao-padrao">Empreendedorismo</a></li>
+                            <li><a href="https://www.youtube.com/playlist?list=PLgm_pWyXvC8dwYE8p7Wddm4Cww-w3t1j6" class="config-subopcao-padrao">Estudos Bíblicos</a></li>
+                            <li><a href="https://www.youtube.com/playlist?list=PLgm_pWyXvC8c7DwuNu3vj9C01rsNRZpPG" class="config-subopcao-padrao">Investimentos</a></li>
                         </ul>
                     </details>
                     <details><summary>Contato</summary>
                         <ul class="estilo-lista-padrao-dois">                            
                             <li><a href="#" class="config-subopcao-padrao"><span class="material-symbols-outlined">call</span> Telefone: +55 (88) 99761-6313</a></li>
-                            <li><a href="#" class="config-subopcao-padrao"><span class="material-symbols-outlined">stacked_email</span> PIX: digitalltech100@gmail.com</a></li>
+                            <li><a href="#" class="config-subopcao-padrao" onclick="eventoMovel()"><span class="material-symbols-outlined">stacked_email</span> PIX: digitalltech100@gmail.com</a></li>
                             <li><a href="#" class="config-subopcao-padrao"><span class="material-symbols-outlined">article</span> Formulário de Atendimento</a></li>
                             <li><a href="#" class="config-subopcao-padrao"><span class="material-symbols-outlined">diversity_1</span> Mídia: @digitalltech.oficial</a></li>
                             <li><a href="#" class="config-subopcao-padrao"><span class="material-symbols-outlined">more_time</span> Seg a sex, 8h às 17h.</a></li>
@@ -685,11 +687,12 @@
             <div class="centralizar-cofiguracao">
                 <span>
                     <h1 class="estilo-titulo-padrao">Cursos</h1>
-                    <a href="#" class="estilo-a-padrao estilo-texto-modo-dark">Educação Financeira</a> <br>
-                    <a href="#" class="estilo-a-padrao estilo-texto-modo-dark">Segurança da Informação</a> <br>
-                    <a href="#" class="estilo-a-padrao estilo-texto-modo-dark">Empreendedorismo</a> <br>
-                    <a href="#" class="estilo-a-padrao estilo-texto-modo-dark">Marketing Digital</a> <br>
-                    <a href="#" class="estilo-a-padrao estilo-texto-modo-dark">Estudos Bíblicos</a>
+                    <a href="https://www.youtube.com/playlist?list=PLgm_pWyXvC8c7BuVzGj81kIM9mMj0Phdi" target="_blank" class="estilo-a-padrao estilo-texto-modo-dark">Marketing Digital</a> <br>
+                    <a href="https://www.youtube.com/playlist?list=PLgm_pWyXvC8cUWSMRnaujmfuPBBqm7HAB" target="_blank" class="estilo-a-padrao estilo-texto-modo-dark">Educação Financeira</a> <br>
+                    <a href="https://www.youtube.com/playlist?list=PLgm_pWyXvC8duqYAOcsf6zbK9rpPclhaN" target="_blank" class="estilo-a-padrao estilo-texto-modo-dark">Segurança da Informação</a> <br>
+                    <a href="https://www.youtube.com/playlist?list=PLgm_pWyXvC8fPkpBBtJJXF6nuQ3dSiNmv" target="_blank" class="estilo-a-padrao estilo-texto-modo-dark">Empreendedorismo</a> <br>
+                    <a href="https://www.youtube.com/playlist?list=PLgm_pWyXvC8dwYE8p7Wddm4Cww-w3t1j6" target="_blank" class="estilo-a-padrao estilo-texto-modo-dark">Estudos Bíblicos</a> <br>
+                    <a href="https://www.youtube.com/playlist?list=PLgm_pWyXvC8c7DwuNu3vj9C01rsNRZpPG" target="_blank" class="estilo-a-padrao estilo-texto-modo-dark">Investimentos</a>
                 </span>
             </div>
 
