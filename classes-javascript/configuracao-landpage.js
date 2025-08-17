@@ -454,7 +454,13 @@ const ratingValue = document.getElementById('rating-value');
 stars.forEach(star => {
   star.addEventListener('change', () => {
     star.value
-    // teste de captura
-    alert(star.value)
   });
 });
+
+
+function eventoLimpar() {
+  document.getElementById('input-comentario').value = '';
+  document.getElementById('nome-usuario').value = '';
+  
+  stars.forEach(star => star.checked = false);
+}

@@ -1390,12 +1390,13 @@ figcaption > a:hover{
 
 #label-nome-avaliacao > input{
     font: normal normal 18px var(--fonteprimaria);
-    border: 3px solid var(--corprimaria);
+    border: 1px solid var(--corprimaria);
     padding: 8px 10px;
     border-top: none;
     border-left: none;
     border-right: none;
     width: 100%;
+    background: transparent;
 }
 
 .stars {
@@ -1448,7 +1449,7 @@ figcaption > a:hover{
 #input-comentario{
     padding: 15px;
     font: normal normal 18px var(--fonteprimaria);
-    border: 2px solid var(--corprimaria);
+    border: 1px solid var(--corprimaria);
     color: var(--corsextiaria);
     border-radius: 5px;
     height: 150px;
@@ -1472,7 +1473,7 @@ figcaption > a:hover{
     padding: 12px;
     cursor: pointer;
     border-radius: 8px;
-    border: 2px solid var(--corprimaria);
+    border: 1px solid var(--corprimaria);
 }
 
 #estilo-botao-um:hover, #estilo-botao-dois:hover{
