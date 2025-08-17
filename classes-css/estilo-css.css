@@ -1360,6 +1360,11 @@ figcaption > a:hover{
 
 #formulario-comentario > div{
     width: 90%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
 }
 
 #nome-avaliacao{
@@ -1438,4 +1443,14 @@ figcaption > a:hover{
     align-items: center;
     justify-content: center;
     flex-flow: column nowrap;
+}
+
+#input-comentario{
+    padding: 15px;
+    font: normal normal 18px var(--fonteprimaria);
+    border: 2px solid var(--corprimaria);
+    color: var(--corsextiaria);
+    border-radius: 5px;
+    height: 150px;
+    width: 100%;
 }
