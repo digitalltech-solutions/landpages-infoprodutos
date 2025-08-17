@@ -445,3 +445,16 @@ function eventoMovel(){
 function eventoEmpresa(){
     window.location = 'https://digitalltech.netlify.app'
 }
+
+// Configuração de Avaliação de 5 Estrelas
+
+const stars = document.querySelectorAll('.stars input');
+const ratingValue = document.getElementById('rating-value');
+
+stars.forEach(star => {
+  star.addEventListener('change', () => {
+    star.value
+    // teste de captura
+    alert(star.value)
+  });
+});
