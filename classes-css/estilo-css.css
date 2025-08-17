@@ -1454,3 +1454,36 @@ figcaption > a:hover{
     height: 150px;
     width: 100%;
 }
+
+#configurar-display-botoes-comentario{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+#estilo-botao-um, #estilo-botao-dois{
+    background: var(--corprimaria);
+    font: normal normal 18px var(--fonteprimaria);
+    color: var(--corterciaria);
+    width: 50%;
+    padding: 12px;
+    cursor: pointer;
+    border-radius: 8px;
+    border: 2px solid var(--corprimaria);
+}
+
+#estilo-botao-um:hover, #estilo-botao-dois:hover{
+    transform: scale(1.03);
+}
+
+#estilo-botao-um:active, #estilo-botao-dois:active{
+    transform: scale(0.95);
+}
+
+#estilo-botao-dois{
+    background: var(--corterciaria);
+    color: var(--corprimaria);
+}
