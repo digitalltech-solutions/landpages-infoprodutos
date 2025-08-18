@@ -84,6 +84,8 @@ function eventoModoDark() {
         window.document.getElementById('imagem-carrossel-dois').src = '../recursos/imagens/card-mensagem-dois-dark.jpg'
         window.document.getElementById('imagem-carrossel-tres').src = '../recursos/imagens/card-mensagem-tres-dark.jpg'
         window.document.getElementById('icone-ecommerce').src = '../recursos/imagens/icone-ecommerce-claro.png'
+        window.document.getElementById('input-comentario').style.backgroundColor = 'black'
+        window.document.getElementById('nome-usuario').style.backgroundColor = 'black'
 
     }else{
         window.location = window.location.href.split('#')[0];
@@ -163,6 +165,8 @@ function eventoModoDarkDois() {
         window.document.getElementById('imagem-carrossel-dois').src = '../recursos/imagens/card-mensagem-dois-dark.jpg'
         window.document.getElementById('imagem-carrossel-tres').src = '../recursos/imagens/card-mensagem-tres-dark.jpg'
         window.document.getElementById('icone-ecommerce').src = '../recursos/imagens/icone-ecommerce-claro.png'
+        window.document.getElementById('input-comentario').style.backgroundColor = 'black'
+        window.document.getElementById('nome-usuario').style.backgroundColor = 'black'
 
     }else{
         window.location = window.location.href.split('#')[0];

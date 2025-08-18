@@ -1488,3 +1488,7 @@ figcaption > a:hover{
     background: var(--corterciaria);
     color: var(--corprimaria);
 }
+
+#estilo-botao-um{
+    border: none;
+}
