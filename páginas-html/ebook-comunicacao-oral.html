@@ -53,7 +53,7 @@
         "@type": "Offer",
         "url": "https://l1nq.com/ebook-arte-da-comunicacao-oral",
         "priceCurrency": "BRL",
-        "price": "17.99",
+        "price": "19.89",
         "priceValidUntil": "2025-12-31",
         "itemCondition": "https://schema.org/NewCondition",
         "availability": "https://schema.org/InStock"
@@ -133,7 +133,8 @@
                     <h1>Tópicos da Página</h1>
                     <a href="#secao-infoproduto" onclick="eventoCloseMenuDesktop()">Seção de Compra</a>
                     <a href="#descricao-infoproduto" onclick="eventoCloseMenuDesktop()">Descrição do Infoproduto</a>
-                    <a href="#como-comprar" onclick="eventoCloseMenuDesktop()">Como Comprar</a>
+                    <a href="#comentarios" onclick="eventoCloseMenuDesktop()">Comentar sobre o Infoproduto</a>
+                    <a href="#como-comprar" onclick="eventoCloseMenuDesktop()">Como Comprar o Infoproduto</a>
                     <a href="#secao-apresentação" onclick="eventoCloseMenuDesktop()">Informações Importantes</a>
                     <a href="#rodapé" onclick="eventoCloseMenuDesktop()">Rodapé</a>
                 </div>
@@ -256,7 +257,8 @@
                         <ul class="estilo-lista-padrao-dois">
                             <li><a href="#secao-infoproduto" onclick="eventoClose()" class="config-subopcao-padrao">Seção de Compra</a></li>
                             <li><a href="#descricao-infoproduto" onclick="eventoClose()" class="config-subopcao-padrao">Detalhes do Infoproduto</a></li>
-                            <li><a href="#como-comprar" onclick="eventoClose()" class="config-subopcao-padrao">Como Comprar</a></li>
+                            <li><a href="#comentarios" onclick="eventoClose()" class="config-subopcao-padrao">Comentar sobre o Infoproduto</a></li>
+                            <li><a href="#como-comprar" onclick="eventoClose()" class="config-subopcao-padrao">Como Comprar o Infoproduto</a></li>
                             <li><a href="#secao-apresentação" onclick="eventoClose()" class="config-subopcao-padrao">Informações Importantes</a></li>
                             <li><a href="#rodapé" onclick="eventoClose()" class="config-subopcao-padrao">Rodapé</a></li>
                         </ul>
@@ -495,7 +497,7 @@
                         <span id="preco-antigo"><del>R$ 25,00</del> <span class="marca-texto-padrao-um destaque-padrao"><b>18% OFF</b></span></span>
                         <br>
                         <span id="preco-atual" class="estilo-texto-modo-dark">
-                            <span>R$</span><b>17</b><sup>,99</sup>
+                            <span>R$</span><b>19</b><sup>,89</sup>
                         </span>
                     </div>
                     <div id="configurar-botoes-span">
@@ -583,7 +585,7 @@
                 práticos e orientações que ajudam tanto na vida profissional quanto pessoal. É um guia direto ao 
                 ponto, <span class="marcador-texto-dois">cujo material contem tudo que é importante sobre a 
                 comunicação oral</span> feito para quem quer se destacar, dominar e se comunicar bem em 
-                qualquer situação — inclusive nas mais exigentes do mercado atual.
+                qualquer situação — inclusive nas mais exigentes do mercado atual. Segue os principais objetivos do Infoproduto:
             </p>
 
             <ul class="estilo-lista-padrao-um hidden-dois">
@@ -795,5 +797,20 @@
             </span>
         </div>
     </footer>
+
+    <!-- ACESSIBILIDADE - LIBRAS -->
+
+    <div vw class="enabled">
+            <div vw-access-button class="active"></div>
+            <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+
 </body>
 </html>
