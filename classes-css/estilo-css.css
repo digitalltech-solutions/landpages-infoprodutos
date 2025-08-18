@@ -1230,10 +1230,6 @@ footer > div > div:first-child{
     justify-content: center;
 }
 
-.teste{
-    color: red;
-}
-
 /* CONFICURAÇÕES DE ESTILO DE COMO COMPRAR UM INFOPRODUTO */
 
 #como-comprar{
@@ -1439,7 +1435,7 @@ figcaption > a:hover{
 }
 
 #configurar-div-stars{
-    width: 40%;
+    width: 20%;
     display: flex;
     align-items: center;
     justify-content: center;

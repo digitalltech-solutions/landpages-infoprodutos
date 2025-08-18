@@ -212,6 +212,17 @@
     .estilo-texto-padrao{
         font-size: 14px;
     }
+
+    /* CONFIGURAÇÃO DE RESPONSIVIDADE DOS COMENTÁRIOS */
+
+    #label-nome-avaliacao{
+        width: 70%;
+    }
+
+    #configurar-div-stars{
+        width: 200px;
+    }
+
 }
 
 @media screen and (max-width: 595px) {
@@ -407,5 +418,43 @@
 
     #como-comprar > div > div:first-child > h1{
         font-size: 20px;
+    }
+
+    /* CONFIGURAÇÃO DE RESPONSIVIDADE DOS COMENTÁRIOS */
+
+    #nome-avaliacao{
+        flex-flow: column nowrap;
+        justify-content: center;
+        width: 100%;
+        gap: 20px;
+    }
+
+    #label-nome-avaliacao{
+        width: 100%;
+    }
+
+    #configurar-div-stars{
+        width: 100%;
+    }
+
+    #configurar-div-stars{
+        display: flex;
+        flex-flow: row nowrap;
+        gap: 15px;
+    }
+
+    #avaliacao{
+        font-size: 20px;
+    }
+
+    #configurar-display-botoes-comentario{
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 12px;
+    }
+
+    #estilo-botao-um, #estilo-botao-dois{
+        padding: 12px 0;
+        width: 100%;
     }
 }
