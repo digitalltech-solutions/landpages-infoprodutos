@@ -457,4 +457,8 @@
         padding: 12px 0;
         width: 100%;
     }
+
+    #input-comentario{
+        padding: 10px 5px;
+    }
 }
