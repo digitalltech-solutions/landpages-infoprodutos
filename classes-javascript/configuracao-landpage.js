@@ -468,3 +468,9 @@ function eventoLimpar() {
   
   stars.forEach(star => star.checked = false);
 }
+
+// Função de Comentário:
+
+function eventoComentario(){
+    window.location = window.location.href+"comentarios"
+}
