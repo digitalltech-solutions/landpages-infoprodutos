@@ -472,5 +472,5 @@ function eventoLimpar() {
 // Função de Comentário:
 
 function eventoComentario(){
-    window.location = window.location.href+"comentarios"
+    window.location = window.location.href+"#comentarios"
 }
