@@ -554,6 +554,10 @@ header > nav{
 
 /* configuração do modal de acessibilidades */
 
+.configurar-margin-especifico{
+    margin: 0;
+}
+
 #acessibilidades{
     background: #00000033;
     position: fixed;
@@ -617,6 +621,8 @@ header > nav{
     justify-content: space-between;
     align-items: center;
     margin: 16px 0;
+    padding-bottom: 5px;
+    border-bottom: 1px solid var(--corquaternaria);
 }
 
 #input-dislexia {
@@ -631,7 +637,7 @@ header > nav{
 /* Estilo do trilho */
 .elemento-pai {
   display: inline-block;
-  width: 60px;
+  width: 55px;
   height: 30px;
   background: #ccc;
   border-radius: 25px;
@@ -659,7 +665,7 @@ header > nav{
 }
 
 .estilo-acessibilidade input[type="checkbox"]:checked + .elemento-pai .elemento-filho {
-  transform: translateX(90%);
+  transform: translateX(80%);
 }
 
 
