@@ -118,7 +118,7 @@ body, html{
     display: none;
 }
 
-#elemento-pai{
+#elemento-pai, #elemento-pai-dois{
     position: relative;
     width: 45px;
     height: 20px;
@@ -130,7 +130,7 @@ body, html{
     transition: all 0.5s ease-in-out;
 }
 
-#elemento-filho{
+#elemento-filho, #elemento-filho-dois{
     position: absolute;
     width: 25px;
     height: 25px;
@@ -551,6 +551,118 @@ header > nav{
     border: none;
     border: 1px solid var(--corprimaria);
 }
+
+/* configuração do modal de acessibilidades */
+
+#acessibilidades{
+    background: #00000033;
+    position: fixed;
+    height: 100dvh;
+    width: 100dvw;
+    top: 0;
+    display: flex;
+    align-items: center;
+    flex-flow: row nowrap;
+    justify-content: center;
+    z-index: 99999;
+}
+
+#acessibilidades > div{
+    width: 310px;
+    height: 420px;
+    margin: 0px 20px;
+    background: var(--corterciaria);
+    border-bottom: 5px solid var(--corsextiaria);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+
+#conteudo-card{
+    width: 90%;
+}
+
+#configurar-icone-acessibilidade{
+    color: var(--corprimaria);
+    text-align: center;
+    width: 100%;
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+    border-bottom: 2px solid var(--corquaternaria);
+}
+
+#configurar-icone-acessibilidade > span{
+    font-size: 40px;
+}
+
+#configurar-icone-acessibilidade > h1{
+    font: normal bold 25px 'fonte-titulos';
+    line-height: 20px;
+}
+
+#input-dislexia{
+    display: none;
+}
+
+.estilo-titulo-acessibilidade{
+    font: normal normal 20px var(--fonteprimaria);
+    color: var(--corsecundaria);
+}
+
+.estilo-acessibilidade{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 16px 0;
+}
+
+#input-dislexia {
+  display: none;
+}
+
+/* Esconde os checkboxes */
+.estilo-acessibilidade input[type="checkbox"] {
+  display: none;
+}
+
+/* Estilo do trilho */
+.elemento-pai {
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+  background: #ccc;
+  border-radius: 25px;
+  position: relative;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+
+/* Bolinha */
+.elemento-filho {
+  position: absolute;
+  left: 2px;
+  width: 28px;
+  height: 28px;
+  background: #fff;
+  border-radius: 100%;
+  transition: transform 0.3s ease;
+}
+
+/* Quando marcado */
+.estilo-acessibilidade input[type="checkbox"]:checked + .elemento-pai {
+  background: #00ffaa;
+}
+
+.estilo-acessibilidade input[type="checkbox"]:checked + .elemento-pai .elemento-filho {
+  transform: translateX(90%);
+}
+
+
 
 /* CONFIGURAÇÃO MENU MOBILE */
 
