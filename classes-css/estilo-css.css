@@ -639,6 +639,21 @@ header > nav{
     font: normal bold 20px var(--fonteprimaria);
 }
 
+#estilo-opcoes-acessibilidades{
+    width: 100%;
+    background: red;
+}
+
+#estilo-opcoes-acessibilidades > span{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+#estilo-opcoes-acessibilidades > span > h2{
+    font: normal normal 15px var(--fonteprimaria);
+}
+
 /* CONFIGURAÇÃO MENU MOBILE */
 
 @keyframes animacaoMenu{
