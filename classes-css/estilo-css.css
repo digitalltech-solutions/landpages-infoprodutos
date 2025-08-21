@@ -587,6 +587,7 @@ header > nav{
     align-items: center;
     justify-content: center;
     flex-flow: column nowrap;
+    gap: 14px;
 }
 
 #estilo-evento-close{
@@ -623,6 +624,19 @@ header > nav{
 
 #estilo-botao-close-acessibilidade:active{
     transform: scale(0.9);
+}
+
+#estilo-texto-acessibilidade{
+    color: var(--corprimaria);
+    text-align: center;
+}
+
+#estilo-texto-acessibilidade > span{
+    font-size: 40px;
+}
+
+#estilo-texto-acessibilidade > h1{
+    font: normal bold 20px var(--fonteprimaria);
 }
 
 /* CONFIGURAÇÃO MENU MOBILE */
