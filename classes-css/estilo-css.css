@@ -590,7 +590,39 @@ header > nav{
 }
 
 #estilo-evento-close{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
 
+#estilo-evento-close > span{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#estilo-evento-close > span > img{
+    width: 26px;
+}
+
+#estilo-evento-close > span > h1{
+    font: normal normal 25px 'fonte-titulos';
+}
+
+#estilo-botao-close-acessibilidade{
+    color: var(--corprimaria);
+    font-size: 35px;
+    cursor: pointer;
+}
+
+#estilo-botao-close-acessibilidade:hover{
+    transform: scale(1.05);
+}
+
+#estilo-botao-close-acessibilidade:active{
+    transform: scale(0.9);
 }
 
 /* CONFIGURAÇÃO MENU MOBILE */
