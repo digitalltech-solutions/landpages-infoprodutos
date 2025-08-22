@@ -474,3 +474,16 @@ function eventoLimpar() {
 function eventoComentario(){
     window.location = window.location.href+"#comentarios"
 }
+
+const checkboxes = document.querySelectorAll(".acessibilidade");
+
+checkboxes.forEach(cb => {
+    cb.addEventListener("change", function() {
+      if (this.checked) {
+        // desmarca todos os outros
+        checkboxes.forEach(outro => {
+          if (outro !== this) outro.checked = false;
+        });
+      }
+    });
+});

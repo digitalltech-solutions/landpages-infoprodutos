@@ -641,18 +641,88 @@ header > nav{
 
 #estilo-opcoes-acessibilidades{
     width: 100%;
-    background: red;
 }
 
 #estilo-opcoes-acessibilidades > span{
     display: flex;
     align-items: center;
+    justify-content: space-between;
     width: 100%;
+    border-bottom: 1px solid var(--corquaternaria);
+    padding-bottom: 2px;
 }
 
 #estilo-opcoes-acessibilidades > span > h2{
     font: normal normal 15px var(--fonteprimaria);
 }
+
+.titulo-acessibilidade-padrao{
+    font: normal normal 20px var(--fonteprimaria);
+}
+
+.opcao {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.titulo-acessibilidade-padrao {
+  font-size: 15px;
+  color: #333;
+  margin: 0;
+}
+
+
+.switch {
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  width: 43px;
+  height: 26px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 24px;
+    width: 24px;
+    transition: 0.4s;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.switch input:checked + .slider {
+  background-color: #00f89c;
+}
+
+.switch input:checked + .slider:before {
+  transform: translateX(78%);
+}
+
+
 
 /* CONFIGURAÇÃO MENU MOBILE */
 
