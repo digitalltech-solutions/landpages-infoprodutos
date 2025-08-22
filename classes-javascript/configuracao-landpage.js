@@ -487,3 +487,7 @@ checkboxes.forEach(cb => {
       }
     });
 });
+
+function eventoCloseAcessibilidade(){
+    
+}
