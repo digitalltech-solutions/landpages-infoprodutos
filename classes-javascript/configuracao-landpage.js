@@ -488,6 +488,12 @@ checkboxes.forEach(cb => {
     });
 });
 
+function eventoAcessibilidadeOpen(){
+    window.document.getElementById('configurar-display-acessivilidade').style.display = 'flex'
+    window.document.getElementsByTagName('body')[0].style.overflowY = 'hidden'
+}
+
 function eventoCloseAcessibilidade(){
-    
+    window.document.getElementById('configurar-display-acessivilidade').style.display = 'none'
+    window.document.getElementsByTagName('body')[0].style.overflowY = 'auto'
 }
