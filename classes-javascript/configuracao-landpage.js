@@ -580,10 +580,6 @@ function eventoModoDeuteranopia() {
     });
 }
 
-
-
-
-
 const coresOriginais = new Map(); // Vai armazenar cores originais
 
 function eventoModoTritanopia() {
@@ -644,12 +640,6 @@ function eventoModoTritanopia() {
         }
     });
 }
-
-
-
-
-
-
 
 let vozAtiva = false;
 let synth = window.speechSynthesis;
