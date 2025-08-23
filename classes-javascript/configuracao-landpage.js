@@ -532,9 +532,76 @@ function eventoModoDislexia(){
     }
 }
 
-// function eventoModoVoz(){
-    
-// }
+
+
+function eventoModoDeuteranopia() {
+    const isChecked = document.getElementById('deuteranopia').checked;
+
+    // Função para verificar se uma cor contém verde
+    function temVerde(cor) {
+        if (!cor) return false;
+        // Converter a cor para rgb se estiver em formato rgb(a)
+        let rgb = cor;
+        if (cor.startsWith("rgb")) {
+            rgb = cor.match(/\d+/g).map(Number); // [r, g, b]
+        } else if (cor.startsWith("#")) {
+            // Converter hexadecimal para RGB
+            const bigint = parseInt(cor.slice(1), 16);
+            const r = (bigint >> 16) & 255;
+            const g = (bigint >> 8) & 255;
+            const b = bigint & 255;
+            rgb = [r, g, b];
+        } else {
+            return false; // ignora cores nomeadas
+        }
+
+        if (Array.isArray(rgb)) {
+            return rgb[1] > 50 && rgb[1] > rgb[0] && rgb[1] > rgb[2]; // G predominante
+        }
+        return false;
+    }
+
+    // Selecionar todos os elementos do DOM
+    const todosElementos = document.querySelectorAll("*");
+
+    todosElementos.forEach(el => {
+        const style = window.getComputedStyle(el);
+
+        // Verificar e alterar cor do texto
+        if (temVerde(style.color)) {
+            el.style.color = isChecked ? "#555" : style.color; // exemplo de cor substituta
+        }
+
+        // Verificar e alterar cor de fundo
+        if (temVerde(style.backgroundColor)) {
+            el.style.backgroundColor = isChecked ? "#ddd" : style.backgroundColor;
+        }
+
+        // Verificar e alterar borda
+        if (temVerde(style.borderColor)) {
+            el.style.borderColor = isChecked ? "#999" : style.borderColor;
+        }
+
+        // Verificar box-shadow (opcional)
+        if (style.boxShadow && style.boxShadow.includes("rgb")) {
+            if (temVerde(style.boxShadow.match(/\d+/g).map(Number))) {
+                el.style.boxShadow = isChecked ? "none" : style.boxShadow;
+            }
+        }
+    });
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 let vozAtiva = false;
 let synth = window.speechSynthesis;
@@ -577,7 +644,6 @@ document.addEventListener("selectionchange", () => {
     }
 });
 
-// Clicar/tocar fora → para leitura
 document.addEventListener("click", () => {
     if (!vozAtiva) return;
     if (!window.getSelection().toString().trim()) pararLeitura();
