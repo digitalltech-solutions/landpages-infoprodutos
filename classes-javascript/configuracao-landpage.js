@@ -540,7 +540,7 @@ let vozAtiva = false;
 let synth = window.speechSynthesis;
 let ultimaSelecao = "";
 
-// Ativar/desativar voz
+// Ativar/desativar
 function eventoModoVoz() {
     vozAtiva = document.getElementById("voz").checked;
     if (!vozAtiva) pararLeitura();
@@ -549,8 +549,6 @@ function eventoModoVoz() {
 // Ler texto
 function lerTexto(texto) {
     if (!texto || texto.trim() === "") return;
-
-    // Se já estiver lendo o mesmo texto, não reinicia
     if (texto === ultimaSelecao && synth.speaking) return;
 
     pararLeitura();
@@ -563,14 +561,12 @@ function lerTexto(texto) {
 
 // Parar leitura
 function pararLeitura() {
-    if (synth.speaking || synth.pending) {
-        synth.cancel();
-    }
+    if (synth.speaking || synth.pending) synth.cancel();
     ultimaSelecao = "";
 }
 
-// Detecta seleção de texto (desktop e mobile)
-function checarSelecao() {
+// Detectar mudança de seleção
+document.addEventListener("selectionchange", () => {
     if (!vozAtiva) return;
 
     const selecao = window.getSelection().toString().trim();
@@ -579,22 +575,15 @@ function checarSelecao() {
     } else {
         pararLeitura();
     }
-}
+});
 
-// Eventos desktop
-document.addEventListener("mouseup", checarSelecao);
-document.addEventListener("keyup", checarSelecao); // caso use teclado para selecionar
-
-// Eventos mobile
-document.addEventListener("touchend", checarSelecao);
-document.addEventListener("touchcancel", pararLeitura);
-
-// Clique fora → parar leitura
-document.addEventListener("click", (e) => {
+// Clicar/tocar fora → para leitura
+document.addEventListener("click", () => {
     if (!vozAtiva) return;
+    if (!window.getSelection().toString().trim()) pararLeitura();
+});
 
-    // Se clicar em uma área sem seleção ativa
-    if (!window.getSelection().toString().trim()) {
-        pararLeitura();
-    }
+document.addEventListener("touchend", () => {
+    if (!vozAtiva) return;
+    if (!window.getSelection().toString().trim()) pararLeitura();
 });
