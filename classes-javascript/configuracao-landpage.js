@@ -498,6 +498,8 @@ checkboxes.forEach(cb => {
     });
 });
 
+// Configuração de Acessibilidades:
+
 function eventoAcessibilidadeOpen(){
     window.document.getElementById('configurar-display-acessivilidade').style.display = 'flex'
     window.document.getElementsByTagName('body')[0].style.overflowY = 'hidden'
@@ -506,4 +508,26 @@ function eventoAcessibilidadeOpen(){
 function eventoCloseAcessibilidade(){
     window.document.getElementById('configurar-display-acessivilidade').style.display = 'none'
     window.document.getElementsByTagName('body')[0].style.overflowY = 'auto'
+}
+
+function eventoModoDislexia(){
+    if(window.document.getElementById('dislexia').checked == true){
+        // Aplicação da Fonte Tipográfica em Todas as Tags
+        
+        window.document.querySelectorAll('p, h1, h2, h3, li, a, input, button, sub, sup, textarea, del').forEach((elementosDislexia) => {
+            elementosDislexia.style.fontFamily = 'fonte-dislexia'
+        })
+
+        window.document.getElementById('avaliacao').style.fontFamily = 'fonte-dislexia'
+        window.document.getElementById('preco-atual').style.fontFamily = 'fonte-dislexia'
+        window.document.getElementById('preco-antigo').style.fontFamily = 'fonte-dislexia'
+    }else{
+        // window.document.querySelectorAll('p, h1, h2, h3, li, a, input, button, sub, sup, textarea, del').forEach((elementosDislexia) => {
+        //     elementosDislexia.style.fontFamily = 'auto'
+        // })
+
+        window.document.querySelectorAll('p, h1, h2, h3, li, a, input, button, sub, sup, textarea, del').forEach((elementos) => {
+            elementos.style.removeProperty('font-family');
+        });
+    }
 }

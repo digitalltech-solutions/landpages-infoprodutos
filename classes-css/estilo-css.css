@@ -24,9 +24,15 @@ body, html{
     scroll-behavior: smooth;
 }
 
+
 @font-face {
     font-family: 'fonte-titulos';
     src: url(../recursos/fontes-tipograficas/fonte-titulo.ttf);
+}
+
+@font-face {
+    font-family: 'fonte-dislexia';
+    src: url(../recursos/fontes-tipograficas/fonte-dislexia.otf) format('opentype');
 }
 
 :root{
@@ -221,6 +227,7 @@ header > nav{
     padding: 0px 5px 5px 5px;
     border-radius: 6px;
     margin-top: 10px;
+    z-index: 99999;
 }
 
 #configurar-triangulo{
@@ -1144,6 +1151,7 @@ header > nav{
     border: 1px solid var(--corprimaria);
     background: var(--corterciaria);
     color: var(--corprimaria);
+    width: 100%;
 }
 
 /* configuração da descrição do infoproduto */
