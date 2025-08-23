@@ -522,10 +522,6 @@ function eventoModoDislexia(){
         window.document.getElementById('preco-atual').style.fontFamily = 'fonte-dislexia'
         window.document.getElementById('preco-antigo').style.fontFamily = 'fonte-dislexia'
     }else{
-        // window.document.querySelectorAll('p, h1, h2, h3, li, a, input, button, sub, sup, textarea, del').forEach((elementosDislexia) => {
-        //     elementosDislexia.style.fontFamily = 'auto'
-        // })
-
         window.document.querySelectorAll('p, h1, h2, h3, li, a, input, button, sub, sup, textarea, del').forEach((elementos) => {
             elementos.style.removeProperty('font-family');
         });
