@@ -485,19 +485,6 @@ function eventoComentario(){
     window.location = window.location.href+"#comentarios"
 }
 
-const checkboxes = document.querySelectorAll(".acessibilidade");
-
-checkboxes.forEach(cb => {
-    cb.addEventListener("change", function() {
-      if (this.checked) {
-        // desmarca todos os outros
-        checkboxes.forEach(outro => {
-          if (outro !== this) outro.checked = false;
-        });
-      }
-    });
-});
-
 // Configuração de Acessibilidades:
 
 function eventoAcessibilidadeOpen(){
@@ -544,3 +531,52 @@ function eventoModoDislexia(){
         window.document.getElementById('voz').checked = false
     }
 }
+
+// function eventoModoVoz(){
+    
+// }
+
+let vozAtiva = false;
+let synth = window.speechSynthesis;
+
+function eventoModoVoz() {
+    vozAtiva = document.getElementById("voz").checked;
+    if (!vozAtiva) {
+        pararLeitura(); // desativa e limpa qualquer leitura em andamento
+    }
+}
+
+function lerTexto(texto) {
+    pararLeitura();
+    if (!texto || texto.trim() === "") return;
+
+    let utterance = new SpeechSynthesisUtterance(texto.trim());
+    utterance.lang = "pt-BR"; // português
+    synth.speak(utterance);
+}
+
+function pararLeitura() {
+    if (synth.speaking || synth.pending) {
+        synth.cancel();
+    }
+}
+
+// Detecta quando o usuário solta o mouse (fim da seleção)
+document.addEventListener("mouseup", () => {
+    if (!vozAtiva) return;
+
+    const selecionado = window.getSelection().toString().trim();
+    if (selecionado) {
+        lerTexto(selecionado);
+    }
+});
+
+// Clique fora → parar leitura
+document.addEventListener("click", (e) => {
+    if (!vozAtiva) return;
+
+    // Se clicar em uma área sem texto selecionado
+    if (!window.getSelection().toString().trim()) {
+        pararLeitura();
+    }
+});
