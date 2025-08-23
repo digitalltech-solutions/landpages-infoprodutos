@@ -521,9 +521,26 @@ function eventoModoDislexia(){
         window.document.getElementById('avaliacao').style.fontFamily = 'fonte-dislexia'
         window.document.getElementById('preco-atual').style.fontFamily = 'fonte-dislexia'
         window.document.getElementById('preco-antigo').style.fontFamily = 'fonte-dislexia'
+
+        window.document.getElementById('dislexia').checked = true
+        window.document.getElementById('deuteranopia').checked = false
+        window.document.getElementById('protanopia').checked = false
+        window.document.getElementById('tritanopia').checked = false
+        window.document.getElementById('voz').checked = false
+
     }else{
         window.document.querySelectorAll('p, h1, h2, h3, li, a, input, button, sub, sup, textarea, del').forEach((elementos) => {
             elementos.style.removeProperty('font-family');
         });
+
+        window.document.getElementById('avaliacao').style.removeProperty('font-family')
+        window.document.getElementById('preco-atual').style.removeProperty('font-family')
+        window.document.getElementById('preco-antigo').style.removeProperty('font-family')
+
+        window.document.getElementById('dislexia').checked = false
+        window.document.getElementById('deuteranopia').checked = false
+        window.document.getElementById('protanopia').checked = false
+        window.document.getElementById('tritanopia').checked = false
+        window.document.getElementById('voz').checked = false
     }
 }
