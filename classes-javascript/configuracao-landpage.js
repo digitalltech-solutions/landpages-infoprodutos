@@ -538,44 +538,62 @@ function eventoModoDislexia(){
 
 let vozAtiva = false;
 let synth = window.speechSynthesis;
+let ultimaSelecao = "";
 
+// Ativar/desativar voz
 function eventoModoVoz() {
     vozAtiva = document.getElementById("voz").checked;
-    if (!vozAtiva) {
-        pararLeitura(); // desativa e limpa qualquer leitura em andamento
-    }
+    if (!vozAtiva) pararLeitura();
 }
 
+// Ler texto
 function lerTexto(texto) {
-    pararLeitura();
     if (!texto || texto.trim() === "") return;
 
+    // Se já estiver lendo o mesmo texto, não reinicia
+    if (texto === ultimaSelecao && synth.speaking) return;
+
+    pararLeitura();
+    ultimaSelecao = texto;
+
     let utterance = new SpeechSynthesisUtterance(texto.trim());
-    utterance.lang = "pt-BR"; // português
+    utterance.lang = "pt-BR";
     synth.speak(utterance);
 }
 
+// Parar leitura
 function pararLeitura() {
     if (synth.speaking || synth.pending) {
         synth.cancel();
     }
+    ultimaSelecao = "";
 }
 
-// Detecta quando o usuário solta o mouse (fim da seleção)
-document.addEventListener("mouseup", () => {
+// Detecta seleção de texto (desktop e mobile)
+function checarSelecao() {
     if (!vozAtiva) return;
 
-    const selecionado = window.getSelection().toString().trim();
-    if (selecionado) {
-        lerTexto(selecionado);
+    const selecao = window.getSelection().toString().trim();
+    if (selecao) {
+        lerTexto(selecao);
+    } else {
+        pararLeitura();
     }
-});
+}
+
+// Eventos desktop
+document.addEventListener("mouseup", checarSelecao);
+document.addEventListener("keyup", checarSelecao); // caso use teclado para selecionar
+
+// Eventos mobile
+document.addEventListener("touchend", checarSelecao);
+document.addEventListener("touchcancel", pararLeitura);
 
 // Clique fora → parar leitura
 document.addEventListener("click", (e) => {
     if (!vozAtiva) return;
 
-    // Se clicar em uma área sem texto selecionado
+    // Se clicar em uma área sem seleção ativa
     if (!window.getSelection().toString().trim()) {
         pararLeitura();
     }
