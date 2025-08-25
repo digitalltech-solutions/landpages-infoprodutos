@@ -775,7 +775,7 @@ header > nav{
     transform: scale(1.05);
 }
 
-#icones-compartilhar-infoproduto > img:hover{
+#icones-compartilhar-infoproduto > img:active{
     transform: scale(0.95);
 }
 
