@@ -520,7 +520,7 @@ header > nav{
     z-index: 99999;
 }
 
-#configurar-display-modal-indisponivel > div{
+#configurar-display-modal-indisponivel > div, #configurar-estilo-card-dois{
     width: 400px;
     padding: 10px 0;
     border-radius: 10px;
@@ -597,7 +597,7 @@ header > nav{
     gap: 5px;
 }
 
-#estilo-evento-close{
+#estilo-evento-close, #estilo-evento-close-dois{
     width: 100%;
     display: flex;
     align-items: center;
@@ -605,17 +605,17 @@ header > nav{
     justify-content: space-between;
 }
 
-#estilo-evento-close > span{
+#estilo-evento-close > span, #estilo-evento-close-dois > span{
     display: flex;
     align-items: center;
     justify-content: flex-start;
 }
 
-#estilo-evento-close > span > img{
+#estilo-evento-close > span > img, #estilo-evento-close-dois > span > img{
     width: 26px;
 }
 
-#estilo-evento-close > span > h1{
+#estilo-evento-close > span > h1, #estilo-evento-close-dois > span > h1{
     font: normal normal 25px 'fonte-titulos';
 }
 
@@ -641,7 +641,6 @@ header > nav{
 
 #estilo-texto-acessibilidade > h1{
     font: normal bold 25px var(--fonteprimaria);
-    /* line-height: 0; */
 }
 
 #estilo-opcoes-acessibilidades{
@@ -738,6 +737,24 @@ header > nav{
     border: none;
 }
 
+/* configuração de modal - compartilhar */
+
+#configurar-display-compartilhar{
+    background: #00000033;
+    position: fixed;
+    height: 100dvh;
+    width: 100dvw;
+    top: 0;
+    display: flex;
+    align-items: center;
+    flex-flow: row nowrap;
+    justify-content: center;
+    z-index: 99999;
+}
+
+#configurar-botao-compartilhar{
+    width: 90%;
+}
 
 /* CONFIGURAÇÃO MENU MOBILE */
 
