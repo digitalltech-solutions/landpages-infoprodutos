@@ -745,7 +745,7 @@ header > nav{
     height: 100dvh;
     width: 100dvw;
     top: 0;
-    display: flex;
+    display: none;
     align-items: center;
     flex-flow: row nowrap;
     justify-content: center;

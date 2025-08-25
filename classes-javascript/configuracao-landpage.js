@@ -691,3 +691,20 @@ document.addEventListener("touchend", () => {
     if (!vozAtiva) return;
     if (!window.getSelection().toString().trim()) pararLeitura();
 });
+
+
+// Evento Compartilhar
+
+function eventoOpenCompartilhar(){
+    window.document.getElementById('configurar-display-compartilhar').style.display = 'flex'
+    window.document.getElementsByTagName('body')[0].style.overflowY = 'hidden'
+}
+
+function eventoCloseCompartilhar(){
+    window.document.getElementById('configurar-display-compartilhar').style.display = 'none'
+    window.document.getElementsByTagName('body')[0].style.overflowY = 'auto'
+}
+
+function eventoCompartilharInstagram(){
+
+}
