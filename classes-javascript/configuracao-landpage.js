@@ -89,6 +89,7 @@ function eventoModoDark() {
         window.document.getElementById('imagem-carrossel-tres').src = '../recursos/imagens/card-mensagem-tres-dark.jpg'
         window.document.getElementById('icone-ecommerce').src = '../recursos/imagens/icone-ecommerce-claro.png'
         window.document.getElementById('icone-empresa-acessibilidade').src = '../recursos/imagens/icone-ecommerce-claro.png'
+        window.document.getElementById('icone-empresa-compartilhar').src = '../recursos/imagens/icone-ecommerce-claro.png'
         window.document.getElementById('input-comentario').style.backgroundColor = 'black'
         window.document.getElementById('nome-usuario').style.backgroundColor = 'black'
 
@@ -174,10 +175,10 @@ function eventoModoDarkDois() {
         window.document.getElementById('icone-empresa-acessibilidade').src = '../recursos/imagens/icone-ecommerce-claro.png'
         window.document.getElementById('imagem-carrossel-tres').src = '../recursos/imagens/card-mensagem-tres-dark.jpg'
         window.document.getElementById('icone-mobile').src = '../recursos/imagens/icone-digitalltech-mobile-dark.jpg'
+        window.document.getElementById('icone-empresa-compartilhar').src = '../recursos/imagens/icone-ecommerce-claro.png'
         window.document.getElementById('icone-ecommerce').src = '../recursos/imagens/icone-ecommerce-claro.png'
         window.document.getElementById('input-comentario').style.backgroundColor = 'black'
         window.document.getElementById('nome-usuario').style.backgroundColor = 'black'
-
     }else{
         window.location = window.location.href.split('#')[0];
     }
@@ -482,7 +483,14 @@ function eventoLimpar() {
 // Função de Comentário:
 
 function eventoComentario(){
-    window.location = window.location.href+"#comentarios"
+       // Atualiza o hash da URL sem concatenar
+    window.location.hash = "comentarios";
+
+    // Faz o scroll suave até a seção
+    const alvo = document.getElementById("comentarios");
+    if (alvo) {
+        alvo.scrollIntoView({ behavior: "smooth" });
+    }
 }
 
 // Configuração de Acessibilidades:
@@ -705,6 +713,19 @@ function eventoCloseCompartilhar(){
     window.document.getElementsByTagName('body')[0].style.overflowY = 'auto'
 }
 
-function eventoCompartilharInstagram(){
+function eventoCompartilharWhatsapp(){
+        // Captura a URL da página atual
+    const url = window.location.href;
 
+    // Mensagem genérica sobre a loja
+    const mensagem = `🚀 Conheça essa loja incrível de infoprodutos digitais!  
+Ela oferece eBooks, cursos, modelos e muito mais para facilitar sua vida.  
+
+👉 Confira aqui: ${url}`;
+
+    // Monta o link do WhatsApp (funciona em desktop e celular)
+    const linkWhatsapp = "https://wa.me/?text=" + encodeURIComponent(mensagem);
+
+    // Abre em nova aba
+    window.open(linkWhatsapp, "_blank");
 }
