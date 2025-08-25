@@ -713,19 +713,4 @@ function eventoCloseCompartilhar(){
     window.document.getElementsByTagName('body')[0].style.overflowY = 'auto'
 }
 
-function eventoCompartilharWhatsapp(){
-        // Captura a URL da página atual
-    const url = window.location.href;
-
-    // Mensagem genérica sobre a loja
-    const mensagem = `🚀 Conheça essa loja incrível de infoprodutos digitais!  
-Ela oferece eBooks, cursos, modelos e muito mais para facilitar sua vida.  
-
-👉 Confira aqui: ${url}`;
-
-    // Monta o link do WhatsApp (funciona em desktop e celular)
-    const linkWhatsapp = "https://wa.me/?text=" + encodeURIComponent(mensagem);
-
-    // Abre em nova aba
-    window.open(linkWhatsapp, "_blank");
-}
+// Eventos de Compartilhamento Dinâmico
