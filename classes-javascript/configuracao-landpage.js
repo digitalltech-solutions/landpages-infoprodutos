@@ -1,4 +1,4 @@
-function tamanhoBody(){
+{function tamanhoBody(){
     if(window.innerWidth > 595){
         window.document.getElementById('container-select-opcoes').style.display = 'none'
         window.document.getElementById('menu-mobile').style.display = 'none'
@@ -711,6 +711,11 @@ function eventoOpenCompartilhar(){
 function eventoCloseCompartilhar(){
     window.document.getElementById('configurar-display-compartilhar').style.display = 'none'
     window.document.getElementsByTagName('body')[0].style.overflowY = 'auto'
+    }
 }
 
 // Eventos de Compartilhamento Dinâmico
+
+function eventoImprimir(){
+    window.print()
+}
