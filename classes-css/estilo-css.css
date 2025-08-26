@@ -757,13 +757,13 @@ header > nav{
 }
 
 #icones-compartilhar-infoproduto{
-    width: 98%;
+    width: 80%;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
     align-items: center;
-    margin: 25px 0;
-    gap: 2px;
+    margin: 15px 0;
+    gap: 15px;
 }
 
 #icones-compartilhar-infoproduto > img{
