@@ -361,6 +361,10 @@ function eventoLoja(){
     window.location = 'https://digitalltech.netlify.app'
 }
 
+function eventoDuvidas(){
+    window.location = 'https://digitalltech.netlify.app/classehtml/duvidas'
+}
+
 //CONFIGURAÇÃO MODAL DE FUNÇÃO INDISPONÍVEL:
 // Configuracão do modal indisponível transparente
 
@@ -494,6 +498,10 @@ function eventoComentario(){
 }
 
 // Configuração de Acessibilidades:
+
+function eventoAfiliar(){
+    window.location = "https://digitalltech.netlify.app/classehtml/saiba-vender-conosco"
+}
 
 function eventoAcessibilidadeOpen(){
     window.document.getElementById('configurar-display-acessivilidade').style.display = 'flex'
