@@ -384,6 +384,13 @@ function eventoCloseMenuDesktop(){
     window.document.getElementById('configuracao-menu-sobre').style.display = 'none'
 }
 
+// Configuracão do modal indisponível oculto
+
+function eventoModalOcultoDois(){
+    window.document.getElementById('configurar-display-modal-agradecimento').style.display = 'none'
+    window.document.getElementsByTagName('body')[0].style.overflowY = 'auto'
+}
+
 // Configuração da Apresentação de Imagem
 
 var imageCapa = window.document.getElementById('capa-infoproduto')
@@ -728,7 +735,10 @@ function eventoImprimir(){
 
 // Evento Enviar Dados do Formulário:
 
-  // liga a lógica somente quando o DOM estiver pronto
+// function eventoModalAparenteDois(){
+//     window.document.getElementById('configurar-display-modal-agradecimento').style.display = 'flex'
+//     window.document.getElementsByTagName('body')[0].style.overflowY = 'hidden'
+// }
 
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("formulario-comentario");
@@ -761,13 +771,13 @@ document.addEventListener("DOMContentLoaded", () => {
       const res = await fetch(URL_SCRIPT, { method: "POST", body: fd });
       if (!res.ok) throw new Error("HTTP " + res.status);
 
-      let msg = "Feedback enviado com sucesso!";
+    //   let msg = "Feedback enviado com sucesso!";
       try {
         const json = await res.json();
         if (json && json.ok === false) msg = "Erro: " + (json.msg || "Falha no servidor");
       } catch (_) {}
 
-      alert(msg);
+    //   alert(msg);
       form.reset();
     } catch (err) {
       alert("Erro ao enviar: " + err.message);
@@ -775,3 +785,15 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+function eventoEnviarComentario(){ 
+    let nome = window.document.getElementById('nome-usuario').value
+    let feedback = window.document.getElementById('input-comentario').value
+    
+    if(nome.length >= 3 && nome.length <= 30 && feedback.length >= 3 && feedback.length <= 1000){
+        window.document.getElementById('configurar-display-modal-agradecimento').style.display = 'flex'
+        window.document.getElementsByTagName('body')[0].style.overflowY = 'hidden'
+    }else{
+        alert('Preencha os Dados Corretamente!')
+    }
+}

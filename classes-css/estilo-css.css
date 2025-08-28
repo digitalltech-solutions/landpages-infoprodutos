@@ -520,10 +520,6 @@ header > nav{
     z-index: 99999;
 }
 
-#configurar-display-modal-agradecimento{
-    display: flex;
-}
-
 #configurar-display-modal-indisponivel > div, #configurar-estilo-card-dois, #configurar-display-modal-agradecimento > div{
     width: 400px;
     padding: 10px 0;
