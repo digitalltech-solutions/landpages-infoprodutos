@@ -729,27 +729,26 @@ function eventoImprimir(){
 // Evento Enviar Dados do Formulário:
 
   // liga a lógica somente quando o DOM estiver pronto
+
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("formulario-comentario");
   if (!form) return;
 
-  // garantia: botão "Limpar" continua funcionando
-  window.eventoLimpar = function eventoLimpar(){ form.reset(); };
+  // Botão limpar
+  window.eventoLimpar = function () { form.reset(); };
 
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
-    const id          = 1; // <-- aqui você pode substituir manualmente depois
     const nome        = document.getElementById("nome-usuario").value.trim();
     const comentario  = document.getElementById("input-comentario").value.trim();
     const infoproduto = document.title;
     const checked     = document.querySelector("input[name='rating']:checked");
     const estrelas    = checked ? checked.value : "0";
-    const dataHora    = new Date().toLocaleString("pt-BR"); // data + hora
+    const dataHora    = new Date().toLocaleString("pt-BR");
 
-    // monta FormData → evita preflight/CORS
+    // prepara dados para enviar
     const fd = new FormData();
-    fd.append("id",         id);          // <-- novo campo
     fd.append("nome",       nome);
     fd.append("feedback",   comentario);
     fd.append("infoproduto", infoproduto);
@@ -759,20 +758,14 @@ document.addEventListener("DOMContentLoaded", () => {
     const URL_SCRIPT = "https://script.google.com/macros/s/AKfycbzKQuPwax94NZYDTaOtKNo5sV_7om3sOYgnc09jSncebrAUF3PYnbcJMbfrjxG5m1o_/exec";
 
     try {
-      const res = await fetch(URL_SCRIPT, {
-        method: "POST",
-        body: fd,
-        redirect: "follow",
-        credentials: "omit"
-      });
-
+      const res = await fetch(URL_SCRIPT, { method: "POST", body: fd });
       if (!res.ok) throw new Error("HTTP " + res.status);
 
       let msg = "Feedback enviado com sucesso!";
       try {
         const json = await res.json();
         if (json && json.ok === false) msg = "Erro: " + (json.msg || "Falha no servidor");
-      } catch(_) {}
+      } catch (_) {}
 
       alert(msg);
       form.reset();
