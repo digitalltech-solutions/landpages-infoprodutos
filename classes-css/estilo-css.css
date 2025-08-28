@@ -553,6 +553,10 @@ header > nav{
     margin: 10px 0;
 }
 
+#configurar-display-modal-agradecimento > div > div > p{
+    margin: 5px 0;
+}
+
 #configurar-display-modal-indisponivel > div > div > button, #configurar-display-modal-agradecimento > div > div > button{
     background: var(--corprimaria);
     color: var(--corterciaria);
