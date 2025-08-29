@@ -1414,10 +1414,10 @@ footer > div > div:first-child{
     width: 220px;
     display: flex;
     flex-flow: column nowrap;
-    gap: 10px;
+    gap: 5px;
 }
 
-#gmail{
+#gmail, #nome{
     padding: 8px 5px;
     border: none;
     width: 95%;
@@ -1425,7 +1425,7 @@ footer > div > div:first-child{
     font: normal normal 15px var(--fonteprimaria);
 }
 
-#label-gmail{
+#label-gmail, #label-nome{
     width: 100%;
 }
 
