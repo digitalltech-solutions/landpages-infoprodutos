@@ -678,6 +678,11 @@ header > nav{
     font: normal normal 15px var(--fonteprimaria);
 }
 
+#titulo-sucesso{
+    font: normal bold 20px 'fonte-titulos';
+    color: var(--corprimaria);
+}
+
 .titulo-acessibilidade-padrao{
     font: normal normal 20px var(--fonteprimaria);
 }
