@@ -735,11 +735,6 @@ function eventoImprimir(){
 
 // Evento Enviar Dados do Formulário:
 
-// function eventoModalAparenteDois(){
-//     window.document.getElementById('configurar-display-modal-agradecimento').style.display = 'flex'
-//     window.document.getElementsByTagName('body')[0].style.overflowY = 'hidden'
-// }
-
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("formulario-comentario");
   if (!form) return;
@@ -797,3 +792,55 @@ function eventoEnviarComentario(){
         alert('Preencha os Dados Corretamente!')
     }
 }
+
+// Configuração JS para o envio na planilha Newsletter:
+
+document.addEventListener("DOMContentLoaded", () => {
+  const formNewsletter = document.querySelector(".configurar-div-especifico");
+  if (!formNewsletter) return;
+
+  formNewsletter.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const nome  = document.getElementById("nome").value.trim();
+    const gmail = document.getElementById("gmail").value.trim();
+
+    const origem = document.title;
+    const dispositivo = /Mobi|Android|iPhone/i.test(navigator.userAgent) ? "Mobile" : "Desktop";
+
+    const agora = new Date();
+    const data = agora.toLocaleDateString("pt-BR");
+    const hora = agora.toLocaleTimeString("pt-BR");
+
+    const fd = new FormData();
+    fd.append("nome", nome);
+    fd.append("gmail", gmail);
+    fd.append("origem", origem);
+    fd.append("dispositivo", dispositivo);
+    fd.append("data", data);
+    fd.append("hora", hora);
+
+    const URL_SCRIPT = "https://script.google.com/macros/s/AKfycbxjyiOjjVGZQvzkgE9tBQ0AzCUdmqSRwYsSIi82ke6tSNqm6OjwJHGmmpNDkIYMoR0u/exec";
+
+    try {
+      const res = await fetch(URL_SCRIPT, {
+        method: "POST",
+        body: fd,
+        mode: "cors" // importante para funcionar local
+      });
+
+      if (!res.ok) throw new Error("HTTPS" + res.status);
+
+      const json = await res.json();
+      if (json.ok) {
+        alert("Inscrição realizada com sucesso!");
+        formNewsletter.reset();
+      } else {
+        alert("Erro: " + (json.msg || "Falha ao salvar"));
+      }
+    } catch (err) {
+      alert("Erro ao enviar: " + err.message);
+      console.error(err);
+    }
+  });
+});
