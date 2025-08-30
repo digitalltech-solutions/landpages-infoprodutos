@@ -794,53 +794,38 @@ function eventoEnviarComentario(){
 }
 
 // Configuração JS para o envio na planilha Newsletter:
+  const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyTtRMMI4yuJEILzxhQhJyYzlhCMz_rSgjYv1YhjpgYO63a3LTvgS440pLmKqblg3jq/exec";
 
-document.addEventListener("DOMContentLoaded", () => {
-  const formNewsletter = document.querySelector(".configurar-div-especifico");
-  if (!formNewsletter) return;
-
-  formNewsletter.addEventListener("submit", async (e) => {
+  document.getElementById("newsletter-form").addEventListener("submit", function(e) {
     e.preventDefault();
 
     const nome  = document.getElementById("nome").value.trim();
     const gmail = document.getElementById("gmail").value.trim();
 
+    // 🔹 Origem = título da página
     const origem = document.title;
-    const dispositivo = /Mobi|Android|iPhone/i.test(navigator.userAgent) ? "Mobile" : "Desktop";
 
-    const agora = new Date();
-    const data = agora.toLocaleDateString("pt-BR");
-    const hora = agora.toLocaleTimeString("pt-BR");
+    // 🔹 Monta os parâmetros para enviar
+    const params = new URLSearchParams({
+      nome: nome,
+      gmail: gmail,
+      origem: origem,
+      dispositivo: navigator.userAgent,
+      data: new Date().toLocaleDateString("pt-BR"),
+      hora: new Date().toLocaleTimeString("pt-BR")
+    });
 
-    const fd = new FormData();
-    fd.append("nome", nome);
-    fd.append("gmail", gmail);
-    fd.append("origem", origem);
-    fd.append("dispositivo", dispositivo);
-    fd.append("data", data);
-    fd.append("hora", hora);
-
-    const URL_SCRIPT = "https://script.google.com/macros/s/AKfycbxjyiOjjVGZQvzkgE9tBQ0AzCUdmqSRwYsSIi82ke6tSNqm6OjwJHGmmpNDkIYMoR0u/exec";
-
-    try {
-      const res = await fetch(URL_SCRIPT, {
-        method: "POST",
-        body: fd,
-        mode: "cors" // importante para funcionar local
+    fetch(SCRIPT_URL + "?" + params.toString(), { method: "GET" })
+      .then(r => r.json())
+      .then(res => {
+        if (res.ok) {
+          alert("✅ Inscrição enviada com sucesso!");
+          document.getElementById("newsletter-form").reset();
+        } else {
+          alert("❌ Erro: " + res.msg);
+        }
+      })
+      .catch(err => {
+        alert("⚠️ Falha na comunicação: " + err.message);
       });
-
-      if (!res.ok) throw new Error("HTTPS" + res.status);
-
-      const json = await res.json();
-      if (json.ok) {
-        alert("Inscrição realizada com sucesso!");
-        formNewsletter.reset();
-      } else {
-        alert("Erro: " + (json.msg || "Falha ao salvar"));
-      }
-    } catch (err) {
-      alert("Erro ao enviar: " + err.message);
-      console.error(err);
-    }
   });
-});

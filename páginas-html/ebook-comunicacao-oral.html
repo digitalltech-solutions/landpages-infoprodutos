@@ -855,13 +855,15 @@
                 </span>
             </div>
 
-            <form class="configurar-div-especifico">
-                <p id="configurar-texto-gmail" class="estilo-texto-modo-dark">Participe da nossa newsletter e receba novidades pelo gmail</p>
-                <label for="gmail" id="label-nome">
-                    <input type="text" name="" id="nome" placeholder="Digite seu None" minlength="3" maxlength="30" required pattern="^[A-Za-zÀ-ÿ\s]+$">
+            <form id="newsletter-form" class="configurar-div-especifico">
+                <p id="configurar-texto-gmail" class="estilo-texto-modo-dark">
+                    Participe da nossa newsletter e receba novidades pelo gmail
+                </p>
+                <label for="nome" id="label-nome">
+                    <input type="text" id="nome" placeholder="Digite seu Nome" minlength="3" maxlength="30" required pattern="^[A-Za-zÀ-ÿ\s]+$">
                 </label>
                 <label for="gmail" id="label-gmail">
-                    <input type="text" name="" id="gmail" placeholder="Gmail: exemplo@gmail.com" pattern="^[a-zA-Z0-9._]+@gmail\.com$" required>
+                    <input type="text" id="gmail" placeholder="Gmail: exemplo@gmail.com" pattern="^[a-zA-Z0-9._]+@gmail\.com$" required>
                 </label>
                 <button id="enviar-gmail" class="estilo-botao-dark-dois" type="submit">Enviar</button>
             </form>
