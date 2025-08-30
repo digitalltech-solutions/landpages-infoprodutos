@@ -841,3 +841,7 @@ function eventoNewsletter(){
         alert("⚠️ Falha na comunicação: " + err.message);
       });
   });
+
+function eventoLogin(){
+    window.location = "https://digitalltech.netlify.app/classehtml/login-digitalltech"
+}
