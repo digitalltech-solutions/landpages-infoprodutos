@@ -793,17 +793,18 @@ function eventoEnviarComentario(){
     }
 }
 
-// function eventoNewsletter(){
-//     let nome = window.document.getElementById('nome').value
-//     let feedback = window.document.getElementById('gmail').value
+function eventoNewsletter(){
+    let nome = window.document.getElementById('nome').value
+    let gmail = window.document.getElementById('gmail').value
+    let regExGmail = /^[a-zA-Z0-9._]+@gmail\.com$/
     
-//     if(nome.length >= 3 && nome.length <= 30 && feedback.length >= 3 && feedback.length <= 1000){
-//         window.document.getElementById('configurar-display-modal-agradecimento').style.display = 'flex'
-//         window.document.getElementsByTagName('body')[0].style.overflowY = 'hidden'
-//     }else{
-//         alert('Preencha os Dados Corretamente!')
-//     }
-// }
+    if(nome.length >= 3 && regExGmail.test(gmail)){
+        window.document.getElementById('configurar-display-modal-agradecimento').style.display = 'flex'
+        window.document.getElementsByTagName('body')[0].style.overflowY = 'hidden'
+    }else{
+        alert('Preencha os Dados Corretamente!')
+    }
+}
 
 // Configuração JS para o envio na planilha Newsletter:
   const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyTtRMMI4yuJEILzxhQhJyYzlhCMz_rSgjYv1YhjpgYO63a3LTvgS440pLmKqblg3jq/exec";
@@ -831,7 +832,6 @@ function eventoEnviarComentario(){
       .then(r => r.json())
       .then(res => {
         if (res.ok) {
-          alert("✅ Inscrição enviada com sucesso!");
           document.getElementById("newsletter-form").reset();
         } else {
           alert("❌ Erro: " + res.msg);
