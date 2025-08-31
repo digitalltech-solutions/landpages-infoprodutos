@@ -518,6 +518,14 @@ function eventoGratis(){
     window.location = "https://digitalltech.netlify.app/classehtml/gratis"
 }
 
+function eventoServicos(){
+    window.location = "https://digitalltech.netlify.app/classehtml/serviços"
+}
+
+function eventoYoutube(){
+    window.location = "youtube.com"
+}
+
 function eventoAcessibilidadeOpen(){
     window.document.getElementById('configurar-display-acessivilidade').style.display = 'flex'
     window.document.getElementsByTagName('body')[0].style.overflowY = 'hidden'
