@@ -565,10 +565,11 @@ function eventoModoDeuteranopia() {
 
     function temVerde(cor) {
         if (!cor) return false;
-        let rgb = cor;
+        let rgb;
 
         if (cor.startsWith("rgb")) {
-            rgb = cor.match(/\d+/g).map(Number); // [r, g, b]
+            rgb = cor.match(/\d+/g).map(Number);
+            rgb = rgb.slice(0, 3);
         } else if (cor.startsWith("#")) {
             const bigint = parseInt(cor.slice(1), 16);
             const r = (bigint >> 16) & 255;
@@ -580,7 +581,8 @@ function eventoModoDeuteranopia() {
         }
 
         if (Array.isArray(rgb)) {
-            return rgb[1] > 50 && rgb[1] > rgb[0] && rgb[1] > rgb[2]; // verde predominante
+            const [r, g, b] = rgb;
+            return g > 80 && g > r * 1.1 && g > b * 1.1;
         }
         return false;
     }
@@ -595,24 +597,36 @@ function eventoModoDeuteranopia() {
                 color: style.color,
                 backgroundColor: style.backgroundColor,
                 borderColor: style.borderColor,
-                boxShadow: style.boxShadow
+                boxShadow: style.boxShadow,
+                filter: style.filter // salva filtro original (importante p/ imagens)
             });
         }
 
         if (isChecked) {
-            if (temVerde(style.color)) el.style.color = "#555";
-            if (temVerde(style.backgroundColor)) el.style.backgroundColor = "#ddd";
-            if (temVerde(style.borderColor)) el.style.borderColor = "#999";
+            if (temVerde(style.color)) el.style.color = "#000";
+            if (temVerde(style.backgroundColor)) el.style.backgroundColor = "#000";
+            if (temVerde(style.borderColor)) el.style.borderColor = "#000";
+
             if (style.boxShadow && style.boxShadow.includes("rgb")) {
-                const shadowRgb = style.boxShadow.match(/\d+/g).map(Number);
-                if (temVerde(shadowRgb)) el.style.boxShadow = "none";
+                const sombras = style.boxShadow.match(/rgb[a]?\([^)]+\)/g);
+                if (sombras && sombras.some(temVerde)) {
+                    el.style.boxShadow = "none";
+                }
             }
+
+            // Se for imagem, aplica filtro
+            if (el.tagName === "IMG") {
+                // Filtro forte em direção ao preto
+                el.style.filter = "grayscale(100%) brightness(50%) contrast(200%)";
+            }
+
         } else {
             const orig = coresOriginaisDeuteranopia.get(el);
             el.style.color = orig.color;
             el.style.backgroundColor = orig.backgroundColor;
             el.style.borderColor = orig.borderColor;
             el.style.boxShadow = orig.boxShadow;
+            el.style.filter = orig.filter; // restaura o filtro original
         }
     });
 }
