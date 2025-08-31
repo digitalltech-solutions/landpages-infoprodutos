@@ -116,6 +116,15 @@ body, html{
 
 #icone-empresa{
     width: 150px;
+    cursor: pointer;
+}
+
+#icone-empresa:hover{
+    transform: scale(1.05);
+}
+
+#icone-empresa:active{
+    transform: scale(0.95);
 }
 
 /* Configuração Modo Dark */

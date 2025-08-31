@@ -510,6 +510,14 @@ function eventoAfiliar(){
     window.location = "https://digitalltech.netlify.app/classehtml/saiba-vender-conosco"
 }
 
+function eventoResultados(){
+    window.location = "https://digitalltech.netlify.app/classehtml/nossos-resultados"
+}
+
+function eventoGratis(){
+    window.location = "https://digitalltech.netlify.app/classehtml/gratis"
+}
+
 function eventoAcessibilidadeOpen(){
     window.document.getElementById('configurar-display-acessivilidade').style.display = 'flex'
     window.document.getElementsByTagName('body')[0].style.overflowY = 'hidden'
