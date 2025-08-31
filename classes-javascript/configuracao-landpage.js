@@ -561,75 +561,206 @@ function eventoModoDislexia(){
 const coresOriginaisDeuteranopia = new Map(); // Armazena cores originais
 
 function eventoModoDeuteranopia() {
-    const isChecked = document.getElementById('deuteranopia').checked;
+  const isChecked = document.getElementById("deuteranopia")?.checked;
 
-    function temVerde(cor) {
-        if (!cor) return false;
-        let rgb;
+  function temVerde(cor) {
+    if (!cor) return false;
+    let rgb;
 
-        if (cor.startsWith("rgb")) {
-            rgb = cor.match(/\d+/g).map(Number);
-            rgb = rgb.slice(0, 3);
-        } else if (cor.startsWith("#")) {
-            const bigint = parseInt(cor.slice(1), 16);
-            const r = (bigint >> 16) & 255;
-            const g = (bigint >> 8) & 255;
-            const b = bigint & 255;
-            rgb = [r, g, b];
-        } else {
-            return false;
-        }
-
-        if (Array.isArray(rgb)) {
-            const [r, g, b] = rgb;
-            return g > 80 && g > r * 1.1 && g > b * 1.1;
-        }
-        return false;
+    if (cor.startsWith("rgb")) {
+      rgb = cor.match(/\d+/g).map(Number);
+      rgb = rgb.slice(0, 3);
+    } else if (cor.startsWith("#")) {
+      const bigint = parseInt(cor.slice(1), 16);
+      const r = (bigint >> 16) & 255;
+      const g = (bigint >> 8) & 255;
+      const b = bigint & 255;
+      rgb = [r, g, b];
+    } else {
+      return false;
     }
 
-    const todosElementos = document.querySelectorAll("*");
+    if (Array.isArray(rgb)) {
+      const [r, g, b] = rgb;
+      return g > 80 && g > r * 1.1 && g > b * 1.1; // verde predominante
+    }
+    return false;
+  }
 
-    todosElementos.forEach(el => {
-        const style = window.getComputedStyle(el);
+  const todosElementos = document.querySelectorAll("*");
 
-        if (!coresOriginaisDeuteranopia.has(el)) {
-            coresOriginaisDeuteranopia.set(el, {
-                color: style.color,
-                backgroundColor: style.backgroundColor,
-                borderColor: style.borderColor,
-                boxShadow: style.boxShadow,
-                filter: style.filter // salva filtro original (importante p/ imagens)
+  todosElementos.forEach((el) => {
+    const style = window.getComputedStyle(el);
+
+    // Salva estilos originais inline
+    if (!coresOriginaisDeuteranopia.has(el)) {
+      coresOriginaisDeuteranopia.set(el, {
+        color: el.style.color,
+        backgroundColor: el.style.backgroundColor,
+        borderColor: el.style.borderColor,
+        boxShadow: el.style.boxShadow,
+        filter: el.style.filter, // salva filtro original (importante p/ imagens)
+      });
+    }
+
+    if (isChecked) {
+      if (temVerde(style.color)) el.style.color = "#000";
+      if (temVerde(style.backgroundColor)) el.style.backgroundColor = "#000";
+      if (temVerde(style.borderColor)) el.style.borderColor = "#000";
+
+      if (style.boxShadow && style.boxShadow.includes("rgb")) {
+        const sombras = style.boxShadow.match(/rgb[a]?\([^)]+\)/g);
+        if (sombras && sombras.some(temVerde)) {
+          el.style.boxShadow = "none";
+        }
+      }
+
+      // Se for imagem, aplica filtro de cinza parcial
+      if (el.tagName === "IMG") {
+        el.style.filter = "grayscale(70%) brightness(95%)";
+      }
+
+    } else {
+      // Restaurar estilos originais
+      const orig = coresOriginaisDeuteranopia.get(el);
+      el.style.color = orig.color;
+      el.style.backgroundColor = orig.backgroundColor;
+      el.style.borderColor = orig.borderColor;
+      el.style.boxShadow = orig.boxShadow;
+      el.style.filter = orig.filter;
+    }
+  });
+}
+
+const coresOriginaisTritanopia = new Map();
+
+function eventoModoTritanopia() {
+    const isChecked = document.getElementById('tritanopia')?.checked;
+
+    // ---- helpers
+    const BLUE_MIN = 70, DOMINANCE = 1.08;
+    const isBlue = ([r, g, b]) => b >= BLUE_MIN && b > r * DOMINANCE && b > g * DOMINANCE;
+
+    const hexToRgb = (hex) => {
+        if (!hex) return null;
+        let h = hex.replace('#', '').trim();
+        if (h.length === 3) {
+            return [
+                parseInt(h[0] + h[0], 16),
+                parseInt(h[1] + h[1], 16),
+                parseInt(h[2] + h[2], 16),
+            ];
+        }
+        if (h.length >= 6) {
+            return [
+                parseInt(h.slice(0, 2), 16),
+                parseInt(h.slice(2, 4), 16),
+                parseInt(h.slice(4, 6), 16),
+            ];
+        }
+        return null;
+    };
+
+    const anyBlueIn = (value) => {
+        if (!value) return false;
+        if (Array.isArray(value)) return isBlue(value);
+        if (typeof value !== 'string') return false;
+
+        if (value.startsWith('#')) {
+            const rgb = hexToRgb(value);
+            return rgb ? isBlue(rgb) : false;
+        }
+
+        const re = /rgba?\(\s*(\d+)[^,\d]+(\d+)[^,\d]+(\d+)/g;
+        let m;
+        while ((m = re.exec(value))) {
+            const r = +m[1], g = +m[2], b = +m[3];
+            if (isBlue([r, g, b])) return true;
+        }
+        return false;
+    };
+
+    const setImp = (el, prop, val) => el.style.setProperty(prop, val, 'important');
+
+    const nodes = document.querySelectorAll('*');
+    let changed = 0;
+
+    nodes.forEach((el) => {
+        const cs = getComputedStyle(el);
+
+        // ignora <img>
+        if (el.tagName === 'IMG') return;
+
+        if (!coresOriginaisTritanopia.has(el)) {
+            coresOriginaisTritanopia.set(el, {
+                color: el.style.color,
+                backgroundColor: el.style.backgroundColor,
+                borderTopColor: el.style.borderTopColor,
+                borderRightColor: el.style.borderRightColor,
+                borderBottomColor: el.style.borderBottomColor,
+                borderLeftColor: el.style.borderLeftColor,
+                outlineColor: el.style.outlineColor,
+                boxShadow: el.style.boxShadow,
+                textShadow: el.style.textShadow,
+                fill: el.style.fill,
+                stroke: el.style.stroke,
             });
         }
 
         if (isChecked) {
-            if (temVerde(style.color)) el.style.color = "#000";
-            if (temVerde(style.backgroundColor)) el.style.backgroundColor = "#000";
-            if (temVerde(style.borderColor)) el.style.borderColor = "#000";
+            if (anyBlueIn(cs.color))                { setImp(el, 'color', '#000'); changed++; }
+            if (anyBlueIn(cs.backgroundColor))      { setImp(el, 'background-color', '#000'); changed++; }
+            if (anyBlueIn(cs.borderTopColor))       { setImp(el, 'border-top-color', '#000'); changed++; }
+            if (anyBlueIn(cs.borderRightColor))     { setImp(el, 'border-right-color', '#000'); changed++; }
+            if (anyBlueIn(cs.borderBottomColor))    { setImp(el, 'border-bottom-color', '#000'); changed++; }
+            if (anyBlueIn(cs.borderLeftColor))      { setImp(el, 'border-left-color', '#000'); changed++; }
+            if (anyBlueIn(cs.outlineColor))         { setImp(el, 'outline-color', '#000'); changed++; }
 
-            if (style.boxShadow && style.boxShadow.includes("rgb")) {
-                const sombras = style.boxShadow.match(/rgb[a]?\([^)]+\)/g);
-                if (sombras && sombras.some(temVerde)) {
-                    el.style.boxShadow = "none";
-                }
-            }
+            // SVG
+            if (anyBlueIn(cs.fill))   { setImp(el, 'fill', '#000'); changed++; }
+            if (anyBlueIn(cs.stroke)) { setImp(el, 'stroke', '#000'); changed++; }
 
-            // Se for imagem, aplica filtro
-            if (el.tagName === "IMG") {
-                // Filtro forte em direção ao preto
-                el.style.filter = "grayscale(100%) brightness(50%) contrast(200%)";
-            }
+            // sombras
+            const bs = cs.boxShadow && cs.boxShadow.match(/rgb[a]?\([^)]+\)/g);
+            if (bs && bs.some(anyBlueIn)) { setImp(el, 'box-shadow', 'none'); changed++; }
+
+            const ts = cs.textShadow && cs.textShadow.match(/rgb[a]?\([^)]+\)/g);
+            if (ts && ts.some(anyBlueIn)) { setImp(el, 'text-shadow', 'none'); changed++; }
 
         } else {
-            const orig = coresOriginaisDeuteranopia.get(el);
-            el.style.color = orig.color;
-            el.style.backgroundColor = orig.backgroundColor;
-            el.style.borderColor = orig.borderColor;
-            el.style.boxShadow = orig.boxShadow;
-            el.style.filter = orig.filter; // restaura o filtro original
+            const o = coresOriginaisTritanopia.get(el);
+            if (!o) return;
+            el.style.color = o.color;
+            el.style.backgroundColor = o.backgroundColor;
+            el.style.borderTopColor = o.borderTopColor;
+            el.style.borderRightColor = o.borderRightColor;
+            el.style.borderBottomColor = o.borderBottomColor;
+            el.style.borderLeftColor = o.borderLeftColor;
+            el.style.outlineColor = o.outlineColor;
+            el.style.boxShadow = o.boxShadow;
+            el.style.textShadow = o.textShadow;
+            el.style.fill = o.fill;
+            el.style.stroke = o.stroke;
         }
     });
+
+    if (isChecked) {
+        console.info(`[Tritanopia] Alterados: ${changed} elementos azuis neutralizados.`);
+    } else {
+        console.info('[Tritanopia] Estilos restaurados.');
+    }
 }
+
+// listeners
+document.addEventListener('DOMContentLoaded', () => {
+    const cb = document.getElementById('tritanopia');
+    if (cb) {
+        cb.addEventListener('change', eventoModoTritanopia);
+        eventoModoTritanopia(); // estado inicial
+    } else {
+        console.warn('Checkbox #tritanopia não encontrado.');
+    }
+});
 
 const coresOriginais = new Map(); // Vai armazenar cores originais
 
