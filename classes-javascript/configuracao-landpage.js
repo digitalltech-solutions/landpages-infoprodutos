@@ -93,6 +93,12 @@ function eventoModoDark() {
         window.document.getElementById('input-comentario').style.backgroundColor = 'black'
         window.document.getElementById('nome-usuario').style.backgroundColor = 'black'
 
+        window.document.querySelectorAll('.elementos-fundo-borda').forEach((elementos) => {
+            elementos.style.backgroundColor = 'black'
+            elementos.style.borderColor = '#7F7F7F'
+            elementos.style.color = '#ffffff'
+        })
+
     }else{
         window.location = window.location.href.split('#')[0];
     }
@@ -179,6 +185,12 @@ function eventoModoDarkDois() {
         window.document.getElementById('icone-ecommerce').src = '../recursos/imagens/icone-ecommerce-claro.png'
         window.document.getElementById('input-comentario').style.backgroundColor = 'black'
         window.document.getElementById('nome-usuario').style.backgroundColor = 'black'
+
+        window.document.querySelectorAll('.elementos-fundo-borda').forEach((elementos) => {
+            elementos.style.backgroundColor = 'black'
+            elementos.style.borderColor = '#7F7F7F'
+            elementos.style.color = '#ffffff'
+        })
     }else{
         window.location = window.location.href.split('#')[0];
     }
