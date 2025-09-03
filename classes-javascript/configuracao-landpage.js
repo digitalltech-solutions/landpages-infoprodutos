@@ -19,6 +19,9 @@ function eventoModoDark() {
     caixa2.checked = caixa1.checked;
 
     if(caixa1.checked == true){
+
+        window.document.getElementById('icone-ecommerce-dois-mobile').src = '../recursos/imagens/icone-ecommerce-claro.png'
+
         window.document.querySelectorAll('.configurar-fundo-dark').forEach((elementosDark) => {
             elementosDark.style.backgroundColor = '#303030'
         })
@@ -112,6 +115,10 @@ function eventoModoDarkDois() {
 
     
     if(caixa1.checked == true){
+
+        window.document.getElementById('icone-ecommerce-dois-mobile').src = '../recursos/imagens/icone-ecommerce-claro.png'
+
+
         window.document.querySelectorAll('.configurar-fundo-dark').forEach((elementosDark) => {
             elementosDark.style.backgroundColor = '#303030'
         })
