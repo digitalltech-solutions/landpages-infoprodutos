@@ -1655,13 +1655,13 @@ figcaption > a:hover{
 
 .stars {
     display: inline-block;
-    direction: rtl; /* Faz a estrela da direita ser a primeira */
+    direction: rtl;
     font-size: 25px;
     cursor: pointer;
 }
 
 .stars input {
-    display: none; /* Esconde os inputs de radio */
+    display: none;
 }
 
 .stars label {
@@ -1671,7 +1671,7 @@ figcaption > a:hover{
 
 .stars label:hover,
 .stars label:hover ~ label,
-.stars input:checked ~ label {
+.stars input:checked ~ label{
     color: var(--corprimaria);
 }
 

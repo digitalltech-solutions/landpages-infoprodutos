@@ -498,10 +498,9 @@ const ratingValue = document.getElementById('rating-value');
 
 stars.forEach(star => {
   star.addEventListener('change', () => {
-    star.value
+    alert("Você avaliou com " + star.value + " estrela" + (star.value > 1 ? "s" : ""));
   });
 });
-
 
 function eventoLimpar() {
   document.getElementById('input-comentario').value = '';
