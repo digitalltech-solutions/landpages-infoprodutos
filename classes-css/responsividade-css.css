@@ -444,7 +444,11 @@
     }
 
     #avaliacao{
-        font-size: 20px;
+        font-size: 25px;
+    }
+
+    .stars > label{
+        font-size: 22px;
     }
 
     #configurar-display-botoes-comentario{

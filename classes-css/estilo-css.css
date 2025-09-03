@@ -1603,7 +1603,7 @@ figcaption > a:hover{
 
 #formulario-comentario{
     border: 1px solid var(--corprimaria);
-    border-radius: 20px;
+    border-radius: 10px;
     padding: 20px 0;
     width: 100%;
     display: flex;
@@ -1696,8 +1696,8 @@ figcaption > a:hover{
     width: 20%;
     display: flex;
     align-items: center;
-    justify-content: center;
     flex-flow: column nowrap;
+    justify-content: space-between;
 }
 
 #input-comentario{
