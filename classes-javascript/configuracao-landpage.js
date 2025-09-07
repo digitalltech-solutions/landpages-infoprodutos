@@ -5,8 +5,6 @@ function tamanhoBody(){
         window.document.querySelectorAll('.sub-menu-padrao').forEach((elementos) => {
             elementos.style.display = 'none'
         })
-    }else{
-        window.document.getElementById('menu-mobile').style.display = 'none'
     }
 }
 
