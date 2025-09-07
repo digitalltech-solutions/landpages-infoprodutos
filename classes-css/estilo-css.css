@@ -166,6 +166,10 @@ body, html{
     transform: translateX(80%);
 }
 
+#estilo-weight{
+    font-weight: lighter;
+}
+
 #configuracao-modo-claro{
     color: var(--corprimaria);
     line-height: 0;
@@ -239,6 +243,10 @@ header > nav{
     z-index: 99999;
 }
 
+#config-submenu-grupos > a:hover{
+    color: red;
+}
+
 #configurar-triangulo{
     transform: rotate(45deg) translateX(-45%) translateY(-30%);
     border: 1px solid var(--corsextiaria);
@@ -266,14 +274,13 @@ header > nav{
 }
 
 .configurar-submenus-estilo-padrao:hover{
-    background: var(--corprimaria);
-    color: var(--corterciaria);
+    text-decoration: underline;
+    transform: scale(1.1);
 }
 
 .configurar-submenus-estilo-padrao:active{
     transform: scale(0.95);
 }
-
 
 /* configurar sub navegador */
 
@@ -893,7 +900,8 @@ header > nav{
 }
 
 .configuracao-botoes-menu-padrao:hover{
-    background: var(--corprimaria);
+    background: #00F39F;
+    transform: scale(1.02);
 }
 
 .configuracao-botoes-menu-padrao:hover > span:first-child,

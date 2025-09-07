@@ -21,6 +21,7 @@ function eventoModoDark() {
     if(caixa1.checked == true){
 
         window.document.getElementById('icone-ecommerce-dois-mobile').src = '../recursos/imagens/icone-ecommerce-claro.png'
+        window.document.getElementById('estilo-weight').style.color = '#ffffff'
 
         window.document.querySelectorAll('.configurar-fundo-dark').forEach((elementosDark) => {
             elementosDark.style.backgroundColor = '#303030'
@@ -117,7 +118,7 @@ function eventoModoDarkDois() {
     if(caixa1.checked == true){
 
         window.document.getElementById('icone-ecommerce-dois-mobile').src = '../recursos/imagens/icone-ecommerce-claro.png'
-
+        window.document.getElementById('estilo-weight').style.color = '#ffffff'
 
         window.document.querySelectorAll('.configurar-fundo-dark').forEach((elementosDark) => {
             elementosDark.style.backgroundColor = '#303030'
@@ -202,9 +203,6 @@ function eventoModoDarkDois() {
         window.location = window.location.href.split('#')[0];
     }
 }
-
-
-
 
 function eventoSubmenuGrupos(){
     if(document.getElementById('config-submenu-grupos').style.display == 'flex'){
