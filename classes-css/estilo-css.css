@@ -884,6 +884,7 @@ header > nav{
 #configurar-icone-close > span:last-child{
     color: var(--corprimaria);
     font-size: 40px;
+    cursor: pointer;
 }
 
 #configurar-opcoes-mobile{
