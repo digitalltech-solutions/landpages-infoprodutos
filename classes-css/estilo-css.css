@@ -166,10 +166,6 @@ body, html{
     transform: translateX(80%);
 }
 
-#estilo-weight{
-    font-weight: lighter;
-}
-
 #configuracao-modo-claro{
     color: var(--corprimaria);
     line-height: 0;
@@ -241,10 +237,6 @@ header > nav{
     border-radius: 6px;
     margin-top: 10px;
     z-index: 99999;
-}
-
-#config-submenu-grupos > a:hover{
-    color: red;
 }
 
 #configurar-triangulo{
@@ -916,7 +908,6 @@ header > nav{
 
 .configuracao-botoes-menu-padrao:hover{
     background: #00F39F;
-    transform: scale(1.02);
 }
 
 .configuracao-botoes-menu-padrao:hover > span:first-child,
@@ -1768,4 +1759,8 @@ figcaption > a:hover{
 
 #estilo-botao-um{
     border: none;
+}
+
+#estilo-weight{
+    font-weight: lighter;
 }
