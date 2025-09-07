@@ -1,6 +1,5 @@
 function tamanhoBody(){
     if(window.innerWidth > 595){
-        window.document.getElementById('container-select-opcoes').style.display = 'none'
         window.document.getElementById('menu-mobile').style.display = 'none'
         window.document.querySelectorAll('.sub-menu-padrao').forEach((elementos) => {
             elementos.style.display = 'none'
