@@ -944,6 +944,7 @@ document.addEventListener("DOMContentLoaded", () => {
     fd.append("dataHora",   dataHora);
 
     const URL_SCRIPT = "https://script.google.com/macros/s/AKfycbzKQuPwax94NZYDTaOtKNo5sV_7om3sOYgnc09jSncebrAUF3PYnbcJMbfrjxG5m1o_/exec";
+    form.reset();
 
     try {
       const res = await fetch(URL_SCRIPT, { method: "POST", body: fd });
@@ -956,7 +957,6 @@ document.addEventListener("DOMContentLoaded", () => {
       } catch (_) {}
 
     //   alert(msg);
-      form.reset();
     } catch (err) {
       alert("Erro ao enviar: " + err.message);
       console.error(err);
@@ -1012,12 +1012,12 @@ function eventoNewsletter(){
       data: new Date().toLocaleDateString("pt-BR"),
       hora: new Date().toLocaleTimeString("pt-BR")
     });
-
+    
+    document.getElementById("newsletter-form").reset();
     fetch(SCRIPT_URL + "?" + params.toString(), { method: "GET" })
       .then(r => r.json())
       .then(res => {
         if (res.ok) {
-          document.getElementById("newsletter-form").reset();
         } else {
           alert("❌ Erro: " + res.msg);
         }
