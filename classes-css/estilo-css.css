@@ -480,7 +480,7 @@ header > nav{
 #configuracao-icone-pesquisa:active, #configuracao-icone-select:active, .estilo-botao-padrao:active, 
 #configurar-display-modal-indisponivel > div > div > button:active,
 #configurar-icone-close > span:last-child:active, 
-.configuracao-botoes-menu-padrao:active, #configurar-botao > a > button:active,
+#configurar-botao > a > button:active,
 .configuracao-botao-padrao:active, #enviar-gmail:active, #configurar-container-mobile > span:active{
     transform: scale(0.95);
 }
