@@ -408,6 +408,18 @@ function eventoModalOcultoDois(){
     window.document.getElementsByTagName('body')[0].style.overflowY = 'auto'
 }
 
+// Configuracão do modal erro oculto
+
+function eventoModalOcultoErro(){
+    window.document.getElementById('configurar-display-modal-erro').style.display = 'none'
+    window.document.getElementsByTagName('body')[0].style.overflowY = 'auto'
+}
+
+function eventoOpenErro(){
+    window.document.getElementById('configurar-display-modal-erro').style.display = 'flex'
+    window.document.getElementsByTagName('body')[0].style.overflowY = 'hidden'
+}
+
 // Configuração da Apresentação de Imagem
 
 var imageCapa = window.document.getElementById('capa-infoproduto')
@@ -965,7 +977,8 @@ function eventoEnviarComentario(){
         window.document.getElementById('configurar-display-modal-agradecimento').style.display = 'flex'
         window.document.getElementsByTagName('body')[0].style.overflowY = 'hidden'
     }else{
-        alert('Preencha os Dados Corretamente!')
+        window.document.getElementById('configurar-display-modal-erro').style.display = 'flex'
+        window.document.getElementsByTagName('body')[0].style.overflowY = 'hidden'
     }
 }
 
@@ -978,7 +991,8 @@ function eventoNewsletter(){
         window.document.getElementById('configurar-display-modal-agradecimento').style.display = 'flex'
         window.document.getElementsByTagName('body')[0].style.overflowY = 'hidden'
     }else{
-        alert('Preencha os Dados Corretamente!')
+        window.document.getElementById('configurar-display-modal-erro').style.display = 'flex'
+        window.document.getElementsByTagName('body')[0].style.overflowY = 'hidden'
     }
 }
 

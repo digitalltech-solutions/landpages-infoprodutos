@@ -523,7 +523,8 @@ header > nav{
 
 /* configurar modal de função indisponível */
 
-#configurar-display-modal-indisponivel, #configurar-display-modal-agradecimento{
+#configurar-display-modal-indisponivel, #configurar-display-modal-agradecimento, 
+#configurar-display-modal-erro{
     background: #00000033;
     position: fixed;
     height: 100dvh;
@@ -536,7 +537,8 @@ header > nav{
     z-index: 99999;
 }
 
-#configurar-display-modal-indisponivel > div, #configurar-estilo-card-dois, #configurar-display-modal-agradecimento > div{
+#configurar-display-modal-indisponivel > div, #configurar-estilo-card-dois, 
+#configurar-display-modal-agradecimento > div, #configurar-display-modal-erro > div{
     width: 400px;
     padding: 10px 0;
     border-radius: 10px;
@@ -550,11 +552,15 @@ header > nav{
     margin: 0px 10px;
 }
 
-#configurar-display-modal-indisponivel > div > div, #configurar-display-modal-agradecimento > div > div{
+#configurar-display-modal-indisponivel > div > div, 
+#configurar-display-modal-agradecimento > div > div, 
+#configurar-display-modal-erro > div > div{
     width: 75%;
 }
 
-#configurar-display-modal-indisponivel > div > div > span, #configurar-display-modal-agradecimento > div > div > span{
+#configurar-display-modal-indisponivel > div > div > span, 
+#configurar-display-modal-agradecimento > div > div > span, 
+#configurar-display-modal-erro > div > div > span{
     color: var(--corprimaria);
     font-size: 40px;
 }
@@ -569,7 +575,9 @@ header > nav{
     margin: 5px 0;
 }
 
-#configurar-display-modal-indisponivel > div > div > button, #configurar-display-modal-agradecimento > div > div > button{
+#configurar-display-modal-indisponivel > div > div > button, 
+#configurar-display-modal-agradecimento > div > div > button,
+#configurar-display-modal-erro > div > div > button{
     background: var(--corprimaria);
     color: var(--corterciaria);
     font: normal bolder 16px 'fonte-titulos';
@@ -579,11 +587,13 @@ header > nav{
     border: 1px solid var(--corprimaria);
 }
 
-#configurar-display-modal-agradecimento > div > div > button:hover{
+#configurar-display-modal-agradecimento > div > div > button:hover,
+#configurar-display-modal-erro > div > div > button:hover{
     transform: scale(1.05);
 }
 
-#configurar-display-modal-agradecimento > div > div > button:active{
+#configurar-display-modal-agradecimento > div > div > button:active,
+#configurar-display-modal-erro > div > div > button:active{
     transform: scale(0.95);
 }
 
@@ -694,9 +704,14 @@ header > nav{
     font: normal normal 15px var(--fonteprimaria);
 }
 
-#titulo-sucesso{
+#titulo-sucesso, #titulo-sucesso-dois{
     font: normal bold 20px 'fonte-titulos';
     color: var(--corprimaria);
+}
+
+#titulo-sucesso-dois{
+    line-height: 20px;
+    margin: 5px 0;
 }
 
 .titulo-acessibilidade-padrao{
