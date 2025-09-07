@@ -17,7 +17,6 @@ body{
 
 body::-webkit-scrollbar{
     display: none;
-    color: var(--corprimaria);
 }
 
 body, html{
@@ -32,7 +31,7 @@ body, html{
 
 @font-face {
     font-family: 'fonte-dislexia';
-    src: url(../recursos/fontes-tipograficas/fonte-dislexia.otf) format('opentype');
+    src: url(../recursos/fontes-tipograficas/fonte-dislexia.otf);
 }
 
 :root{
@@ -906,19 +905,6 @@ header > nav{
     padding: 5px;
 }
 
-.configuracao-botoes-menu-padrao:hover{
-    background: #00F39F;
-}
-
-.configuracao-botoes-menu-padrao:hover > span:first-child,
-.configuracao-botoes-menu-padrao:hover > span:last-child{
-    color: var(--corterciaria);
-}
-
-.configuracao-botoes-menu-padrao:hover > span{
-    color: var(--corterciaria);
-}
-
 .configuracao-botoes-menu-padrao > span:first-child{
     font-size: 30px;
     color: var(--corprimaria);
@@ -928,6 +914,14 @@ header > nav{
     font: normal normal 20px var(--fonteprimaria);
     color: var(--corsecundaria);
     line-height: 28px;
+}
+
+.configuracao-botoes-menu-padrao:hover > span:first-child{
+    font-size: 32px;
+}
+
+.configuracao-botoes-menu-padrao:hover > span:last-child{
+    font-size: 20px;
 }
 
 /* configuração dos submenus do menu mobile */
