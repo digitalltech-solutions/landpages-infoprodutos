@@ -556,7 +556,8 @@ header > nav{
     font-size: 40px;
 }
 
-#configurar-display-modal-indisponivel > div > div > p, #configurar-display-modal-agradecimento > div > div > p{
+#configurar-display-modal-indisponivel > div > div > p, #configurar-display-modal-agradecimento > div > div > p,
+#configurar-display-modal-erro > div > div > h1{
     font: normal normal 15px var(--fonteprimaria);
     color: var(--corquinternaria);
     margin: 10px 0;
