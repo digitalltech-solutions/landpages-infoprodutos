@@ -1037,6 +1037,8 @@ function eventoBlogDois(){
 
 // Evento Blogs:
 
-window.document.getElementById('dica-').addEventListener('click', function(){
-    window.location = 'https://google.com'
+window.document.querySelectorAll('.dica-tutorial').forEach((elementos) => {
+    elementos.addEventListener('click', function(){
+        window.location = 'https://google.com'
+    })
 })
