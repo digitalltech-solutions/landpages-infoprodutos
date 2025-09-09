@@ -1064,8 +1064,38 @@ window.document.querySelectorAll('.glossarios').forEach((elementos) => {
 
 window.document.querySelectorAll('.concursos').forEach((elementos) => {
     elementos.addEventListener('click', function(){
-        window.location = 'google.com'
+        window.location = '#'
     })
 })
 
-// Aprendizado
+// Ferramentas
+
+window.document.querySelectorAll('.plataformas').forEach((elementos) => {
+    elementos.addEventListener('click', function(){
+        window.location = '#'
+    })
+})
+
+window.document.querySelectorAll('.ias').forEach((elementos) => {
+    elementos.addEventListener('click', function(){
+        window.location = '#'
+    })
+})
+
+window.document.querySelectorAll('.sistemas').forEach((elementos) => {
+    elementos.addEventListener('click', function(){
+        window.location = '#'
+    })
+})
+
+window.document.querySelectorAll('.editores').forEach((elementos) => {
+    elementos.addEventListener('click', function(){
+        window.location = '#'
+    })
+})
+
+window.document.querySelectorAll('.outros').forEach((elementos) => {
+    elementos.addEventListener('click', function(){
+        window.location = 'google.com'
+    })
+})
