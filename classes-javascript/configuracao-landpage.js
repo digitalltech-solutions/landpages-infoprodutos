@@ -1096,6 +1096,70 @@ window.document.querySelectorAll('.editores').forEach((elementos) => {
 
 window.document.querySelectorAll('.outros').forEach((elementos) => {
     elementos.addEventListener('click', function(){
-        window.location = 'google.com'
+        window.location = '#'
+    })
+})
+
+// Recomendações
+
+window.document.querySelectorAll('.analises').forEach((elementos) => {
+    elementos.addEventListener('click', function(){
+        window.location = '#'
+    })
+})
+
+window.document.querySelectorAll('.livros').forEach((elementos) => {
+    elementos.addEventListener('click', function(){
+        window.location = '#'
+    })
+})
+
+window.document.querySelectorAll('.filmes').forEach((elementos) => {
+    elementos.addEventListener('click', function(){
+        window.location = '#'
+    })
+})
+
+window.document.querySelectorAll('.series').forEach((elementos) => {
+    elementos.addEventListener('click', function(){
+        window.location = '#'
+    })
+})
+
+window.document.querySelectorAll('.feedback').forEach((elementos) => {
+    elementos.addEventListener('click', function(){
+        window.location = '#'
+    })
+})
+
+// Bastidores
+
+window.document.querySelectorAll('.bastidores').forEach((elementos) => {
+    elementos.addEventListener('click', function(){
+        window.location = '#'
+    })
+})
+
+window.document.querySelectorAll('.sugestoes').forEach((elementos) => {
+    elementos.addEventListener('click', function(){
+        window.location = '#'
+    })
+})
+
+window.document.querySelectorAll('.lancamentos').forEach((elementos) => {
+    elementos.addEventListener('click', function(){
+        window.location = '#'
+    })
+})
+
+window.document.querySelectorAll('.novidades').forEach((elementos) => {
+    elementos.addEventListener('click', function(){
+        window.location = '#'
+    })
+})
+
+window.document.querySelectorAll('.equipe').forEach((elementos) => {
+    elementos.addEventListener('click', function(){
+        window.location = '#'
     })
 })
