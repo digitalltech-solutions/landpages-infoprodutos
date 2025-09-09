@@ -1035,10 +1035,37 @@ function eventoBlogDois(){
     window.location = "#"
 }
 
-// Evento Blogs:
+// EVENTO BLOGS:
+// Aprendizado
 
 window.document.querySelectorAll('.dica-tutorial').forEach((elementos) => {
     elementos.addEventListener('click', function(){
-        window.location = 'https://google.com'
+        window.location = '#'
     })
 })
+
+window.document.querySelectorAll('.atualidades').forEach((elementos) => {
+    elementos.addEventListener('click', function(){
+        window.location = '#'
+    })
+})
+
+window.document.querySelectorAll('.conteudos-enem').forEach((elementos) => {
+    elementos.addEventListener('click', function(){
+        window.location = '#'
+    })
+})
+
+window.document.querySelectorAll('.glossarios').forEach((elementos) => {
+    elementos.addEventListener('click', function(){
+        window.location = '#'
+    })
+})
+
+window.document.querySelectorAll('.concursos').forEach((elementos) => {
+    elementos.addEventListener('click', function(){
+        window.location = 'google.com'
+    })
+})
+
+// Aprendizado
