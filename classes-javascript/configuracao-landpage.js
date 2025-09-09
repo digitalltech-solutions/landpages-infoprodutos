@@ -1030,3 +1030,13 @@ function eventoNewsletter(){
 function eventoLogin(){
     window.location = "https://digitalltech.netlify.app/classehtml/login-digitalltech"
 }
+
+function eventoBlogDois(){
+    window.location = "#"
+}
+
+// Evento Blogs:
+
+window.document.getElementById('dica-').addEventListener('click', function(){
+    window.location = 'https://google.com'
+})
