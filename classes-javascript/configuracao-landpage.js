@@ -549,6 +549,8 @@ function eventoYoutube(){
     window.location = "youtube.com"
 }
 
+window.document.getElementById('video').src = '#'
+
 function eventoAcessibilidadeOpen(){
     window.document.getElementById('configurar-display-acessivilidade').style.display = 'flex'
     window.document.getElementsByTagName('body')[0].style.overflowY = 'hidden'
