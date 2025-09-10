@@ -550,6 +550,7 @@ function eventoYoutube(){
 }
 
 window.document.getElementById('video').src = '#'
+window.document.getElementById('video').poster = '#'
 
 function eventoAcessibilidadeOpen(){
     window.document.getElementById('configurar-display-acessivilidade').style.display = 'flex'
