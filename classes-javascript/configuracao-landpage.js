@@ -19,6 +19,7 @@ function eventoModoDark() {
 
         window.document.getElementById('icone-ecommerce-dois-mobile').src = '../recursos/imagens/icone-ecommerce-claro.png'
         window.document.getElementById('estilo-weight').style.color = '#ffffff'
+        window.document.getElementById('video').poster = '../recursos/imagens/capa-video-dark.jpg'
 
         window.document.querySelectorAll('.configurar-fundo-dark').forEach((elementosDark) => {
             elementosDark.style.backgroundColor = '#303030'
@@ -115,6 +116,7 @@ function eventoModoDarkDois() {
 
         window.document.getElementById('icone-ecommerce-dois-mobile').src = '../recursos/imagens/icone-ecommerce-claro.png'
         window.document.getElementById('estilo-weight').style.color = '#ffffff'
+        window.document.getElementById('video').poster = '../recursos/imagens/capa-video-dark.jpg'
 
         window.document.querySelectorAll('.configurar-fundo-dark').forEach((elementosDark) => {
             elementosDark.style.backgroundColor = '#303030'
