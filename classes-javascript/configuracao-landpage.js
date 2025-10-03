@@ -1113,7 +1113,7 @@ window.document.querySelectorAll('.ferramentas').forEach((elementos) => {
 
 // Recomendações
 
-window.document.querySelectorAll('.analises').forEach((elementos) => {
+window.document.querySelectorAll('.documentarios').forEach((elementos) => {
     elementos.addEventListener('click', function(){
         window.location = '#'
     })
@@ -1137,7 +1137,7 @@ window.document.querySelectorAll('.series').forEach((elementos) => {
     })
 })
 
-window.document.querySelectorAll('.feedback').forEach((elementos) => {
+window.document.querySelectorAll('.podcasts').forEach((elementos) => {
     elementos.addEventListener('click', function(){
         window.location = '#'
     })
