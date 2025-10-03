@@ -1081,31 +1081,31 @@ window.document.querySelectorAll('.concursos').forEach((elementos) => {
 
 // Ferramentas
 
-window.document.querySelectorAll('.plataformas').forEach((elementos) => {
+window.document.querySelectorAll('.quiz').forEach((elementos) => {
     elementos.addEventListener('click', function(){
         window.location = '#'
     })
 })
 
-window.document.querySelectorAll('.ias').forEach((elementos) => {
+window.document.querySelectorAll('.jogos-intelectuais').forEach((elementos) => {
     elementos.addEventListener('click', function(){
         window.location = '#'
     })
 })
 
-window.document.querySelectorAll('.sistemas').forEach((elementos) => {
+window.document.querySelectorAll('.simulados-concursos').forEach((elementos) => {
     elementos.addEventListener('click', function(){
         window.location = '#'
     })
 })
 
-window.document.querySelectorAll('.editores').forEach((elementos) => {
+window.document.querySelectorAll('.simulados-enem').forEach((elementos) => {
     elementos.addEventListener('click', function(){
         window.location = '#'
     })
 })
 
-window.document.querySelectorAll('.outros').forEach((elementos) => {
+window.document.querySelectorAll('.ferramentas').forEach((elementos) => {
     elementos.addEventListener('click', function(){
         window.location = '#'
     })
