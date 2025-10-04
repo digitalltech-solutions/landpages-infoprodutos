@@ -1079,7 +1079,7 @@ window.document.querySelectorAll('.concursos').forEach((elementos) => {
     })
 })
 
-// Ferramentas
+// Desafios
 
 window.document.querySelectorAll('.quiz').forEach((elementos) => {
     elementos.addEventListener('click', function(){
