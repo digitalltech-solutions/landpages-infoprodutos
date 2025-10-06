@@ -454,7 +454,7 @@ header > nav{
     font: normal bolder 30px 'fonte-titulos';
 }
 
-#configurar-cor-especifica{
+.configurar-cor-especifica{
     color: var(--corsecundaria);
     cursor: pointer;
 }
@@ -1536,7 +1536,7 @@ footer > div > div:first-child{
     line-height: 25px;
 }
 
-#estilo-span-especifico-um{
+.estilo-span-especifico-um{
     color: var(--corprimaria);
 }
 
