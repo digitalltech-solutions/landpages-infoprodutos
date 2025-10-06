@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <title>DigitallTech - eBook: Arte da Comunicação Oral</title>
+
+    <link rel="shortcut icon" href="../recursos/imagens/icone-empresa-digitalltech.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"/>
+    <link rel="stylesheet" href="../classes-css/estilo-css.css">
+    <link rel="stylesheet" href="../classes-css/responsividade-css.css">
+    
+    <script src="../classes-javascript/configuracao-landpage.js" defer></script>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+</head>
+<body onresize="tamanhoBody()">
+    <header class="hidden-um">
+        <nav>
+            <span id="config-span-logo">
+                <img src="../recursos/imagens/icone-empresa-digitalltech-dois.jpg" alt="icone-empresa" id="icone-empresa" onclick="eventoEmpresa()">
+                
+                <input type="checkbox" name="caixa-dark" id="caixa-dark" onchange="eventoModoDark()">
+                <label for="caixa-dark" id="elemento-pai" class="configurar-fundo-dark">
+                    <span id="elemento-filho" class="configuraca-padrao-elemento-filho">
+                        <span class="material-symbols-outlined configurar-icone-light" id="configuracao-modo-claro">light_mode</span>
+                        <span class="material-symbols-outlined configurar-icone-dark" id="configuracao-modo-escuro">dark_mode</span>
+                    </span>
+                </label>
+            </span>
+            <div id="configurar-icones">
+                <div>
+                    <a href="#" id="config-icone" onclick="eventoSubmenuGrupos()"><span id="tamanho-fonte-grupo">Grupos</span><span id="config-icone-arrow-drop-down">&#x25BE;</span>
+                        <div class="elementos-fundo-borda" id="config-submenu-grupos">
+                            <div id="configurar-triangulo" class="elementos-fundo-borda"></div>
+                            <a href="#" id="configurar-texto-whatsapp">Participe no <br> WhatsApp e Receba <br> Ofertas VIP!</a>
+                            <a href="#" class="configurar-submenus-estilo-padrao estilo-texto-modo-dark" title="Grupo do WhatsApp sobre Websites">Afiliados</a>
+                            <a href="https://chat.whatsapp.com/BEbHL9WZUt3BmaJ9VUwlSi?mode=ems_copy_t" class="configurar-submenus-estilo-padrao estilo-texto-modo-dark" title="Grupo do WhatsApp sobre Websites">WebSites</a>
+                            <a href="https://chat.whatsapp.com/CSNsEFPBb9KEL59t3fLTW3?mode=ems_copy_t" class="configurar-submenus-estilo-padrao estilo-texto-modo-dark" title="Grupo do WhatsApp sobre Designs">Designs</a>
+                            <a href="https://chat.whatsapp.com/FcjzrmZJ9ZdBmn7h62tHd8?mode=ems_copy_t" class="configurar-submenus-estilo-padrao estilo-texto-modo-dark" title="Grupo do WhatsApp sobre eBooks">eBooks</a>
+                        </div>
+                    </a>
+                </div>
+                <!-- &#x25B4; -->
+                <a href="https://digitalltech.netlify.app/classehtml/saiba-vender-conosco.html" class="estolo-modo-dark">Afiliar</a>
+                <a href="#" onclick="eventoAcessibilidadeOpen()"><span class="material-symbols-outlined tamanho-span-icone estilo-texto-modo-dark">accessibility</span></a>
+                <a href="https://digitalltech.netlify.app/classehtml/login-digitalltech"><span class="material-symbols-outlined tamanho-span-icone estilo-texto-modo-dark">account_circle</span></a>
+            </div>
+        </nav>
+        <div id="configuracao-nav-dois" class="estilo-fundo-modo-dark-um">
+            <div id="estilo-borda-dark-um">
+                <a href="#" onclick="eventoSobre()">Sobre<span id="config-icone-arrow-drop-down-dois">&#x25BE;</span></a>
+                <a href="https://digitalltech.netlify.app/classehtml/nossos-resultados">Resultados</a>
+                <a href="https://digitalltech.netlify.app/classehtml/servi%C3%A7os.html">Serviços</a>
+            </div>
+            <div id="estilo-borda-dark-dois">
+                <a href="#" onclick="eventoBlog()">Blogs<span id="config-icone-arrow-drop-down-tres">&#x25BE;</span></a>
+                <a href="https://digitalltech.netlify.app/classehtml/termos-de-uso">Termos</a>
+                <a href="https://digitalltech.netlify.app/classehtml/gratis">Gratis</a>
+                <span class="material-symbols-outlined" id="configurar-icone-duvidas" title="dúvidas - FAQ" onclick="eventoDuvidas()">help</span>
+            </div>
+        </div>
+        <div id="configuracao-menu-sobre">
+            <div>
+                <div class="configuracao-padrao-opcoes">
+                    <h1>Saiba Mais</h1>
+                    <a href="https://digitalltech.netlify.app/classehtml/sobre-empresa">Quem Somos</a>
+                    <a href="https://digitalltech.netlify.app/classehtml/saiba-vender-conosco">Saiba Vender Conosco</a>
+                    <a href="https://digitalltech.netlify.app/classehtml/sobre-nossos-produtos">Sobre Nossos Produtos</a>
+                    <a href="https://digitalltech.netlify.app/classehtml/sobre-nossos-servi%C3%A7os.html">Sobre Nossos Serviços</a>
+                    <a href="https://digitalltech.netlify.app/classehtml/pagina-cursos">Página de Cursos</a>
+                    <a href="https://digitalltech.netlify.app/classehtml/conheca-nossa-equipe">Equipe</a>
+                </div>
+
+                <div class="configuracao-padrao-opcoes">
+                    <h1>Tópicos da Página</h1>
+                    <a href="#secao-infoproduto" onclick="eventoCloseMenuDesktop()">Seção de Compra</a>
+                    <a href="#descricao-infoproduto" onclick="eventoCloseMenuDesktop()">Descrição do Infoproduto</a>
+                    <a href="#comentarios" onclick="eventoCloseMenuDesktop()">Comentar sobre o Infoproduto</a>
+                    <a href="#como-comprar" onclick="eventoCloseMenuDesktop()">Como Comprar Infoprodutos</a>
+                    <a href="#secao-apresentação" onclick="eventoCloseMenuDesktop()">Informações Importantes</a>
+                    <a href="#rodapé" onclick="eventoCloseMenuDesktop()">Rodapé</a>
+                </div>
+
+                <div class="configuracao-padrao-opcoes">
+                    <h1>Cursos Grátis</h1>
+                    <a href="https://www.youtube.com/playlist?list=PLgm_pWyXvC8c7BuVzGj81kIM9mMj0Phdi">Marketing Digital</a>
+                    <a href="https://www.youtube.com/playlist?list=PLgm_pWyXvC8cUWSMRnaujmfuPBBqm7HAB">Educação Financeira</a>
+                    <a href="https://www.youtube.com/playlist?list=PLgm_pWyXvC8duqYAOcsf6zbK9rpPclhaN">Segurança da Informação</a>
+                    <a href="https://www.youtube.com/playlist?list=PLgm_pWyXvC8fPkpBBtJJXF6nuQ3dSiNmv">Empreendedorismo</a>
+                    <a href="https://www.youtube.com/playlist?list=PLgm_pWyXvC8dwYE8p7Wddm4Cww-w3t1j6">Estudos Bíblicos</a>
+                    <a href="https://www.youtube.com/playlist?list=PLgm_pWyXvC8c7DwuNu3vj9C01rsNRZpPG">Investimentos</a>
+                </div>
+
+                <div class="configuracao-padrao-opcoes">
+                    <h1>Contato</h1>
+                    <a href="https://wa.me/5588997616313"><span class="material-symbols-outlined estilo-texto-modo-dark">call</span> Telefone: +55 (88) 99761-6313</a>
+                    <a href="#" onclick="eventoMovel()"><span class="material-symbols-outlined estilo-texto-modo-dark">stacked_email</span> PIX: digitalltech100@gmail.com</a>
+                    <a href="https://digitalltech.netlify.app/classehtml/serviços"><span class="material-symbols-outlined estilo-texto-modo-dark">article</span> Formulário de Atendimento</a>
+                    <a href="https://github.com/digitalltech-solutions"><span class="material-symbols-outlined estilo-texto-modo-dark">commit</span> Github: digitalltech-solutions</a>
+                    <a href="https://www.instagram.com/digitalltech.oficial"><span class="material-symbols-outlined estilo-texto-modo-dark">diversity_1</span> Mídia: @digitalltech.oficial</a>
+                    <a href="https://wa.me/5588997616313"><span class="material-symbols-outlined estilo-texto-modo-dark">more_time</span> Seg a sex, 8h às 17h.</a>
+                </div>
+            </div>
+        </div>
+
+        <div id="configuracao-menu-blog">
+            <div>
+                <div class="configuracao-padrao-opcoes">
+                    <h1>Aprendizado</h1>
+                    <a href="#" class="dica-tutorial">Dicas e Tutoriais</a>
+                    <a href="#" class="atualidades">Atualidades e Tendências</a>
+                    <a href="#" class="concursos">Conteúdos de Concursos</a>
+                    <a href="#" class="conteudos-enem">Conteúdos ENEM</a>
+                    <a href="#" class="glossarios">Glossários</a>
+                </div>
+
+                <div class="configuracao-padrao-opcoes">
+                    <h1>Desafios</h1>
+                    <a href="#" class="quiz">Quiz da Semana</a>
+                    <a href="#" class="jogos-intelectuais">Jogos Intelectuais</a>
+                    <a href="#" class="simulados-concursos">Simulados Concursos</a>
+                    <a href="#" class="editores">Simulados ENEM</a>
+                    <a href="#" class="ferramentas">Ferramentas</a>
+                </div>
+
+                <div class="configuracao-padrao-opcoes">
+                    <h1>Recomendações</h1>
+                    <a href="#" class="livros">Sugestões de Livros</a>
+                    <a href="#" class="documentarios">Sugestões de Documentários</a>
+                    <a href="#" class="podcasts">Sugestões de Podcasts</a>
+                    <a href="#" class="filmes">Sugestões de Filmes</a>
+                    <a href="#" class="series">Sugestões de Séries</a>
+                </div>
+
+                <div class="configuracao-padrao-opcoes">
+                    <h1>Bastidores</h1>
+                    <a href="#" class="bastidores">Bastidores da Empresa</a>
+                    <a href="#" class="novidades">Novidades do Website</a>
+                    <a href="#" class="lancamentos">Lançamentos Exclusivos</a>
+                    <a href="#" class="sugestoes">Forneça seu Feedback</a>
+                    <a href="#" class="equipe">Vida de Empreendedor</a>
+                </div>
+            </div>
+        </div>
+    </header>
+</body>
+</html>

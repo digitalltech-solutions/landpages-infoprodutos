@@ -265,6 +265,7 @@ header > nav{
 }
 
 .configurar-submenus-estilo-padrao:hover{
+    background: var(--corprimaria);
     text-decoration: underline;
     transform: scale(1.1);
 }
