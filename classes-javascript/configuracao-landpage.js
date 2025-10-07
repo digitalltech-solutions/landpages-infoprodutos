@@ -666,196 +666,133 @@ function eventoModoDeuteranopia() {
   });
 }
 
-const coresOriginaisTritanopia = new Map();
+// (function(){
+  const BLUE_MIN = 70, DOMINANCE = 1.08;
+  const PROPS = [
+    'color','background-color',
+    'border-top-color','border-right-color','border-bottom-color','border-left-color',
+    'outline-color','box-shadow','text-shadow','fill','stroke'
+  ];
+  const saved = new Map();
 
-function eventoModoTritanopia() {
-    const isChecked = document.getElementById('tritanopia')?.checked;
-
-    // ---- helpers
-    const BLUE_MIN = 70, DOMINANCE = 1.08;
-    const isBlue = ([r, g, b]) => b >= BLUE_MIN && b > r * DOMINANCE && b > g * DOMINANCE;
-
-    const hexToRgb = (hex) => {
-        if (!hex) return null;
-        let h = hex.replace('#', '').trim();
-        if (h.length === 3) {
-            return [
-                parseInt(h[0] + h[0], 16),
-                parseInt(h[1] + h[1], 16),
-                parseInt(h[2] + h[2], 16),
-            ];
-        }
-        if (h.length >= 6) {
-            return [
-                parseInt(h.slice(0, 2), 16),
-                parseInt(h.slice(2, 4), 16),
-                parseInt(h.slice(4, 6), 16),
-            ];
-        }
-        return null;
-    };
-
-    const anyBlueIn = (value) => {
-        if (!value) return false;
-        if (Array.isArray(value)) return isBlue(value);
-        if (typeof value !== 'string') return false;
-
-        if (value.startsWith('#')) {
-            const rgb = hexToRgb(value);
-            return rgb ? isBlue(rgb) : false;
-        }
-
-        const re = /rgba?\(\s*(\d+)[^,\d]+(\d+)[^,\d]+(\d+)/g;
-        let m;
-        while ((m = re.exec(value))) {
-            const r = +m[1], g = +m[2], b = +m[3];
-            if (isBlue([r, g, b])) return true;
-        }
-        return false;
-    };
-
-    const setImp = (el, prop, val) => el.style.setProperty(prop, val, 'important');
-
-    const nodes = document.querySelectorAll('*');
-    let changed = 0;
-
-    nodes.forEach((el) => {
-        const cs = getComputedStyle(el);
-
-        // ignora <img>
-        if (el.tagName === 'IMG') return;
-
-        if (!coresOriginaisTritanopia.has(el)) {
-            coresOriginaisTritanopia.set(el, {
-                color: el.style.color,
-                backgroundColor: el.style.backgroundColor,
-                borderTopColor: el.style.borderTopColor,
-                borderRightColor: el.style.borderRightColor,
-                borderBottomColor: el.style.borderBottomColor,
-                borderLeftColor: el.style.borderLeftColor,
-                outlineColor: el.style.outlineColor,
-                boxShadow: el.style.boxShadow,
-                textShadow: el.style.textShadow,
-                fill: el.style.fill,
-                stroke: el.style.stroke,
-            });
-        }
-
-        if (isChecked) {
-            if (anyBlueIn(cs.color))                { setImp(el, 'color', '#000'); changed++; }
-            if (anyBlueIn(cs.backgroundColor))      { setImp(el, 'background-color', '#000'); changed++; }
-            if (anyBlueIn(cs.borderTopColor))       { setImp(el, 'border-top-color', '#000'); changed++; }
-            if (anyBlueIn(cs.borderRightColor))     { setImp(el, 'border-right-color', '#000'); changed++; }
-            if (anyBlueIn(cs.borderBottomColor))    { setImp(el, 'border-bottom-color', '#000'); changed++; }
-            if (anyBlueIn(cs.borderLeftColor))      { setImp(el, 'border-left-color', '#000'); changed++; }
-            if (anyBlueIn(cs.outlineColor))         { setImp(el, 'outline-color', '#000'); changed++; }
-
-            // SVG
-            if (anyBlueIn(cs.fill))   { setImp(el, 'fill', '#000'); changed++; }
-            if (anyBlueIn(cs.stroke)) { setImp(el, 'stroke', '#000'); changed++; }
-
-            // sombras
-            const bs = cs.boxShadow && cs.boxShadow.match(/rgb[a]?\([^)]+\)/g);
-            if (bs && bs.some(anyBlueIn)) { setImp(el, 'box-shadow', 'none'); changed++; }
-
-            const ts = cs.textShadow && cs.textShadow.match(/rgb[a]?\([^)]+\)/g);
-            if (ts && ts.some(anyBlueIn)) { setImp(el, 'text-shadow', 'none'); changed++; }
-
-        } else {
-            const o = coresOriginaisTritanopia.get(el);
-            if (!o) return;
-            el.style.color = o.color;
-            el.style.backgroundColor = o.backgroundColor;
-            el.style.borderTopColor = o.borderTopColor;
-            el.style.borderRightColor = o.borderRightColor;
-            el.style.borderBottomColor = o.borderBottomColor;
-            el.style.borderLeftColor = o.borderLeftColor;
-            el.style.outlineColor = o.outlineColor;
-            el.style.boxShadow = o.boxShadow;
-            el.style.textShadow = o.textShadow;
-            el.style.fill = o.fill;
-            el.style.stroke = o.stroke;
-        }
-    });
-
-    if (isChecked) {
-        console.info(`[Tritanopia] Alterados: ${changed} elementos azuis neutralizados.`);
-    } else {
-        console.info('[Tritanopia] Estilos restaurados.');
+  // util: hex -> [r,g,b]
+  function hexToRgb(hex){
+    if(!hex) return null;
+    let h = hex.replace('#','').trim();
+    if(h.length === 3) {
+      return [parseInt(h[0]+h[0],16), parseInt(h[1]+h[1],16), parseInt(h[2]+h[2],16)];
     }
-}
+    if(h.length >= 6) {
+      return [parseInt(h.slice(0,2),16), parseInt(h.slice(2,4),16), parseInt(h.slice(4,6),16)];
+    }
+    return null;
+  }
 
-// listeners
-document.addEventListener('DOMContentLoaded', () => {
+  function parseRgbString(s){
+    const m = /rgba?\(\s*([\d]+)[\s,]+([\d]+)[\s,]+([\d]+)/i.exec(s);
+    return m ? [parseInt(m[1]), parseInt(m[2]), parseInt(m[3])] : null;
+  }
+
+  function isBlue([r,g,b]){
+    return b >= BLUE_MIN && b > r * DOMINANCE && b > g * DOMINANCE;
+  }
+
+  function anyBlueIn(value){
+    if(!value) return false;
+    if(Array.isArray(value)) return isBlue(value);
+    if(typeof value !== 'string') return false;
+    if(value.startsWith('#')) {
+      const rgb = hexToRgb(value);
+      return rgb ? isBlue(rgb) : false;
+    }
+    const single = parseRgbString(value);
+    if(single) return isBlue(single);
+    const re = /rgba?\(\s*(\d+)[\s,]+(\d+)[\s,]+(\d+)/g;
+    let m;
+    while((m = re.exec(value))) {
+      if(isBlue([+m[1],+m[2],+m[3]])) return true;
+    }
+    return false;
+  }
+
+  function saveInline(el){
+    if(saved.has(el)) return;
+    const o = {};
+    for(const p of PROPS){
+      o[p] = {
+        value: el.style.getPropertyValue(p) || null,
+        priority: el.style.getPropertyPriority(p) || ''
+      };
+    }
+    saved.set(el, o);
+  }
+
+  function restoreInline(el){
+    const o = saved.get(el);
+    if(!o) return;
+    for(const p of PROPS){
+      const v = o[p].value;
+      const pr = o[p].priority || '';
+      if(!v) el.style.removeProperty(p);
+      else el.style.setProperty(p, v, pr);
+    }
+    saved.delete(el);
+  }
+
+  function applyNeutralize(el){
+    const cs = getComputedStyle(el);
+    if(anyBlueIn(cs.color)) el.style.setProperty('color', '#000', 'important');
+    if(anyBlueIn(cs.backgroundColor)) el.style.setProperty('background-color', '#000', 'important');
+    if(anyBlueIn(cs.borderTopColor)) el.style.setProperty('border-top-color', '#000', 'important');
+    if(anyBlueIn(cs.borderRightColor)) el.style.setProperty('border-right-color', '#000', 'important');
+    if(anyBlueIn(cs.borderBottomColor)) el.style.setProperty('border-bottom-color', '#000', 'important');
+    if(anyBlueIn(cs.borderLeftColor)) el.style.setProperty('border-left-color', '#000', 'important');
+    if(anyBlueIn(cs.outlineColor)) el.style.setProperty('outline-color', '#000', 'important');
+    if(anyBlueIn(cs.fill)) el.style.setProperty('fill', '#000', 'important');
+    if(anyBlueIn(cs.stroke)) el.style.setProperty('stroke', '#000', 'important');
+
+    const bs = cs.boxShadow && cs.boxShadow.match(/rgba?\([^)]+\)/g);
+    if(bs && bs.some(anyBlueIn)) el.style.setProperty('box-shadow', 'none', 'important');
+
+    const ts = cs.textShadow && cs.textShadow.match(/rgba?\([^)]+\)/g);
+    if(ts && ts.some(anyBlueIn)) el.style.setProperty('text-shadow', 'none', 'important');
+  }
+
+  function eventoModoTritanopia(){
     const cb = document.getElementById('tritanopia');
-    if (cb) {
-        cb.addEventListener('change', eventoModoTritanopia);
-        eventoModoTritanopia(); // estado inicial
-    } else {
-        console.warn('Checkbox #tritanopia não encontrado.');
-    }
-});
+    if(!cb) return;
+    const checked = !!cb.checked;
+    // percorre elementos (pule imagens, scripts, svg e controles interativos)
+    const nodes = document.querySelectorAll('body, body *');
+    nodes.forEach(el => {
+      if(!el || el.nodeType !== 1) return;
+      const tag = el.tagName;
+      if(tag === 'IMG' || tag === 'SCRIPT' || tag === 'STYLE' || tag === 'SVG') return;
+      // NÃO mexer em controles interativos (preserva :hover)
+      if(el.matches('a, button, input, textarea, select, label')) return;
+      // NÃO mexer no próprio painel de acessibilidade (preserva hover do card)
+      if(el.closest && el.closest('#configurar-estilo-card')) return;
 
-const coresOriginais = new Map(); // Vai armazenar cores originais
-
-function eventoModoTritanopia() {
-    const isChecked = document.getElementById('tritanopia').checked;
-
-    function temAzul(cor) {
-        if (!cor) return false;
-        let rgb = cor;
-
-        if (cor.startsWith("rgb")) {
-            rgb = cor.match(/\d+/g).map(Number); // [r, g, b]
-        } else if (cor.startsWith("#")) {
-            const bigint = parseInt(cor.slice(1), 16);
-            const r = (bigint >> 16) & 255;
-            const g = (bigint >> 8) & 255;
-            const b = bigint & 255;
-            rgb = [r, g, b];
-        } else {
-            return false;
-        }
-
-        if (Array.isArray(rgb)) {
-            return rgb[2] > 50 && rgb[2] > rgb[0] && rgb[2] > rgb[1]; // azul predominante
-        }
-        return false;
-    }
-
-    const todosElementos = document.querySelectorAll("*");
-
-    todosElementos.forEach(el => {
-        const style = window.getComputedStyle(el);
-
-        // Guardar cores originais apenas na primeira vez
-        if (!coresOriginais.has(el)) {
-            coresOriginais.set(el, {
-                color: style.color,
-                backgroundColor: style.backgroundColor,
-                borderColor: style.borderColor,
-                boxShadow: style.boxShadow
-            });
-        }
-
-        if (isChecked) {
-            if (temAzul(style.color)) el.style.color = "#555";
-            if (temAzul(style.backgroundColor)) el.style.backgroundColor = "#ddd";
-            if (temAzul(style.borderColor)) el.style.borderColor = "#999";
-            if (style.boxShadow && style.boxShadow.includes("rgb")) {
-                const shadowRgb = style.boxShadow.match(/\d+/g).map(Number);
-                if (temAzul(shadowRgb)) el.style.boxShadow = "none";
-            }
-        } else {
-            // Restaurar cores originais
-            const orig = coresOriginais.get(el);
-            el.style.color = orig.color;
-            el.style.backgroundColor = orig.backgroundColor;
-            el.style.borderColor = orig.borderColor;
-            el.style.boxShadow = orig.boxShadow;
-        }
+      if(checked){
+        saveInline(el);
+        applyNeutralize(el);
+      } else {
+        restoreInline(el);
+      }
     });
-}
+    console.info(`[Tritanopia] ${checked ? 'ativado' : 'desativado'}`);
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const cb = document.getElementById('tritanopia');
+    if(cb){
+      // preferir change no input (remova onclick do label no HTML)
+      cb.addEventListener('change', eventoModoTritanopia);
+      eventoModoTritanopia(); // estado inicial
+    } else {
+      console.warn('Checkbox #tritanopia não encontrado.');
+    }
+  });
 
 // Acessibilidade de Leitura em Voz Alta
 
