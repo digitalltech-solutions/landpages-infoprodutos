@@ -857,6 +857,8 @@ function eventoModoTritanopia() {
     });
 }
 
+// Acessibilidade de Leitura em Voz Alta
+
 let vozAtiva = false;
 let synth = window.speechSynthesis;
 let ultimaSelecao = "";
