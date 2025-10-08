@@ -41,15 +41,16 @@ body, html{
     --corquaternaria: #7F7F7F;
     --corquinternaria: #000;
     --corsextiaria: #7F7F7F;
-
+    --corsetimo: #00C886;
     --fonteprimaria: arial;
 }
 
 /* CONFIGURAÇÕES PADRÕES */
 
 .estilo-titulo-padrao-texto{
-    font: normal bold 35px 'fonte-titulos';
-    color: var(--corprimaria);
+    font: normal bold 30px 'fonte-titulos';
+    color: var(--corsetimo);
+    text-transform: uppercase;
 }
 
 .texto-padrao{
