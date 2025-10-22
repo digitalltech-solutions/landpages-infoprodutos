@@ -440,12 +440,13 @@ header > nav{
 
 .config-elemento{
     margin-right: auto;
-    scale: 1.05;
+    margin-left: 5px;
+    scale: 1.35;
 }
 
 #configurar-container-mobile > span{
     color: var(--corprimaria);
-    font-size: 40px;
+    font-size: 50px;
 }
 
 #navegador-mobile > img{
@@ -467,6 +468,7 @@ header > nav{
     text-align: center;
     width: 95%;
     font: normal normal 16px var(--fonteprimaria);
+    color: var(--corquaternaria);
 }
 
 /* CONFIGURAÇÃO PADRÃO: ACTIVE E HOVER */
