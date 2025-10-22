@@ -390,10 +390,11 @@ header > nav{
 .configuracao-padrao-opcoes > h1{
     font: normal bold 20px 'fonte-titulos';
     color: var(--corsecundaria);
+    text-transform: uppercase;
 }
 
 .configuracao-padrao-opcoes > a{
-    font: normal lighter 15px var(--fonteprimaria);
+    font: normal normal 15px var(--fonteprimaria);
     color: var(--corquaternaria);
     text-decoration: none;
     margin: 3px 0;
@@ -408,7 +409,6 @@ header > nav{
 }
 
 .configuracao-padrao-opcoes > a:hover{
-    color: var(--corsecundaria);
     transform: scale(1.03);
 }
 
