@@ -531,6 +531,10 @@ header > nav{
     z-index: 99999;
 }
 
+#modal-nao-disponivel{
+    display: flex;
+}
+
 .configurar-display-modal-padrao > div{
     width: 400px;
     padding: 10px 0;
@@ -590,7 +594,7 @@ header > nav{
     height: 100dvh;
     width: 100dvw;
     top: 0;
-    display: flex;
+    display: none;
     align-items: center;
     flex-flow: row nowrap;
     justify-content: center;

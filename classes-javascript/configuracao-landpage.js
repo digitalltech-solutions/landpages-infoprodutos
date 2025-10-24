@@ -388,39 +388,41 @@ function eventoDuvidas(){
 //CONFIGURAÇÃO MODAL DE FUNÇÃO INDISPONÍVEL:
 // Configuracão do modal indisponível transparente
 
-function eventoModalAparente(){
-    window.document.getElementById('configurar-display-modal-indisponivel').style.display = 'flex'
+//CONFIGURAÇÃO MODAL DE FUNÇÃO INDISPONÍVEL:
+// Configuracão do modal indisponível aparente
+
+function eventoModalIndisponivel(){
+    window.document.getElementById('modal-nao-disponivel').style.display = 'flex'
     window.document.getElementsByTagName('body')[0].style.overflowY = 'hidden'
 }
 
-// Configuracão do modal indisponível oculto
-
-function eventoModalOculto(){
-    window.document.getElementById('configurar-display-modal-indisponivel').style.display = 'none'
+function eventoModalIndisponivelOculto(){
+    window.document.getElementById('modal-nao-disponivel').style.display = 'none'
     window.document.getElementsByTagName('body')[0].style.overflowY = 'auto'
 }
 
-function eventoCloseMenuDesktop(){
-    window.document.getElementById('configuracao-menu-sobre').style.display = 'none'
-}
+// Configuracão do modal de dados enviados
 
-// Configuracão do modal indisponível oculto
-
-function eventoModalOcultoDois(){
-    window.document.getElementById('configurar-display-modal-agradecimento').style.display = 'none'
-    window.document.getElementsByTagName('body')[0].style.overflowY = 'auto'
-}
-
-// Configuracão do modal erro oculto
-
-function eventoModalOcultoErro(){
-    window.document.getElementById('configurar-display-modal-erro').style.display = 'none'
-    window.document.getElementsByTagName('body')[0].style.overflowY = 'auto'
-}
-
-function eventoOpenErro(){
-    window.document.getElementById('configurar-display-modal-erro').style.display = 'flex'
+function eventoModalDadosEnviados(){
+    window.document.getElementById('modal-dados-enviados').style.display = 'flex'
     window.document.getElementsByTagName('body')[0].style.overflowY = 'hidden'
+}
+
+function eventoModalDadosEnviadosOculto(){
+    window.document.getElementById('modal-dados-enviados').style.display = 'none'
+    window.document.getElementsByTagName('body')[0].style.overflowY = 'auto'
+}
+
+// Configuracão do modal dos dados inválidos
+
+function eventoModalDadosInvalidos(){
+    window.document.getElementById('modal-dados-inválidos').style.display = 'flex'
+    window.document.getElementsByTagName('body')[0].style.overflowY = 'hidden'
+}
+
+function eventoModalDadosInvalidosOculto(){
+    window.document.getElementById('modal-dados-inválidos').style.display = 'none'
+    window.document.getElementsByTagName('body')[0].style.overflowY = 'auto'
 }
 
 // Configuração da Apresentação de Imagem
