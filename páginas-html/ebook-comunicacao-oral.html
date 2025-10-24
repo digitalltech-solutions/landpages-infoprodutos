@@ -395,43 +395,42 @@
 
     <!-- CONFIGURAÇÃO DE MODAL - FUNÇÃO NÃO DISPONÍVEL -->
 
-    <div id="configurar-display-modal-indisponivel">
-        <div class="estilo-fundo-modo-dark-um">
+    <div class="configurar-display-modal-padrao" id="modal-nao-disponivel">
+        <div class="estilo-fundo-modo-dark-um estilo-borda-dark-dois">
             <div>
-                <span class="material-symbols-outlined destaque-padrao">timer</span>
+                <span class="material-symbols-outlined estilo-texto-modo-dark">timer</span>
                 <p class="texto-padrao-dois">
-                    <em>Ops!</em> Esta função estará disponível em breve. A 
-                    <span class="configurar-cor-especifica"><b class="destaque-padrao">Digitall</b></span>Tech agradece pelo 
-                    seu interesse e paciência! 💕😊
+                    Esta funcionalidade estará disponível em breve. A <b>Digitall</b>Tech agradece seu interesse e compreensão!
                 </p>
-                <button onclick="eventoModalOculto()" class="estilo-botao-dark-dois">OK</button>
+                <button onclick="eventoModalIndisponivelOculto()" class="estilo-botao-padrao-tres">OK</button>
             </div>
         </div>
     </div>
 
     <!-- CONFIGURAÇÃO DE MODAL - FUNÇÃO ENVIADO COM SUCESSO -->
 
-    <div id="configurar-display-modal-agradecimento">
+    <div class="configurar-display-modal-padrao" id="modal-dados-enviados">
         <div class="estilo-fundo-modo-dark-um">
             <div>
-                <span class="material-symbols-outlined destaque-padrao texto-padrao-dois">check_circle</span>
-                <h1 id="titulo-sucesso" class="texto-padrao-dois">ENVIADO COM SUCESSO!</h1>
-                <p class="texto-padrao-dois estilo-texto-modo-dark">
-                     <em>A <span class="configurar-cor-especifica" class="estilo-texto-modo-dark"><b class="estilo-texto-modo-dark">Digitall</b></span>Tech agradece</em> pela sua participação. Em breve você receberá nossas novidades! ❤️😊
+                <span class="material-symbols-outlined estilo-texto-modo-dark">check_circle</span>
+                <p class="texto-padrao-dois">
+                    Enviado com sucesso! A <b>Digitall</b>Tech agradece sua participação. Em breve, você receberá novidades 😉!
                 </p>
-                <button onclick="eventoModalOcultoDois()" class="estilo-botao-dark-dois">OK</button>
+                <button onclick="eventoModalDadosEnviadosOculto()" class="estilo-botao-padrao-tres">OK</button>
             </div>
         </div>
     </div>
 
     <!-- CONFIGURAÇÃO DE MODAL - FUNÇÃO DADOS INVÁLIDOS -->
 
-    <div id="configurar-display-modal-erro">
+    <div class="configurar-display-modal-padrao" id="modal-dados-inválidos">
         <div class="estilo-fundo-modo-dark-um">
             <div>
-                <span class="material-symbols-outlined destaque-padrao texto-padrao-dois">error</span>
-                <h1 id="titulo-sucesso-dois" class="texto-padrao-dois">POR FAVOR, PREENCHA OS DADOS CORRETAMENTE!</h1>
-                <button onclick="eventoModalOcultoErro()" class="estilo-botao-dark-dois">OK</button>
+                <span class="material-symbols-outlined estilo-texto-modo-dark">error</span>
+                <p class="texto-padrao-dois">
+                    Dados Inválidos! Certifique-se de que os dados foram preenchidos corretamente no formulário.
+                </p>
+                <button onclick="eventoModalDadosInvalidosOculto()" class="estilo-botao-padrao-tres">OK</button>
             </div>
         </div>
     </div>
