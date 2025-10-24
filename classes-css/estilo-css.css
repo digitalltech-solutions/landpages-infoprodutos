@@ -475,8 +475,6 @@ header > nav{
 /* CONFIGURAÇÃO PADRÃO: ACTIVE E HOVER */
 
 #configuracao-icone-pesquisa:hover, #configuracao-icone-select:hover, 
-#configurar-display-modal-indisponivel > div > div > button:hover, 
-#configurar-display-modal-indisponivel > div > div > span:hover,
 #configurar-icone-close > span:last-child:hover, .estilo-botao-padrao:hover,
 #configurar-botao > a > button:hover, #enviar-gmail:hover, .configuracao-botao-padrao:hover,
 #configurar-container-mobile > span:hover{
@@ -484,7 +482,6 @@ header > nav{
 }
 
 #configuracao-icone-pesquisa:active, #configuracao-icone-select:active, .estilo-botao-padrao:active, 
-#configurar-display-modal-indisponivel > div > div > button:active,
 #configurar-icone-close > span:last-child:active, 
 #configurar-botao > a > button:active,
 .configuracao-botao-padrao:active, #enviar-gmail:active, #configurar-container-mobile > span:active{
@@ -534,6 +531,10 @@ header > nav{
     z-index: 99999;
 }
 
+#modal-nao-disponivel{
+    display: flex;
+}
+
 .configurar-display-modal-padrao > div{
     width: 400px;
     padding: 10px 0;
@@ -575,6 +576,14 @@ header > nav{
     font: normal bolder 16px 'fonte-titulos';
     border: 1px solid var(--corprimaria);
     border-radius: 5px;
+}
+
+.configurar-display-modal-padrao > div > div > button:hover{
+    transform: scale(1.1);
+}
+
+.configurar-display-modal-padrao > div > div > button:active{
+    transform: scale(0.95);
 }
 
 /* configuração de modal - acessibilidades */
