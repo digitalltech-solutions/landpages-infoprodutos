@@ -531,10 +531,6 @@ header > nav{
     z-index: 99999;
 }
 
-#modal-nao-disponivel{
-    display: flex;
-}
-
 .configurar-display-modal-padrao > div{
     width: 400px;
     padding: 10px 0;
@@ -586,20 +582,19 @@ header > nav{
     transform: scale(0.95);
 }
 
-/* configuração de modal - acessibilidades */
+/* CONFIGURAÇÃO DE MODAL - ACESSIBILIDADES */
 
 #configurar-display-acessivilidade{
-    display: none;
-    justify-content: center;
-    flex-flow: column nowrap;
-    align-items: center;
+    background: #00000033;
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100dvw;
     height: 100dvh;
-    z-index: 9999999;
-    background: #00000050; 
+    width: 100dvw;
+    top: 0;
+    display: flex;
+    align-items: center;
+    flex-flow: row nowrap;
+    justify-content: center;
+    z-index: 99999;
 }
 
 #configurar-estilo-card{
@@ -607,7 +602,7 @@ header > nav{
     height: 360px;
     border-radius: 12px;
     background: var(--corterciaria);
-    border-bottom: 5px solid var(--corquaternaria);
+    border-bottom: 5px solid #0000003f;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
@@ -621,10 +616,9 @@ header > nav{
     align-items: center;
     justify-content: center;
     flex-flow: column nowrap;
-    gap: 5px;
 }
 
-#estilo-evento-close, #estilo-evento-close-dois{
+#estilo-evento-close-dois{
     width: 100%;
     display: flex;
     align-items: center;
@@ -632,17 +626,17 @@ header > nav{
     justify-content: space-between;
 }
 
-#estilo-evento-close > span, #estilo-evento-close-dois > span{
+#estilo-evento-close-dois > span{
     display: flex;
     align-items: center;
     justify-content: flex-start;
 }
 
-#estilo-evento-close > span > img, #estilo-evento-close-dois > span > img{
+#estilo-evento-close-dois > span > img{
     width: 26px;
 }
 
-#estilo-evento-close > span > h1, #estilo-evento-close-dois > span > h1{
+#estilo-evento-close-dois > span > h1{
     font: normal normal 25px 'fonte-titulos';
 }
 
@@ -660,19 +654,27 @@ header > nav{
     transform: scale(0.9);
 }
 
-#estilo-texto-acessibilidade, #estilo-texto-compartilhar{
+#estilo-texto-acessibilidade{
     color: var(--corprimaria);
     text-align: center;
-    margin: 5px 0;
+}
+
+#estilo-texto-acessibilidade > span{
+    font-size: 45px;
+}
+
+.marcador-texto-dois{
+    color: var(--corsecundaria);
 }
 
 #estilo-texto-acessibilidade > h1, #estilo-texto-compartilhar > h1{
-    font: normal bold 25px var(--fonteprimaria);
+    font: normal bold 23px var(--fonteprimaria);
 }
 
 #estilo-opcoes-acessibilidades{
     width: 100%;
     overflow-y: auto;
+    margin: 15px 0;
 }
 
 #estilo-opcoes-acessibilidades::-webkit-scrollbar{
@@ -696,11 +698,6 @@ header > nav{
 #titulo-sucesso, #titulo-sucesso-dois{
     font: normal bold 20px 'fonte-titulos';
     color: var(--corprimaria);
-}
-
-#titulo-sucesso-dois{
-    line-height: 20px;
-    margin: 5px 0;
 }
 
 .titulo-acessibilidade-padrao{
@@ -772,6 +769,16 @@ header > nav{
 
 #configurar-borda-especifica{
     border: none;
+}
+
+.estilo-botao-padrao-tres:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.estilo-botao-padrao-tres:active{
+    transform: scale(0.95);
+    cursor: pointer;
 }
 
 /* configuração de modal - compartilhar */

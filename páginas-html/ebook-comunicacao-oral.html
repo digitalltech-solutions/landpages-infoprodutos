@@ -440,15 +440,8 @@
     <div id="configurar-display-acessivilidade">
         <div id="configurar-estilo-card" class="configurar-fundo-dark-dois">
             <div>
-                <div id="estilo-evento-close">
-                    <span>
-                        <img src="../recursos/imagens/icone-empresa-digitalltech.png" alt="icone-empresa" id="icone-empresa-acessibilidade">
-                        <h1 class="texto-padrao-dois"><span class="marcador-texto-dois"><b class="texto-padrao-dois">Digitall</b></span>Tech</h1>
-                    </span>
-                    <span class="material-symbols-outlined texto-padrao-dois" id="estilo-botao-close-acessibilidade" onclick="eventoCloseAcessibilidade()">close</span>                    
-                </div>
-
                 <div id="estilo-texto-acessibilidade">
+                    <span class="material-symbols-outlined estilo-texto-modo-dark">accessibility</span>
                     <h1 class="estilo-texto-modo-dark">ACESSIBILIDADES</h1>
                 </div>
 
@@ -456,35 +449,37 @@
                     <div class="opcao">
                         <h2 class="titulo-acessibilidade-padrao estilo-texto-modo-dark">Modo Dislexia</h2>
                         <label class="switch" onclick="eventoModoDislexia()">
-                            <input type="checkbox" class="acessibilidade" id="dislexia">
-                            <span class="slider destaque-padrao"></span>
+                        <input type="checkbox" class="acessibilidade" id="dislexia">
+                        <span class="slider destaque-padrao"></span>
                         </label>
                     </div>
 
                     <div class="opcao">
                         <h2 class="titulo-acessibilidade-padrao estilo-texto-modo-dark">Modo Deuteranopia</h2>
                         <label class="switch" onclick="eventoModoDeuteranopia()">
-                            <input type="checkbox" class="acessibilidade" id="deuteranopia">
-                            <span class="slider"></span>
+                        <input type="checkbox" class="acessibilidade" id="deuteranopia">
+                        <span class="slider"></span>
                         </label>
                     </div>
 
                     <div class="opcao">
                         <h2 class="titulo-acessibilidade-padrao estilo-texto-modo-dark">Modo Tritanopia</h2>
                         <label class="switch" onclick="eventoModoTritanopia()">
-                            <input type="checkbox" class="acessibilidade" id="tritanopia">
-                            <span class="slider"></span>
+                        <input type="checkbox" class="acessibilidade" id="tritanopia">
+                        <span class="slider"></span>
                         </label>
                     </div>
 
                     <div class="opcao" id="configurar-borda-especifica">
                         <h2 class="titulo-acessibilidade-padrao estilo-texto-modo-dark">Leitura em Voz Alta</h2>
                         <label class="switch" onclick="eventoModoVoz()">
-                            <input type="checkbox" class="acessibilidade" id="voz">
-                            <span class="slider"></span>
+                        <input type="checkbox" class="acessibilidade" id="voz">
+                        <span class="slider"></span>
                         </label>
                     </div>
                 </div>
+
+                <button onclick="eventoModalAcessibilidadeOculto()" class="estilo-padrao-botao estilo-botao-padrao-tres">OK</button>
             </div>
         </div>
     </div>
