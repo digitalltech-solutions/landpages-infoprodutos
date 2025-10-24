@@ -531,9 +531,9 @@ header > nav{
     z-index: 99999;
 }
 
-#modal-nao-disponivel{
+/* #modal-nao-disponivel{
     display: flex;
-}
+} */
 
 .configurar-display-modal-padrao > div{
     width: 400px;

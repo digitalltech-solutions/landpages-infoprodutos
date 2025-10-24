@@ -388,9 +388,6 @@ function eventoDuvidas(){
 //CONFIGURAÇÃO MODAL DE FUNÇÃO INDISPONÍVEL:
 // Configuracão do modal indisponível transparente
 
-//CONFIGURAÇÃO MODAL DE FUNÇÃO INDISPONÍVEL:
-// Configuracão do modal indisponível aparente
-
 function eventoModalIndisponivel(){
     window.document.getElementById('modal-nao-disponivel').style.display = 'flex'
     window.document.getElementsByTagName('body')[0].style.overflowY = 'hidden'
@@ -422,6 +419,18 @@ function eventoModalDadosInvalidos(){
 
 function eventoModalDadosInvalidosOculto(){
     window.document.getElementById('modal-dados-inválidos').style.display = 'none'
+    window.document.getElementsByTagName('body')[0].style.overflowY = 'auto'
+}
+
+// Configuracão do modal de Acessibilidades
+
+function eventoModalDadosInvalidos(){
+    window.document.getElementById('configurar-display-acessivilidade').style.display = 'flex'
+    window.document.getElementsByTagName('body')[0].style.overflowY = 'hidden'
+}
+
+function eventoModalAcessibilidadeOculto(){
+    window.document.getElementById('configurar-display-acessivilidade').style.display = 'none'
     window.document.getElementsByTagName('body')[0].style.overflowY = 'auto'
 }
 
