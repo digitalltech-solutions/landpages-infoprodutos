@@ -1156,7 +1156,7 @@ header > nav{
 
 #secao-infoproduto > div > div:last-child{
     /* background: pink; */
-    width: 450px;
+    width: 420px;
 }
 
 #configurar-imagem-infoproduto{
@@ -1227,7 +1227,7 @@ header > nav{
     color: var(--corterciaria);
     border-radius: 5px;
     border: none;
-    width: 220px;
+    width: 205px;
     cursor: pointer;
     padding: 8px 0px;
     text-transform: uppercase;
@@ -1258,13 +1258,13 @@ header > nav{
 }
 
 #descricao-compra-infoproduto > h1{
-    font: normal normal 31px var(--fonteprimaria);
+    font: normal normal 35px var(--fonteprimaria);
     color: var(--corquaternaria);
     line-height: 28px;
 }
 
 #descricao-compra-infoproduto > p, #compra-segura{
-    font: normal normal 20px var(--fonteprimaria);
+    font: normal normal 23px var(--fonteprimaria);
     color: var(--corprimaria);
     margin: 0;
 }
@@ -1285,18 +1285,18 @@ header > nav{
     align-items: center;
     text-align: center;
     gap: 10px;
-    margin: 15px 0;
+    margin: 20px 0;
 }
 
 #preco-antigo{
     color: var(--corquaternaria);
-    font: normal normal 20px var(--fonteprimaria);
+    font: normal normal 23px var(--fonteprimaria);
 }
 
 #preco-atual{
     font: normal normal 70px 'fonte-titulos';
     color: var(--corquinternaria);
-    line-height: 45px;
+    line-height: 50px;
 }
 
 #preco-atual > span, #preco-atual > sup{
