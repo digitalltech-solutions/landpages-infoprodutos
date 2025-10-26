@@ -1796,3 +1796,25 @@ figcaption > a:hover{
 #icone-mobile{
     cursor: pointer;
 }
+
+/* CONFIGURAÇÃO DE BARRA SUPERIOR */
+
+#barra {
+    background: var(--corprimaria);
+    position: fixed;
+    height: 5px;
+    width: 0%;
+    left: 0;
+    top: 0;
+    z-index: 9999999;
+}
+
+#icone-dark-empresa:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+#icone-dark-empresa:active{
+    transform: scale(1);
+
+}

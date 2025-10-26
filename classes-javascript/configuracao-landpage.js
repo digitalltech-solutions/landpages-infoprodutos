@@ -1129,3 +1129,12 @@ window.document.querySelectorAll('.equipe').forEach((elementos) => {
         window.location = '#'
     })
 })
+
+// Configuração do Comprimento da Barra Horizontal
+
+window.onscroll = function() {
+    let scroll = document.documentElement.scrollTop;
+    let altura = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    let progresso = (scroll / altura) * 100;
+    document.getElementById("barra").style.width = progresso + "%";
+};
