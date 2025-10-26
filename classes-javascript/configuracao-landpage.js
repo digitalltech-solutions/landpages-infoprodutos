@@ -20,6 +20,7 @@ function eventoModoDark() {
         window.document.getElementById('icone-ecommerce-dois-mobile').src = '../recursos/imagens/icone-ecommerce-claro.png'
         window.document.getElementById('estilo-weight').style.color = '#ffffff'
         window.document.getElementById('video').poster = '../recursos/imagens/capa-video-dark.jpg'
+        window.document.getElementById('barra').style.background = '#4C4C4C'
 
         window.document.querySelectorAll('.estilo-botao-padrao-tres').forEach((elementosDark) => {
             elementosDark.style.color = '#FFFFFF'
@@ -127,6 +128,7 @@ function eventoModoDarkDois() {
         window.document.getElementById('video').poster = '../recursos/imagens/capa-video-dark.jpg'
         window.document.getElementById('icone-mobile').src = '../recursos/imagens/icone-digitalltech-mobile-dark.jpg'
         window.document.getElementById('imagem-carrossel-tres').src = '../recursos/imagens/card-mensagem-tres-dark.jpg'
+        window.document.getElementById('barra').style.background = '#4C4C4C'
 
         window.document.getElementById('icone-whatsapp').src = '../recursos/imagens/icone-whatsapp-dark.png'
         window.document.getElementById('icone-uphome-dark').src = '../recursos/imagens/icone-uphome-dark.png'
