@@ -16,7 +16,7 @@ function eventoModoDark() {
     caixa2.checked = caixa1.checked;
 
     if(caixa1.checked == true){
-
+        window.document.getElementById('icone-mobile').src = '../recursos/imagens/icone-digitalltech-mobile-dark.jpg'
         window.document.getElementById('icone-ecommerce-dois-mobile').src = '../recursos/imagens/icone-ecommerce-claro.png'
         window.document.getElementById('estilo-weight').style.color = '#ffffff'
         window.document.getElementById('video').poster = '../recursos/imagens/capa-video-dark.jpg'
@@ -94,7 +94,6 @@ function eventoModoDark() {
             botoes.style.color = '#ffffff'
         })
 
-        window.document.getElementById('icone-mobile').src = '../recursos/imagens/icone-digitalltech-mobile-dark.jpg'
         window.document.getElementById('imagem-carrossel-um').src = '../recursos/imagens/card-mensagem-um-dark.jpg'
         window.document.getElementById('imagem-carrossel-dois').src = '../recursos/imagens/card-mensagem-dois-dark.jpg'
         window.document.getElementById('imagem-carrossel-tres').src = '../recursos/imagens/card-mensagem-tres-dark.jpg'
@@ -126,6 +125,8 @@ function eventoModoDarkDois() {
         window.document.getElementById('icone-ecommerce-dois-mobile').src = '../recursos/imagens/icone-ecommerce-claro.png'
         window.document.getElementById('estilo-weight').style.color = '#ffffff'
         window.document.getElementById('video').poster = '../recursos/imagens/capa-video-dark.jpg'
+        window.document.getElementById('icone-mobile').src = '../recursos/imagens/icone-digitalltech-mobile-dark.jpg'
+        window.document.getElementById('imagem-carrossel-tres').src = '../recursos/imagens/card-mensagem-tres-dark.jpg'
 
         window.document.getElementById('icone-whatsapp').src = '../recursos/imagens/icone-whatsapp-dark.png'
         window.document.getElementById('icone-uphome-dark').src = '../recursos/imagens/icone-uphome-dark.png'
@@ -203,8 +204,6 @@ function eventoModoDarkDois() {
         window.document.getElementById('imagem-carrossel-um').src = '../recursos/imagens/card-mensagem-um-dark.jpg'
         window.document.getElementById('imagem-carrossel-dois').src = '../recursos/imagens/card-mensagem-dois-dark.jpg'
         window.document.getElementById('icone-empresa-acessibilidade').src = '../recursos/imagens/icone-ecommerce-claro.png'
-        window.document.getElementById('imagem-carrossel-tres').src = '../recursos/imagens/card-mensagem-tres-dark.jpg'
-        window.document.getElementById('icone-mobile').src = '../recursos/imagens/icone-digitalltech-mobile-dark.jpg'
         window.document.getElementById('icone-empresa-compartilhar').src = '../recursos/imagens/icone-ecommerce-claro.png'
         window.document.getElementById('input-comentario').style.backgroundColor = 'black'
         window.document.getElementById('nome-usuario').style.backgroundColor = 'black'

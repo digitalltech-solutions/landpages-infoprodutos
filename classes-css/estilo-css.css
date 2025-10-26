@@ -717,8 +717,8 @@ header > nav{
 }
 
 .titulo-acessibilidade-padrao {
-  font-size: 15px;
-  color: #333;
+  font: normal normal 18px var(--fonteprimaria);
+  color: var(--corsextiaria);
   margin: 0;
 }
 
@@ -1136,12 +1136,12 @@ header > nav{
     flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
-    margin: 3vh 0;
+    margin: 5vh 0;
     width: 100%;
 }
 
 #secao-infoproduto > div{
-    width: 90%;
+    width: 86%;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
@@ -1248,8 +1248,9 @@ header > nav{
 }
 
 #descricao-compra-infoproduto > h1{
-    font: normal normal 30px 'fonte-titulos';
+    font: normal normal 31px var(--fonteprimaria);
     line-height: 28px;
+    color: var(--corquaternaria);
 }
 
 #descricao-compra-infoproduto > p{
