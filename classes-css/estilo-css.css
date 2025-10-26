@@ -1433,6 +1433,10 @@ footer > div > div:first-child{
     gap: 10px;
 }
 
+#configurar-botao > a > button{
+    width: 100px;
+}
+
 #configurar-botao > a > button, #enviar-gmail{
     font: normal bold 15px var(--fonteprimaria);
     background: var(--corterciaria);
