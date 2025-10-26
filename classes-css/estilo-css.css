@@ -1330,7 +1330,7 @@ header > nav{
     align-items: center;
     flex-flow: row nowrap;
     justify-content: center;
-    margin: 20vh 0;
+    margin-bottom: 20vh;
 }
 
 #secao-apresentação > div{
