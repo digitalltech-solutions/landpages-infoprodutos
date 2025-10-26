@@ -1025,8 +1025,8 @@ header > nav{
 }
 
 #configurar-botoes-span > div > div{
-    width: 45px;
-    height: 45px;
+    width: 55px;
+    height: 55px;
     border: 1px solid var(--corprimaria);
     border-radius: 5px;
     display: flex;
@@ -1037,7 +1037,7 @@ header > nav{
 
 #configurar-botoes-span > div > div > span{
     color: var(--corprimaria);
-    font-size: 30px;
+    font-size: 40px;
     cursor: pointer;
 }
 
@@ -1055,27 +1055,32 @@ header > nav{
 }
 
 #termo-de-uso{
-    font: normal normal 15px var(--fonteprimaria);
+    font: normal normal 20px var(--fonteprimaria);
     color: var(--corsextiaria);
     text-decoration: none;
+    margin: 12px 0;
 }
 
 #termo-de-uso:hover{
-    color: var(--corquinternaria);
-    text-decoration: underline;
-    transform: scale(1.1);
+    color: var(--corsecundaria);
+    transform: scale(1.05);
 }
 
 #sistema-estrelas > a{
     color: var(--corprimaria);
 }
 
-#sistema-estrelas > :hover{
-    transform: scale(1.08);
+#sistema-estrelas > a:hover{
+    transform: scale(1.1);
+}
+
+#sistema-estrelas > a:active{
+    transform: scale(0.95);
 }
 
 #sistema-estrelas > a > span{
-    font-size: 25px;
+    font-size: 30px;
+    line-height: 18px;
     cursor: pointer;
 }
 
@@ -1260,7 +1265,7 @@ header > nav{
 #descricao-compra-infoproduto > h1{
     font: normal normal 35px var(--fonteprimaria);
     color: var(--corquaternaria);
-    line-height: 28px;
+    line-height: 32px;
 }
 
 #descricao-compra-infoproduto > p, #compra-segura{
@@ -1275,6 +1280,7 @@ header > nav{
 
 #compra-segura{
     color: var(--corsecundaria);
+    font-size: 20px;
 }
 
 #configurar-preco-botoes{
@@ -1294,13 +1300,13 @@ header > nav{
 }
 
 #preco-atual{
-    font: normal normal 70px 'fonte-titulos';
+    font: normal normal 80px 'fonte-titulos';
     color: var(--corquinternaria);
     line-height: 50px;
 }
 
 #preco-atual > span, #preco-atual > sup{
-    font-size: 30px;
+    font-size: 32px;
 }
 
 /* DESCRIÇÃO DO INFOPRODUTO */
