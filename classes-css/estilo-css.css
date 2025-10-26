@@ -1147,10 +1147,16 @@ header > nav{
     justify-content: space-between;
     align-items: center;
     gap: 15px;
+    /* background: red; */
 }
 
 #secao-infoproduto > div > div:first-child{
     width: auto;
+}
+
+#secao-infoproduto > div > div:last-child{
+    /* background: pink; */
+    width: 450px;
 }
 
 #configurar-imagem-infoproduto{
@@ -1212,18 +1218,19 @@ header > nav{
     flex-flow: row wrap;
     justify-content: space-around;
     align-items: center;
-    gap: 5px;
+    gap: 1px;
 }
 
 #estilo-botoes > a > button{
-    font: normal normal 15px var(--fonteprimaria);
+    font: normal bold 15px var(--fonteprimaria);
     background: var(--corprimaria);
     color: var(--corterciaria);
     border-radius: 5px;
-    padding: 8px 5px;
     border: none;
-    width: 180px;
+    width: 220px;
     cursor: pointer;
+    padding: 8px 0px;
+    text-transform: uppercase;
 }
 
 #estilo-botoes > a > button:hover{
@@ -1235,9 +1242,12 @@ header > nav{
 }
 
 #estilo-botoes > a:last-child > button{
-    border: 1px solid var(--corprimaria);
+    border: 2px solid var(--corprimaria);
     background: var(--corterciaria);
     color: var(--corprimaria);
+    text-transform: none;
+    font-weight: normal;
+    font-size: 18px;
     width: 100%;
 }
 
@@ -1249,18 +1259,22 @@ header > nav{
 
 #descricao-compra-infoproduto > h1{
     font: normal normal 31px var(--fonteprimaria);
-    line-height: 28px;
     color: var(--corquaternaria);
+    line-height: 28px;
 }
 
-#descricao-compra-infoproduto > p{
-    font: normal normal 18px var(--fonteprimaria);
-    color: var(--corsecundaria);
+#descricao-compra-infoproduto > p, #compra-segura{
+    font: normal normal 20px var(--fonteprimaria);
+    color: var(--corprimaria);
     margin: 0;
 }
 
 #descricao-compra-infoproduto > p > span{
     color: var(--corprimaria);
+}
+
+#compra-segura{
+    color: var(--corsecundaria);
 }
 
 #configurar-preco-botoes{
