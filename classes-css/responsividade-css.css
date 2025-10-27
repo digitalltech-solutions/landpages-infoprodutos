@@ -1,4 +1,4 @@
-@media screen and (max-width: 1040px) {
+@media screen and (max-width: 900px) {
     /* CONFIGURAÇÃO DE RESPONSIVIDADE DA BARRA DE PESQUISA - PROJETO PARTE UM*/
 
     header > nav{
@@ -145,32 +145,32 @@
     }
 
     #descricao-compra-infoproduto > h1{
-        font-size: 24px;
+        font-size: 3.8vw;
         line-height: 25px;
     }
 
     #descricao-compra-infoproduto > p{
-        font-size: 15px;
+        font-size: 2.6vw;
     }
 
     #configurar-preco-botoes{
-        margin: 12px 0;
+        margin: 20px 0;
         gap: 8px;
         display: flex;
         justify-content: space-between;
     }
 
     #preco-antigo{
-        font-size: 14px;
+        font-size: 18px;
     }
 
     #preco-atual{
-        line-height: 30px;
-        font-size: 60px;
+        line-height: 60px;
+        font-size: 70px;
     }
 
     #preco-atual > span, #preco-atual > sup{
-        font-size: 20px;
+        font-size: 25px;
     }
 
     #configurar-botoes-span > div:first-child > div{
