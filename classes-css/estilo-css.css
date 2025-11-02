@@ -48,13 +48,13 @@ body, html{
 /* CONFIGURAÇÕES PADRÕES */
 
 .titulo{
-    font: normal bold 32px 'fonte-titulos';
+    font: normal bold 35px 'fonte-titulos';
     text-transform: uppercase;
     color: var(--corprimaria);
 }
 
 .texto{
-    font: normal normal 20px var(--fonteprimaria);
+    font: normal normal 22px var(--fonteprimaria);
     color: var(--corquaternaria);
     text-align: left;
     margin: 16px 0;
