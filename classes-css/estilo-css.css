@@ -48,7 +48,7 @@ body, html{
 /* CONFIGURAÇÕES PADRÕES */
 
 .titulo{
-    font: normal bold 35px 'fonte-titulos';
+    font: normal bold 32px 'fonte-titulos';
     text-transform: uppercase;
     color: var(--corprimaria);
 }
@@ -60,7 +60,7 @@ body, html{
     margin: 16px 0;
 }
 
-#marcador-verde{
+.marcador-verde{
     color: var(--corprimaria);
 }
 
@@ -1133,7 +1133,8 @@ header > nav{
     flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
-    margin: 8vh 0;
+    /* margin-top: 50px; */
+    margin: 50px 0;
     width: 100%;
 }
 
@@ -1529,8 +1530,9 @@ footer > div > div:first-child{
     align-items: center;
     flex-flow: row nowrap;
     justify-content: center;
-    margin: 100px 0;
+    /* red */
     width: 100%;
+    margin: 20vh 0;
 }
 
 #comentarios > div{
@@ -1584,23 +1586,19 @@ footer > div > div:first-child{
     border-radius: 4px;
 }
 
-#label-nome-avaliacao > span{
-    font-size: 45px;
-    color: var(--corprimaria);
-}
-
 #label-nome-avaliacao > input{
     font: normal normal 20px var(--fonteprimaria);
     border: none;
     padding: 8px 10px;
     width: 100%;
     background: transparent;
+    color: var(--corquaternaria);
 }
 
-.stars {
-    display: inline-block;
+.stars{
+    display: flex;
     direction: rtl;
-    font-size: 25px;
+    font-size: 30px;
     cursor: pointer;
 }
 
@@ -1611,6 +1609,16 @@ footer > div > div:first-child{
 .stars label {
     color: #ccc;
     transition: color 0.2s;
+    cursor: pointer;
+    transition: .2;
+}
+
+.stars label:hover{
+    transform: scale(1.15);
+}
+
+.stars label:active{
+    transform: scale(0.9);
 }
 
 .stars label:hover,

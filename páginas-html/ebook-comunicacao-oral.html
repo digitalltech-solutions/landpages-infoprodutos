@@ -588,13 +588,13 @@
                 <p>Parcele em até <b>2x de R$ 9,94</b> sem juros</p>
                 <div id="configurar-preco-botoes">
                     <div id="configurar-preco">
-                        <span id="preco-antigo" class="texto-padrao-dois"><del>R$ 25,00</del> <span class="marca-texto-padrao-um destaque-padrao"><b class="texto-padrao-dois">18% OFF</b></span></span>
+                        <span id="preco-antigo" class="texto-padrao-dois"><del>R$ 25,00</del> <span class="marca-texto-padrao-um destaque-padrao"><b class="marcador-verde">18% OFF</b></span></span>
                         <br>
                         <span id="preco-atual" class="estilo-texto-modo-dark">
                             <span class="estilo-texto-modo-dark">R$</span><b class="estilo-texto-modo-dark">19</b><sup class="estilo-texto-modo-dark">,89</sup>
                         </span>
                         <br>
-                        <span id="preco-antigo" class="texto-padrao-dois"><small>Economize</small> <span class="marca-texto-padrao-um destaque-padrao"><b class="texto-padrao-dois" id="marcador-verde"><small>-R$ 22,44</small></b></span></span>
+                        <span id="preco-antigo" class="texto-padrao-dois"><small>Economize</small> <span class="marca-texto-padrao-um destaque-padrao"><b class="texto-padrao-dois"><small class="marcador-verde">-R$ 22,44</small></b></span></span>
                     </div>
                     <div id="configurar-botoes-span">
                         <div>
@@ -655,9 +655,7 @@
 
     <section id="comentarios">
         <div>
-            <h1 class="titulo hidden-dois">
-                O QUE VOCÊ ACHOU? CONTE PRA GENTE!
-            </h1>
+            <h1 class="titulo hidden-dois">O QUE VOCÊ ACHOU? CONTE PRA GENTE!</h1>
             <p class="texto estilo-texto-modo-dark hidden-dois">
                  <b>Este Infoproduto está em evolução e sua opinião é essencial.</b> Comente sugestões, dúvidas ou correções 
                  para ajudar a melhorar o material. Gostaríamos de saber o que você achou!
@@ -666,7 +664,7 @@
                 <div>
                     <div id="nome-avaliacao">
                         <label for="nome-usuario" id="label-nome-avaliacao">
-                            <span class="material-symbols-outlined texto-padrao-dois">account_circle</span>
+                            <!-- <span class="material-symbols-outlined texto-padrao-dois">account_circle</span> -->
                             <input type="text" name="nome-usuario" id="nome-usuario" class="estilo-botao-dark-um estilo-borda-dark" required placeholder="Nome completo" minlength="3" maxlength="30">
                         </label>
                         <div id="configurar-div-stars">
@@ -689,7 +687,7 @@
                             </div>
                         </div>
                     </div>
-                    <textarea name="input-comentario" id="input-comentario" class="estilo-botao-dark-dois" placeholder="Compartilhe sua opinião e forneça seu feedback sobre este infoproduto..." minlength="3" maxlength="1000"></textarea>
+                    <textarea name="input-comentario" id="input-comentario" class="estilo-botao-dark-dois" placeholder="Comente aqui..." minlength="3" maxlength="1000"></textarea>
                     <div id="configurar-display-botoes-comentario">
                         <button id="estilo-botao-um" class="estilo-botao-dark-um" onclick="eventoEnviarComentario()">Enviar Comentário</button>
                         <button id="estilo-botao-dois" class="estilo-botao-dark-dois" onclick="eventoLimpar()">Limpar Comentário</button>
