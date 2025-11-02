@@ -1580,6 +1580,8 @@ footer > div > div:first-child{
     flex-flow: row nowrap;
     justify-content: center;
     width: 100%;
+    border: 2px solid var(--corprimaria);
+    border-radius: 4px;
 }
 
 #label-nome-avaliacao > span{
@@ -1588,12 +1590,9 @@ footer > div > div:first-child{
 }
 
 #label-nome-avaliacao > input{
-    font: normal normal 18px var(--fonteprimaria);
-    border: 1px solid var(--corprimaria);
+    font: normal normal 20px var(--fonteprimaria);
+    border: none;
     padding: 8px 10px;
-    border-top: none;
-    border-left: none;
-    border-right: none;
     width: 100%;
     background: transparent;
 }
@@ -1648,11 +1647,12 @@ footer > div > div:first-child{
 #input-comentario{
     padding: 15px;
     font: normal normal 20px var(--fonteprimaria);
-    border: 3px solid var(--corprimaria);
+    border: 2px solid var(--corprimaria);
     color: var(--corsextiaria);
     border-radius: 4px;
     height: 150px;
-    width: 100%;
+    width: 97%;
+    margin: auto;
 }
 
 #configurar-display-botoes-comentario{
@@ -1669,20 +1669,15 @@ footer > div > div:first-child{
     font: normal normal 18px 'fonte-titulos';
     color: var(--corterciaria);
     width: 50%;
-    padding: 12px;
     cursor: pointer;
     border-radius: 5px;
-    border: 1px solid var(--corprimaria);
+    border: 2px solid var(--corprimaria);
+    padding: 9px 0;
 }
 
 #estilo-botao-um{
     font-weight: bold;
     text-transform: uppercase;
-}
-
-#estilo-botao-dois{
-    border-width: 3px;
-    padding: 8px;
 }
 
 #estilo-botao-um:hover, #estilo-botao-dois:hover{
