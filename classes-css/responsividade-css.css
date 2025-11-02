@@ -138,6 +138,10 @@
         width: 100%;
     }
 
+    #secao-infoproduto > div > div:last-child{
+        width: 95%;
+    }
+
     /* configuração da div-capa do infoproduto: texto-descrição */
 
     #descricao-compra-infoproduto{
@@ -343,26 +347,22 @@
 
     /* configuração da div-capa do infoproduto: texto-descrição */
 
-    #descricao-compra-infoproduto{
-        width: 95%;
-    }
-
     #descricao-compra-infoproduto > h1{
-        font-size: 30px;
+        font-size: 32px;
         text-align: center;
-        line-height: 35px;
+        line-height: 30px;
     }
 
     #descricao-compra-infoproduto > p{
-        font-size: 22px;
+        font-size: 20px;
         text-align: center;
+        margin-top: 8px;
     }
 
     #configurar-preco-botoes{
-        margin: 20px 0;
+        margin: 8px 0;
         gap: 2px;
-        width: 90%;
-        margin: auto;
+        width: 100%;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -377,8 +377,12 @@
         font-size: 70px;
     }
 
+    #termo-de-uso{
+        margin: 8px;
+    }
+
     #preco-atual > span, #preco-atual > sup{
-        font-size: 25px;
+        font-size: 22px;
     }
 
     #sistema-estrelas > a > span{
