@@ -1534,7 +1534,7 @@ footer > div > div:first-child{
 }
 
 #comentarios > div{
-    width: 90%;
+    width: 87%;
 }
 
 #comentarios > div > h1{
@@ -1647,10 +1647,10 @@ footer > div > div:first-child{
 
 #input-comentario{
     padding: 15px;
-    font: normal normal 18px var(--fonteprimaria);
-    border: 1px solid var(--corprimaria);
+    font: normal normal 20px var(--fonteprimaria);
+    border: 3px solid var(--corprimaria);
     color: var(--corsextiaria);
-    border-radius: 5px;
+    border-radius: 4px;
     height: 150px;
     width: 100%;
 }
@@ -1666,13 +1666,23 @@ footer > div > div:first-child{
 
 #estilo-botao-um, #estilo-botao-dois{
     background: var(--corprimaria);
-    font: normal normal 18px var(--fonteprimaria);
+    font: normal normal 18px 'fonte-titulos';
     color: var(--corterciaria);
     width: 50%;
     padding: 12px;
     cursor: pointer;
-    border-radius: 8px;
+    border-radius: 5px;
     border: 1px solid var(--corprimaria);
+}
+
+#estilo-botao-um{
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#estilo-botao-dois{
+    border-width: 3px;
+    padding: 8px;
 }
 
 #estilo-botao-um:hover, #estilo-botao-dois:hover{
