@@ -53,15 +53,15 @@ body, html{
     color: var(--corprimaria);
 }
 
-.texto-padrao{
+.texto{
     font: normal normal 20px var(--fonteprimaria);
-    color: var(--corquinternaria);
-    margin: 10px 0;
+    color: var(--corquaternaria);
+    margin: 16px 0;
 }
 
 .lista-padrao{
     list-style-position: inside;
-    margin: 18px 0;
+    margin: 10px 0;
 }
 
 .lista-padrao > li{
@@ -1307,7 +1307,7 @@ header > nav{
 }
 
 #descricao-infoproduto > div{
-    width: 90%;
+    width: 87%;
 }
 
 /* CONFIGURAÇÃO DE ESTILO DA SEÇÃO DE APRESENTAÇÃO */
