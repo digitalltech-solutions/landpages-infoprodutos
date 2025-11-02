@@ -134,14 +134,14 @@
         font-size: 40px;
     }
     
-    #secao-infoproduto > div > div:first-child{
-        width: 350px;
+    #secao-infoproduto > div > div:first-child, #secao-infoproduto > div > div:last-child{
+        width: 100%;
     }
 
     /* configuração da div-capa do infoproduto: texto-descrição */
 
     #descricao-compra-infoproduto{
-        width: 330px;
+        width: 100%;
     }
 
     #descricao-compra-infoproduto > h1{
@@ -359,8 +359,10 @@
     }
 
     #configurar-preco-botoes{
-        margin: 16px 0;
+        margin: 20px 0;
         gap: 2px;
+        width: 90%;
+        margin: auto;
         display: flex;
         justify-content: space-between;
         align-items: center;
