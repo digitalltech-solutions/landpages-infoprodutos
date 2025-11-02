@@ -47,40 +47,27 @@ body, html{
 
 /* CONFIGURAÇÕES PADRÕES */
 
-.estilo-titulo-padrao-texto{
-    font: normal bold 30px 'fonte-titulos';
-    color: var(--corsetimo);
+.titulo{
+    font: normal bold 32px 'fonte-titulos';
     text-transform: uppercase;
+    color: var(--corprimaria);
 }
 
 .texto-padrao{
-    font: normal normal 16px var(--fonteprimaria);
+    font: normal normal 20px var(--fonteprimaria);
     color: var(--corquinternaria);
     margin: 10px 0;
 }
 
-.marca-texto-padrao-um{
-    color: var(--corprimaria);
-}
-
-.estilo-lista-padrao-um{
-    list-style: circle inside none;
+.lista-padrao{
+    list-style-position: inside;
     margin: 18px 0;
 }
 
-.estilo-lista-padrao-um > li{
-    font: normal normal 16px var(--fonteprimaria);
-    color: var(--corquinternaria);
+.lista-padrao > li{
+    font: normal normal 20px var(--fonteprimaria);
+    color: var(--corquaternaria);
     margin: 8px 0;
-}
-
-.marcador-texto{
-    color: var(--corsecundaria);
-    font-weight: bold;
-}
-
-.marcador-texto-dois{
-    color: var(--corsecundaria);
 }
 
 /* configuração de opacidade */
@@ -711,9 +698,9 @@ header > nav{
 .opcao {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 8px 0;
   border-bottom: 1px solid #ddd;
+  align-items: center;
+  padding: 6px 0;
 }
 
 .titulo-acessibilidade-padrao {
