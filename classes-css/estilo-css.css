@@ -1238,12 +1238,13 @@ header > nav{
 }
 
 #estilo-botoes > a:last-child > button{
-    border: 3px solid var(--corprimaria);
+    border: 2px solid var(--corprimaria);
     background: var(--corterciaria);
     color: var(--corprimaria);
     text-transform: none;
     font-weight: normal;
     font-size: 22px;
+    padding: 6px 0;
     width: 100%;
 }
 

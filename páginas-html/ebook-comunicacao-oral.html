@@ -389,8 +389,8 @@
     <!-- BOTÕES LATERAIS -->
 
     <div id="icones-laterais" class="hidden-um">
-        <a href="#"><img src="../recursos/imagens/icone-uphome.png" alt="icone" id="icone-uphome-dark"></a>
-        <a href="https://wa.me/5588997616313" target="_blank"><img src="../recursos/imagens/icone-whatsapp.png" alt="icone" id="icone-whatsapp"></a>
+        <a href="#" title="Início"><img src="../recursos/imagens/icone-uphome.png" alt="icone" id="icone-uphome-dark"></a>
+        <a href="https://wa.me/5588997616313" target="_blank" title="Conversar no WhatsApp"><img src="../recursos/imagens/icone-whatsapp.png" alt="icone" id="icone-whatsapp"></a>
     </div>
 
     <!-- CONFIGURAÇÃO DE MODAL - FUNÇÃO NÃO DISPONÍVEL -->
@@ -598,9 +598,9 @@
                     </div>
                     <div id="configurar-botoes-span">
                         <div>
-                            <div onclick="eventoModalIndisponivel()" class="estilo-botao-dark-dois"><span class="material-symbols-outlined estilo-botao-dark-dois" title="Marcar como Favorito">favorite</span></div>
-                            <div onclick="eventoComentario()" class="estilo-botao-dark-dois"><span class="material-symbols-outlined estilo-botao-dark-dois" title="Comentar">chat</span></div>
-                            <div onclick="eventoModalIndisponivel()" class="estilo-botao-dark-dois"><span class="material-symbols-outlined estilo-botao-dark-dois" title="Compartilhar">send</span></div>
+                            <div onclick="eventoModalIndisponivel()" class="botao-dark-dois"><span class="material-symbols-outlined botao-dark-dois" title="Marcar como Favorito">favorite</span></div>
+                            <div onclick="eventoComentario()" class="botao-dark-dois"><span class="material-symbols-outlined botao-dark-dois" title="Comentar">chat</span></div>
+                            <div onclick="eventoModalIndisponivel()" class="botao-dark-dois"><span class="material-symbols-outlined botao-dark-dois" title="Compartilhar">send</span></div>
                         </div>
                         <a href="https://digitalltech.netlify.app/classehtml/termos-de-uso" id="termo-de-uso">Termos de Uso</a>
                         <div id="sistema-estrelas">
@@ -613,12 +613,12 @@
                     </div>
                 </div>
                 <div id="estilo-botoes">
-                    <a href="#"><button class="estilo-botao-dark-um" title="Compre o Infoproduto Aqui de Forma Rápida">Comprar Aqui</button></a>
+                    <a href="#"><button class="botao-dark-um" title="Compre o Infoproduto Aqui de Forma Rápida">Comprar Aqui</button></a>
                     <a href="https://wa.me/5588997616313?text=Ol%C3%A1!%20Tenho%20interesse%20no%20eBook%20Arte%20da%20Comunica%C3%A7%C3%A3o%20Oral%20que%20vi%20no%20site%20DigitallTech.%20Segue%20o%20link%20para%20mais%20detalhes:%20https://digitalltech-solutions.github.io/landpages-infoprodutos/p%C3%A1ginas-html/ebook-comunicacao-oral.html">
-                        <button class="estilo-botao-dark-um" title="Compre pelo WhatsApp">Comprar no WhatsApp</button>
+                        <button class="botao-dark-um" title="Compre pelo WhatsApp">Comprar no WhatsApp</button>
                     </a>
                     <a href="https://wa.me/5588997616313?text=Ol%C3%A1!%20Tenho%20interesse%20no%20eBook%20Arte%20da%20Comunica%C3%A7%C3%A3o%20Oral%20que%20vi%20no%20site%20DigitallTech.%20Segue%20o%20link%20para%20mais%20detalhes:%20https://digitalltech-solutions.github.io/landpages-infoprodutos/p%C3%A1ginas-html/ebook-comunicacao-oral.html" style="flex: auto;">
-                        <button class="estilo-botao-dark-dois" title="Torne-se um Afiliado e Comece a Promover este Infoproduto">Afiliar-se ao Infoproduto</button>
+                        <button class="botao-dark-dois" title="Torne-se um Afiliado e Comece a Promover este Infoproduto">Afiliar-se ao Infoproduto</button>
                     </a>
                 </div>
                 <span class="estilo-texto-modo-dark" id="compra-segura">Aqui, sua compra é 100% segura!</span>
@@ -664,7 +664,7 @@
                 <div>
                     <div id="nome-avaliacao">
                         <label for="nome-usuario" id="label-nome-avaliacao">
-                            <input type="text" name="nome-usuario" id="nome-usuario" class="estilo-botao-dark-um estilo-borda-dark" required placeholder="Nome completo" minlength="3" maxlength="30">
+                            <input type="text" name="nome-usuario" id="nome-usuario" required placeholder="Nome completo" minlength="3" maxlength="30">
                         </label>
                         <div id="configurar-div-stars">
                             <span id="avaliacao">Avaliação</span>
@@ -686,10 +686,10 @@
                             </div>
                         </div>
                     </div>
-                    <textarea name="input-comentario" id="input-comentario" class="estilo-botao-dark-dois" placeholder="Comente aqui..." minlength="3" maxlength="1000"></textarea>
+                    <textarea name="input-comentario" id="input-comentario" placeholder="Comente aqui..." minlength="3" maxlength="1000"></textarea>
                     <div id="configurar-display-botoes-comentario">
-                        <button id="estilo-botao-um" class="estilo-botao-dark-um" onclick="eventoEnviarComentario()">Enviar Comentário</button>
-                        <button id="estilo-botao-dois" class="estilo-botao-dark-dois" onclick="eventoLimpar()">Limpar Comentário</button>
+                        <button id="estilo-botao-um" class="botao-dark-um" onclick="eventoEnviarComentario()">Enviar Comentário</button>
+                        <button id="estilo-botao-dois" class="botao-dark-dois" onclick="eventoLimpar()">Limpar Comentário</button>
                     </div>
                 </div>
             </form>
@@ -736,8 +736,8 @@
                     Vá em Serviços. 👇
                 </p>
                 <span id="configurar-botao">
-                    <a href="#"><button class="estilo-botao-dark-dois" title="Início da Página">Início</button></a>
-                    <a href="https://digitalltech.netlify.app/classehtml/serviços" title="Solicitar Serviço Personalizado"><button class="estilo-botao-dark-dois">Serviços</button></a>
+                    <a href="#"><button class="botao-dark-tres" title="Início da Página">Início</button></a>
+                    <a href="https://digitalltech.netlify.app/classehtml/serviços" title="Solicitar Serviço Personalizado"><button class="botao-dark-tres">Serviços</button></a>
                 </span>
             </div>
             <div class="centralizar-cofiguracao">
@@ -774,7 +774,7 @@
                 <label for="gmail" id="label-gmail">
                     <input type="text" id="gmail" placeholder="Gmail: exemplo@gmail.com" pattern="^[a-zA-Z0-9._]+@gmail\.com$" required>
                 </label>
-                <button id="enviar-gmail" class="estilo-botao-dark-dois" type="submit" onclick="eventoNewsletter()" title="Receber Novidades por E-mail">Enviar</button>
+                <button id="enviar-gmail" class="botao-dark-tres" type="submit" onclick="eventoNewsletter()" title="Receber Novidades por E-mail">Enviar</button>
             </form>
         </div>
     </footer>

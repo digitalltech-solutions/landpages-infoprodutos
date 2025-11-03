@@ -16,6 +16,29 @@ function eventoModoDark() {
     caixa2.checked = caixa1.checked;
 
     if(caixa1.checked == true){
+
+        window.document.getElementsByTagName('body')[0].style.backgroundColor = '#000000'
+
+        // 1. Botão Dark
+        window.document.querySelectorAll('.botao-dark-um').forEach((botaoDark) => {
+            botaoDark.style.backgroundColor = '#303030'
+            botaoDark.style.borderColor = '#303030'
+            botaoDark.style.color = '#ffffff'
+        })
+
+        // 2. Botão Dark
+        window.document.querySelectorAll('.botao-dark-dois').forEach((botaoDark) => {
+            botaoDark.style.backgroundColor = '#000000'
+            botaoDark.style.borderColor = '#ffffff'
+            botaoDark.style.color = '#ffffff'
+        })
+
+        // 3. Botão Dark
+        window.document.querySelectorAll('.botao-dark-tres').forEach((botaoDark) => {
+            botaoDark.style.backgroundColor = '#303030'
+            botaoDark.style.borderColor = '#ffffff'
+            botaoDark.style.color = '#ffffff'
+        })
         
     }else{
         window.location = window.location.href.split('#')[0];
@@ -482,9 +505,6 @@ function eventoServicos(){
 function eventoYoutube(){
     window.location = "youtube.com"
 }
-
-// window.document.getElementById('video').src = '#'
-// window.document.getElementById('video').poster = '#'
 
 function eventoAcessibilidadeOpen(){
     window.document.getElementById('configurar-display-acessivilidade').style.display = 'flex'
