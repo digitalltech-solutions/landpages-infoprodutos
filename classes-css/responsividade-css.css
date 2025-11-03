@@ -472,5 +472,28 @@
     #input-comentario{
         padding: 10px 5px;
     }
+
+    /* CONFIGURAÇÃO DE RESPONSIVIDADE TEXTUAL */
+
+    .titulo{
+        font-size: 28px;
+    }
+
+    .texto{
+        font-size: 18px;
+    }
+
+    .marcador-verde{
+        color: var(--corprimaria);
+    }
+
+    .lista-padrao{
+        list-style-position: inside;
+        margin: 8px 0;
+    }
+
+    .lista-padrao > li{
+        font-size: 18px;
+    }
 }
 

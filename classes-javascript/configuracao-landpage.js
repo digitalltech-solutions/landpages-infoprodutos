@@ -507,6 +507,7 @@ function eventoModoDislexia(){
         window.document.getElementById('avaliacao').style.fontFamily = 'fonte-dislexia'
         window.document.getElementById('preco-atual').style.fontFamily = 'fonte-dislexia'
         window.document.getElementById('preco-antigo').style.fontFamily = 'fonte-dislexia'
+        window.document.getElementById('compra-segura').style.fontFamily = 'fonte-dislexia'
     }else{
         window.document.querySelectorAll('p, h1, h2, h3, li, a, input, button, sub, sup, textarea, del, .estilo-acessibilidade-dislexia').forEach((elementos) => {
             elementos.style.removeProperty('font-family');
@@ -515,6 +516,7 @@ function eventoModoDislexia(){
         window.document.getElementById('avaliacao').style.removeProperty('font-family')
         window.document.getElementById('preco-atual').style.removeProperty('font-family')
         window.document.getElementById('preco-antigo').style.removeProperty('font-family')
+        window.document.getElementById('compra-segura').style.removeProperty('font-family')
     }
 }
 

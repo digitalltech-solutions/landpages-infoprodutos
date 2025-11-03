@@ -1216,7 +1216,7 @@ header > nav{
     flex-flow: row wrap;
     justify-content: space-around;
     align-items: center;
-    gap: 1px;
+    gap: 2px;
 }
 
 #estilo-botoes > a > button{
@@ -1245,7 +1245,7 @@ header > nav{
     color: var(--corprimaria);
     text-transform: none;
     font-weight: normal;
-    font-size: 18px;
+    font-size: 22px;
     width: 100%;
 }
 
@@ -1274,6 +1274,7 @@ header > nav{
 #compra-segura{
     color: var(--corsecundaria);
     font-size: 20px;
+    margin-top: 3px;
 }
 
 #configurar-preco-botoes{
@@ -1289,7 +1290,7 @@ header > nav{
 
 #preco-antigo{
     color: var(--corquaternaria);
-    font: normal normal 23px var(--fonteprimaria);
+    font: normal normal 22px var(--fonteprimaria);
 }
 
 #preco-atual{
@@ -1540,8 +1541,9 @@ footer > div > div:first-child{
 }
 
 #comentarios > div > h1{
-    font: normal bolder 30px 'fonte-titulos';
     text-align: center;
+    margin: 0;
+    line-height: 28px;
 }
 
 #comentarios > div > p{
