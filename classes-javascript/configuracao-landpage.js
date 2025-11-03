@@ -500,7 +500,7 @@ function eventoModoDislexia(){
     if(window.document.getElementById('dislexia').checked == true){
         // Aplicação da Fonte Tipográfica em Todas as Tags
         
-        window.document.querySelectorAll('p, h1, h2, h3, li, a, input, button, sub, sup, textarea, del, .estilo-acessibilidade-dislexia').forEach((elementosDislexia) => {
+        window.document.querySelectorAll('p, h1, h2, h3, li, a, input, button, sub, sup, textarea, del, .estilo-acessibilidade-dislexia, .economize').forEach((elementosDislexia) => {
             elementosDislexia.style.fontFamily = 'fonte-dislexia'
         })
 
@@ -509,7 +509,7 @@ function eventoModoDislexia(){
         window.document.getElementById('preco-antigo').style.fontFamily = 'fonte-dislexia'
         window.document.getElementById('compra-segura').style.fontFamily = 'fonte-dislexia'
     }else{
-        window.document.querySelectorAll('p, h1, h2, h3, li, a, input, button, sub, sup, textarea, del, .estilo-acessibilidade-dislexia').forEach((elementos) => {
+        window.document.querySelectorAll('p, h1, h2, h3, li, a, input, button, sub, sup, textarea, del, .estilo-acessibilidade-dislexia, .economize').forEach((elementos) => {
             elementos.style.removeProperty('font-family');
         });
 
