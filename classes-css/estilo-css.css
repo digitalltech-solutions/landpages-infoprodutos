@@ -1133,7 +1133,6 @@ header > nav{
     flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
-    /* margin-top: 50px; */
     margin: 50px 0;
     width: 100%;
 }
@@ -1145,7 +1144,6 @@ header > nav{
     justify-content: space-between;
     align-items: center;
     gap: 15px;
-    /* background: red; */
 }
 
 #secao-infoproduto > div > div:first-child{
@@ -1531,9 +1529,9 @@ footer > div > div:first-child{
     align-items: center;
     flex-flow: row nowrap;
     justify-content: center;
-    /* red */
+    margin-top: 50px;
+    margin-bottom: 15vh;
     width: 100%;
-    margin: 20vh 0;
 }
 
 #comentarios > div{
