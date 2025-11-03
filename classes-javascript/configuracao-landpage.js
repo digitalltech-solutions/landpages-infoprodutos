@@ -17,6 +17,17 @@ function eventoModoDark() {
 
     if(caixa1.checked == true){
 
+        // window.document.getElementById('configuracao-modo-claro').style.display = 'none'
+        // window.document.getElementById('configuracao-modo-escuro').style.display = 'block'
+
+        window.document.querySelectorAll('.configurar-icone-light').forEach((elementosDark) => {
+            elementosDark.style.display = 'none'
+        })
+
+        window.document.querySelectorAll('.configurar-icone-dark').forEach((elementosDark) => {
+            elementosDark.style.display = 'block'
+        })
+
         window.document.getElementsByTagName('body')[0].style.backgroundColor = '#000000'
 
         // 1. Botão Dark
@@ -53,6 +64,17 @@ function eventoModoDarkDois() {
 
     
     if(caixa1.checked == true){
+
+        // Configuração Input Dark
+        
+        window.document.querySelectorAll('.configurar-icone-light').forEach((elementosDark) => {
+            elementosDark.style.display = 'none'
+        })
+
+        window.document.querySelectorAll('.configurar-icone-dark').forEach((elementosDark) => {
+            elementosDark.style.display = 'block'
+        })
+
 
         window.document.getElementById('icone-ecommerce-dois-mobile').src = '../recursos/imagens/icone-ecommerce-claro.png'
         window.document.getElementById('estilo-weight').style.color = '#ffffff'
