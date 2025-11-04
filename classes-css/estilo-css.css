@@ -1521,6 +1521,7 @@ footer > div > div:first-child{
 #configurar-botoes-span-dois{
     display: flex;
     justify-content: center;
+    gap: 10px;
 }
 
 /* ESTILO DE COMENTÁRIOS */
