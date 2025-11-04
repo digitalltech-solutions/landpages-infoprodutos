@@ -81,6 +81,7 @@ function eventoModoDark() {
         
         // Configuração Dark dos Elementos Específicos:
         window.document.getElementById('configuracao-nav-dois').style.backgroundColor = '#303030'
+        window.document.getElementById('barra').style.backgroundColor = '#4C4C4C'
 
     }else{
         window.location = window.location.href.split('#')[0];
