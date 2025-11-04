@@ -50,6 +50,22 @@ function eventoModoDark() {
             botaoDark.style.borderColor = '#ffffff'
             botaoDark.style.color = '#ffffff'
         })
+
+        // Configuração Texto Dark
+        // 1. Texto Dark
+        window.document.querySelectorAll('.cor-texto-dark-um').forEach((textoDark) => {
+            textoDark.style.color = '#ffffff'
+        })
+
+        // 2. Texto Dark
+        window.document.querySelectorAll('.cor-texto-dark-dois').forEach((textoDark) => {
+            textoDark.style.color = '#7F7F7F'
+        })
+
+        // 3. Texto Dark
+        window.document.querySelectorAll('.cor-texto-dark-tres').forEach((textoDark) => {
+            textoDark.style.color = '#004aad'
+        })
         
     }else{
         window.location = window.location.href.split('#')[0];
