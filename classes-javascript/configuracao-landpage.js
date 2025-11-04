@@ -66,6 +66,9 @@ function eventoModoDark() {
         window.document.querySelectorAll('.cor-texto-dark-tres').forEach((textoDark) => {
             textoDark.style.color = '#004aad'
         })
+
+        // Configuração de Imagens Dark:
+        window.document.getElementById('icone-empresa').src = '../recursos/imagens/icone-empresa-dark.jpg'
         
     }else{
         window.location = window.location.href.split('#')[0];

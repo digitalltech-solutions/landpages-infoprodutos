@@ -186,7 +186,7 @@ header > nav{
     display: flex;
     align-items: center;
     flex-flow: row nowrap;
-    padding: 0px 30px;
+    padding: 8px 30px;
     margin: 12px 0;
 }
 
