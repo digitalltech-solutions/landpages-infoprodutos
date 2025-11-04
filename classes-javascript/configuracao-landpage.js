@@ -16,9 +16,19 @@ function eventoModoDark() {
     caixa2.checked = caixa1.checked;
 
     if(caixa1.checked == true){
-
         // window.document.getElementById('configuracao-modo-claro').style.display = 'none'
         // window.document.getElementById('configuracao-modo-escuro').style.display = 'block'
+
+        window.document.querySelectorAll('.elemento-dark-fundo-dois').forEach((elementosDark) => {
+            elementosDark.style.backgroundColor = '#303030'
+        })
+
+        // Cor Fundo Padrão
+        // 1. Fundo Dark Padrão
+
+        window.document.querySelectorAll('.fundo-dark-um').forEach((elementosDark) => {
+            elementosDark.style.backgroundColor = '#000000'
+        })
 
         window.document.querySelectorAll('.configurar-icone-light').forEach((elementosDark) => {
             elementosDark.style.display = 'none'
@@ -82,7 +92,6 @@ function eventoModoDark() {
         // Configuração Dark dos Elementos Específicos:
         window.document.getElementById('configuracao-nav-dois').style.backgroundColor = '#303030'
         window.document.getElementById('barra').style.backgroundColor = '#4C4C4C'
-
     }else{
         window.location = window.location.href.split('#')[0];
     }
@@ -96,9 +105,20 @@ function eventoModoDarkDois() {
 
     
     if(caixa1.checked == true){
+        // window.document.getElementById('configuracao-modo-claro').style.display = 'none'
+        // window.document.getElementById('configuracao-modo-escuro').style.display = 'block'
 
-        // Configuração Input Dark
-        
+        window.document.querySelectorAll('.elemento-dark-fundo-dois').forEach((elementosDark) => {
+            elementosDark.style.backgroundColor = '#303030'
+        })
+
+        // Cor Fundo Padrão
+        // 1. Fundo Dark Padrão
+
+        window.document.querySelectorAll('.fundo-dark-um').forEach((elementosDark) => {
+            elementosDark.style.backgroundColor = '#000000'
+        })
+
         window.document.querySelectorAll('.configurar-icone-light').forEach((elementosDark) => {
             elementosDark.style.display = 'none'
         })
@@ -107,99 +127,60 @@ function eventoModoDarkDois() {
             elementosDark.style.display = 'block'
         })
 
+        window.document.getElementsByTagName('body')[0].style.backgroundColor = '#000000'
 
-        window.document.getElementById('icone-ecommerce-dois-mobile').src = '../recursos/imagens/icone-ecommerce-claro.png'
-        window.document.getElementById('estilo-weight').style.color = '#ffffff'
-        window.document.getElementById('video').poster = '../recursos/imagens/capa-video-dark.jpg'
-        window.document.getElementById('icone-mobile').src = '../recursos/imagens/icone-digitalltech-mobile-dark.jpg'
-        window.document.getElementById('imagem-carrossel-tres').src = '../recursos/imagens/card-mensagem-tres-dark.jpg'
-        window.document.getElementById('barra').style.background = '#4C4C4C'
+        // 1. Botão Dark
+        window.document.querySelectorAll('.botao-dark-um').forEach((botaoDark) => {
+            botaoDark.style.backgroundColor = '#303030'
+            botaoDark.style.borderColor = '#303030'
+            botaoDark.style.color = '#ffffff'
+        })
 
-        window.document.getElementById('icone-whatsapp').src = '../recursos/imagens/icone-whatsapp-dark.png'
+        // 2. Botão Dark
+        window.document.querySelectorAll('.botao-dark-dois').forEach((botaoDark) => {
+            botaoDark.style.backgroundColor = '#000000'
+            botaoDark.style.borderColor = '#ffffff'
+            botaoDark.style.color = '#ffffff'
+        })
+
+        // 3. Botão Dark
+        window.document.querySelectorAll('.botao-dark-tres').forEach((botaoDark) => {
+            botaoDark.style.backgroundColor = '#303030'
+            botaoDark.style.borderColor = '#ffffff'
+            botaoDark.style.color = '#ffffff'
+        })
+
+        // Configuração Borda Dark
+        // 1. Borda Dark
+
+        window.document.querySelectorAll('.borda-dark-um').forEach((textoDark) => {
+            textoDark.style.borderColor = '#7F7F7F'
+        })
+
+        // Configuração Texto Dark
+        // 1. Texto Dark
+        window.document.querySelectorAll('.cor-texto-dark-um').forEach((textoDark) => {
+            textoDark.style.color = '#ffffff'
+        })
+
+        // 2. Texto Dark
+        window.document.querySelectorAll('.cor-texto-dark-dois').forEach((textoDark) => {
+            textoDark.style.color = '#7F7F7F'
+        })
+
+        // 3. Texto Dark
+        window.document.querySelectorAll('.cor-texto-dark-tres').forEach((textoDark) => {
+            textoDark.style.color = '#004aad'
+        })
+
+        // Configuração de Imagens Dark:
+        window.document.getElementById('icone-empresa').src = '../recursos/imagens/icone-empresa-dark.jpg'
         window.document.getElementById('icone-uphome-dark').src = '../recursos/imagens/icone-uphome-dark.png'
-
-        window.document.querySelectorAll('.estilo-botao-padrao-tres').forEach((elementosDark) => {
-            elementosDark.style.color = '#FFFFFF'
-            elementosDark.style.backgroundColor = '#7F7F7F'
-            elementosDark.style.borderColor = '#7F7F7F'
-        })
-
-        window.document.querySelectorAll('.configurar-fundo-dark').forEach((elementosDark) => {
-            elementosDark.style.backgroundColor = '#303030'
-        })
-
-        window.document.querySelectorAll('.configurar-fundo-dark-dois').forEach((elementosDark) => {
-            elementosDark.style.backgroundColor = '#242424'
-        })
+        window.document.getElementById('icone-whatsapp').src = '../recursos/imagens/icone-whatsapp-dark.png'
         
-        window.document.querySelectorAll('.configurar-icone-dark').forEach((elementosDark) => {
-            elementosDark.style.color = '#303030'
-            elementosDark.style.display = 'block'
-        })
-
-        window.document.querySelectorAll('.configurar-icone-light').forEach((elementosDark) => {
-            elementosDark.style.display = 'none'
-        })
-
-        // Configuração Dark
-
-        // Site Modo Escuro (Desktop):
-        window.document.getElementById('icone-empresa').src = "../recursos/imagens/icone-empresa-dark.jpg"
-        window.document.getElementsByTagName('body')[0].style.backgroundColor = 'black'
-        window.document.getElementById('configurar-header-mobile').style.backgroundColor = 'black'
-        window.document.querySelectorAll('.estilo-texto-modo-dark').forEach((elementosDark) => {
-            elementosDark.style.color = '#7F7F7F'
-        })
-        window.document.querySelectorAll('.estilo-fundo-modo-dark-um').forEach((elementosDark) => {
-            elementosDark.style.backgroundColor = '#303030'
-        })
-
-        window.document.querySelectorAll('.estilo-fundo-modo-dark-dois').forEach((elementosDark) => {
-            elementosDark.style.backgroundColor = 'black'
-        })
-
-        window.document.getElementById('estilo-borda-dark-um').style.borderColor = '#7F7F7F'
-        window.document.getElementById('estilo-borda-dark-dois').style.borderColor = '#7F7F7F'
-
-        window.document.querySelectorAll('.estilo-borda-dark').forEach((elementos) =>{
-            elementos.style.borderColor = '#303030'
-        })
-
-        window.document.querySelectorAll('.destaque-padrao').forEach((elementos) =>{
-            elementos.style.color = '#004aad'
-        })
-
-        window.document.querySelectorAll('.texto-padrao-dois').forEach((elementos) =>{
-            elementos.style.color = '#ffffff'
-        })
-
-        window.document.querySelectorAll('.configurar-fundo-branco').forEach((elementos) =>{
-            elementos.style.backgroundColor = '#000000ffff'
-        })
-
-        window.document.querySelectorAll('.estilo-botao-dark-um').forEach((botoes) =>{
-            botoes.style.backgroundColor = '#303030'
-            botoes.style.color = '#ffffff'
-        })
-
-        window.document.querySelectorAll('.estilo-botao-dark-dois').forEach((botoes) =>{
-            botoes.style.backgroundColor = 'transparent'
-            botoes.style.borderColor = '#ffffff'
-            botoes.style.color = '#ffffff'
-        })
-
-        window.document.getElementById('imagem-carrossel-um').src = '../recursos/imagens/card-mensagem-um-dark.jpg'
-        window.document.getElementById('imagem-carrossel-dois').src = '../recursos/imagens/card-mensagem-dois-dark.jpg'
-        window.document.getElementById('icone-empresa-acessibilidade').src = '../recursos/imagens/icone-ecommerce-claro.png'
-        window.document.getElementById('icone-empresa-compartilhar').src = '../recursos/imagens/icone-ecommerce-claro.png'
-        window.document.getElementById('input-comentario').style.backgroundColor = 'black'
-        window.document.getElementById('nome-usuario').style.backgroundColor = 'black'
-
-        window.document.querySelectorAll('.elementos-fundo-borda').forEach((elementos) => {
-            elementos.style.backgroundColor = 'black'
-            elementos.style.borderColor = '#7F7F7F'
-            elementos.style.color = '#ffffff'
-        })
+        // Configuração Dark dos Elementos Específicos:
+        window.document.getElementById('configuracao-nav-dois').style.backgroundColor = '#303030'
+        window.document.getElementById('barra').style.backgroundColor = '#4C4C4C'
     }else{
         window.location = window.location.href.split('#')[0];
     }
