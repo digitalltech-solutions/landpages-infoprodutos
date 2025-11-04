@@ -70,6 +70,9 @@ function eventoModoDark() {
         // Configuração de Imagens Dark:
         window.document.getElementById('icone-empresa').src = '../recursos/imagens/icone-empresa-dark.jpg'
         
+        // Configuração Dark dos Elementos Específicos:
+        window.document.getElementById('configuracao-nav-dois').style.backgroundColor = '#303030'
+
     }else{
         window.location = window.location.href.split('#')[0];
     }
