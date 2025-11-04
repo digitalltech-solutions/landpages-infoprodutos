@@ -51,6 +51,13 @@ function eventoModoDark() {
             botaoDark.style.color = '#ffffff'
         })
 
+        // Configuração Borda Dark
+        // 1. Borda Dark
+
+        window.document.querySelectorAll('.borda-dark-um').forEach((textoDark) => {
+            textoDark.style.borderColor = '#7F7F7F'
+        })
+
         // Configuração Texto Dark
         // 1. Texto Dark
         window.document.querySelectorAll('.cor-texto-dark-um').forEach((textoDark) => {
@@ -69,6 +76,8 @@ function eventoModoDark() {
 
         // Configuração de Imagens Dark:
         window.document.getElementById('icone-empresa').src = '../recursos/imagens/icone-empresa-dark.jpg'
+        window.document.getElementById('icone-uphome-dark').src = '../recursos/imagens/icone-uphome-dark.png'
+        window.document.getElementById('icone-whatsapp').src = '../recursos/imagens/icone-whatsapp-dark.png'
         
         // Configuração Dark dos Elementos Específicos:
         window.document.getElementById('configuracao-nav-dois').style.backgroundColor = '#303030'
