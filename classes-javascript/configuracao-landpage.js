@@ -177,6 +177,8 @@ function eventoModoDarkDois() {
         window.document.getElementById('icone-empresa').src = '../recursos/imagens/icone-empresa-dark.jpg'
         window.document.getElementById('icone-uphome-dark').src = '../recursos/imagens/icone-uphome-dark.png'
         window.document.getElementById('icone-whatsapp').src = '../recursos/imagens/icone-whatsapp-dark.png'
+        window.document.getElementById('icone-ecommerce-dois-mobile').src = '../recursos/imagens/icone-ecommerce-claro.png'
+        window.document.getElementById('icone-mobile').src = '../recursos/imagens/icone-digitalltech-mobile-dark.jpg'
         
         // Configuração Dark dos Elementos Específicos:
         window.document.getElementById('configuracao-nav-dois').style.backgroundColor = '#303030'
