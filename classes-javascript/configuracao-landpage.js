@@ -30,7 +30,7 @@ function eventoModoDark() {
         // 2. Fundo Dark Padrão
 
         window.document.querySelectorAll('.fundo-dark-dois').forEach((elementosDark) => {
-            elementosDark.style.backgroundColor = '#000000'
+            elementosDark.style.backgroundColor = '#484848'
         })
 
         window.document.querySelectorAll('.configurar-icone-light').forEach((elementosDark) => {
@@ -141,7 +141,7 @@ function eventoModoDarkDois() {
         // 2. Fundo Dark Padrão
 
         window.document.querySelectorAll('.fundo-dark-dois').forEach((elementosDark) => {
-            elementosDark.style.backgroundColor = '#000000'
+            elementosDark.style.backgroundColor = '#484848'
         })
 
         window.document.querySelectorAll('.configurar-icone-light').forEach((elementosDark) => {
@@ -175,6 +175,13 @@ function eventoModoDarkDois() {
             botaoDark.style.color = '#ffffff'
         })
 
+        // 4. Botão Dark
+        window.document.querySelectorAll('.botao-dark-quatro').forEach((botaoDark) => {
+            botaoDark.style.backgroundColor = '#7F7F7F'
+            botaoDark.style.borderColor = '#7F7F7F'
+            botaoDark.style.color = '#ffffff'
+        })
+
         // Configuração Borda Dark
         // 1. Borda Dark
 
@@ -196,6 +203,13 @@ function eventoModoDarkDois() {
         // 3. Texto Dark
         window.document.querySelectorAll('.cor-texto-dark-tres').forEach((textoDark) => {
             textoDark.style.color = '#004aad'
+        })
+
+        // Configuração Modal Dark
+        // 1. Modal Dark
+        window.document.querySelectorAll('.modal-dark-um').forEach((modalDark) => {
+            modalDark.style.backgroundColor = '#303030'
+            modalDark.style.borderColor = '#242424'
         })
 
         // Configuração de Imagens Dark:
