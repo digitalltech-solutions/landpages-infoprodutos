@@ -132,9 +132,9 @@ function eventoModoDarkDois() {
 
         // 2. Fundo Dark Padrão
 
-        window.document.querySelectorAll('.fundo-dark-dois').forEach((elementosDark) => {
-            elementosDark.style.backgroundColor = '#000000'
-        })
+        // window.document.querySelectorAll('.fundo-dark-dois').forEach((elementosDark) => {
+        //     elementosDark.style.backgroundColor = '#000000'
+        // })
 
         window.document.querySelectorAll('.configurar-icone-light').forEach((elementosDark) => {
             elementosDark.style.display = 'none'
@@ -286,13 +286,13 @@ function elementosSpan(){
 
     if(indice == 1){
         window.document.getElementById('config-espan-um').style.background = '#00F39F'
-        window.document.getElementById('config-espan-tres').style.background = '#ffffff'
+        window.document.getElementById('config-espan-tres').style.background = 'transparent'
     }else if(indice == 2){
         window.document.getElementById('config-espan-dois').style.background = '#00F39F'
-        window.document.getElementById('config-espan-um').style.background = '#ffffff'
+        window.document.getElementById('config-espan-um').style.background = 'transparent'
     }else if(indice == 3){
         window.document.getElementById('config-espan-tres').style.background = '#00F39F'
-        window.document.getElementById('config-espan-dois').style.background = '#ffffff'
+        window.document.getElementById('config-espan-dois').style.background = 'transparent'
         indice = 0
     }
 }
