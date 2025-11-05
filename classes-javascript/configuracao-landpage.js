@@ -30,6 +30,12 @@ function eventoModoDark() {
             elementosDark.style.backgroundColor = '#000000'
         })
 
+        // 2. Fundo Dark Padrão
+
+        window.document.querySelectorAll('.fundo-dark-dois').forEach((elementosDark) => {
+            elementosDark.style.backgroundColor = '#000000'
+        })
+
         window.document.querySelectorAll('.configurar-icone-light').forEach((elementosDark) => {
             elementosDark.style.display = 'none'
         })
@@ -88,6 +94,11 @@ function eventoModoDark() {
         window.document.getElementById('icone-empresa').src = '../recursos/imagens/icone-empresa-dark.jpg'
         window.document.getElementById('icone-uphome-dark').src = '../recursos/imagens/icone-uphome-dark.png'
         window.document.getElementById('icone-whatsapp').src = '../recursos/imagens/icone-whatsapp-dark.png'
+        window.document.getElementById('icone-ecommerce-dois-mobile').src = '../recursos/imagens/icone-ecommerce-claro.png'
+        window.document.getElementById('icone-mobile').src = '../recursos/imagens/icone-digitalltech-mobile-dark.jpg'
+        window.document.getElementById('imagem-carrossel-um').src = '../recursos/imagens/card-mensagem-um-dark.jpg'
+        window.document.getElementById('imagem-carrossel-dois').src = '../recursos/imagens/card-mensagem-dois-dark.jpg'
+        window.document.getElementById('imagem-carrossel-tres').src = '../recursos/imagens/card-mensagem-tres-dark.jpg'
         
         // Configuração Dark dos Elementos Específicos:
         window.document.getElementById('configuracao-nav-dois').style.backgroundColor = '#303030'
