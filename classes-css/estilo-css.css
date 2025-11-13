@@ -1050,7 +1050,13 @@ header > nav{
     font: normal normal 20px var(--fonteprimaria);
     color: var(--corsextiaria);
     text-decoration: none;
-    margin: 12px 0;
+}
+
+#configurar-elementos{
+    margin: 6px 0;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 2px;
 }
 
 #termo-de-uso:hover{
