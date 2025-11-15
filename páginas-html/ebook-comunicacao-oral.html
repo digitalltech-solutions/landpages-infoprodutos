@@ -465,6 +465,16 @@
 
     <!-- CONFIGURAÇÃO DE MODAL - FUNÇÃO AFILIADOS -->
 
+    <script>
+        window.document.getElementById('link-registro').addEventListener('click', function(){
+            window.location = 'https://www.google.com'
+        })
+
+        window.document.getElementById('link-materiais').addEventListener('click', function(){
+            window.location = 'https://instagram.com'
+        })
+    </script>
+
     <div class="configurar-display-modal-padrao" id="modal-afiliados">
         <div class="modal-dark-um">
             <div>
@@ -473,8 +483,8 @@
                     Ganhe comissões com materiais prontos. <a href="#" id="cor-link-afiliados">Assista tutoriais do registro à venda</a>!
                 </p>
                 <div id="configurar-modal-afiliados">
-                    <button>Registrar Aqui</button>
-                    <button>baixar Materiais</button>
+                    <button id="link-registro">Registrar Aqui</button>
+                    <button id="link-materiais">baixar Materiais</button>
                 </div>
                 <button onclick="eventoModalAfiliadosOculto()" class="estilo-botao-padrao-tres botao-dark-quatro">DESISTIR</button>
             </div>
