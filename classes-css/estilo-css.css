@@ -578,6 +578,15 @@ header > nav{
     transform: scale(0.95);
 }
 
+#configurar-modal-afiliados{
+    background: red;
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
 /* CONFIGURAÇÃO DE MODAL - ACESSIBILIDADES */
 
 #configurar-display-acessivilidade{
