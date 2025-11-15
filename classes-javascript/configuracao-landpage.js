@@ -445,6 +445,18 @@ function eventoModalDadosInvalidosOculto(){
     window.document.getElementsByTagName('body')[0].style.overflowY = 'auto'
 }
 
+// Configuracão do modal dos afiliados
+
+function eventoModalDadosInvalidos(){
+    window.document.getElementById('modal-dados-inválidos').style.display = 'flex'
+    window.document.getElementsByTagName('body')[0].style.overflowY = 'hidden'
+}
+
+function eventoModalDadosInvalidosOculto(){
+    window.document.getElementById('modal-dados-inválidos').style.display = 'none'
+    window.document.getElementsByTagName('body')[0].style.overflowY = 'auto'
+}
+
 // Configuracão do modal de Acessibilidades
 
 function eventoModalDadosInvalidos(){
