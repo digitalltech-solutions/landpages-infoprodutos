@@ -579,12 +579,36 @@ header > nav{
 }
 
 #configurar-modal-afiliados{
-    background: red;
+    /* background: red; */
     width: 100%;
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
+    gap: 5px;
+    margin-bottom: 5px;
+}
+
+#configurar-modal-afiliados > button{
+    background: var(--corterciaria);
+    color: var(--corprimaria);
+    font: normal normal 16px 'fonte-titulos';
+    padding: 2px 12px;
+    border: 2px solid var(--corprimaria);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#configurar-modal-afiliados > button:hover{
+    transform: scale(1.05);
+}
+
+#configurar-modal-afiliados > button:active{
+    transform: scale(0.95);
+}
+
+#cor-link-afiliados{
+    
 }
 
 /* CONFIGURAÇÃO DE MODAL - ACESSIBILIDADES */
