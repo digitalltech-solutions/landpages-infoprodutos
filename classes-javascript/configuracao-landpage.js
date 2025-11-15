@@ -447,13 +447,13 @@ function eventoModalDadosInvalidosOculto(){
 
 // Configuracão do modal dos afiliados
 
-function eventoModalDadosInvalidos(){
-    window.document.getElementById('modal-dados-inválidos').style.display = 'flex'
+function eventoModalAfiliados(){
+    window.document.getElementById('modal-afiliados').style.display = 'flex'
     window.document.getElementsByTagName('body')[0].style.overflowY = 'hidden'
 }
 
-function eventoModalDadosInvalidosOculto(){
-    window.document.getElementById('modal-dados-inválidos').style.display = 'none'
+function eventoModalAfiliadosOculto(){
+    window.document.getElementById('modal-afiliados').style.display = 'none'
     window.document.getElementsByTagName('body')[0].style.overflowY = 'auto'
 }
 
