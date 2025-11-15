@@ -522,10 +522,10 @@ header > nav{
     justify-content: center;
     z-index: 99999;
 }
-
+/* 
 #modal-afiliados{
     display: flex;
-}
+} */
 
 .configurar-display-modal-padrao > div{
     width: 400px;
@@ -594,7 +594,7 @@ header > nav{
     background: var(--corterciaria);
     color: var(--corprimaria);
     border-radius: 5px;
-    padding: 2px 10px;
+    padding: 2px 12px;
     cursor: pointer;
 }
 

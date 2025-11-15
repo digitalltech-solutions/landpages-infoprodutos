@@ -1153,6 +1153,10 @@ window.document.querySelectorAll('.equipe').forEach((elementos) => {
     })
 })
 
+window.document.getElementById('cor-link-afiliados').addEventListener('click', function(){
+    window.location = 'https://www.google.com'
+})
+
 // Configuração do Comprimento da Barra Horizontal
 
 window.onscroll = function() {
