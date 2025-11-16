@@ -594,7 +594,7 @@ function eventoServicos(){
 }
 
 function eventoYoutube(){
-    window.location = "youtube.com"
+    window.location = "https://www.youtube.com"
 }
 
 function eventoAcessibilidadeOpen(){
