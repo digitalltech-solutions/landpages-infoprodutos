@@ -52,7 +52,7 @@ function eventoModoDark() {
 
         // 2. Botão Dark
         window.document.querySelectorAll('.botao-dark-dois').forEach((botaoDark) => {
-            botaoDark.style.backgroundColor = '#000000'
+            botaoDark.style.backgroundColor = 'transparent'
             botaoDark.style.borderColor = '#ffffff'
             botaoDark.style.color = '#ffffff'
         })
