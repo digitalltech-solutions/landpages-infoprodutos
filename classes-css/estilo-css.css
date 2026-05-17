@@ -1588,7 +1588,7 @@ footer > div > div:first-child{
 }
 
 #formulario-comentario{
-    border: 1px solid #dcdcdc;
+    border: 2px solid #dcdcdc;
     box-shadow: 5px 5px 0 #dcdcdc;
     border-radius: 10px;
     padding: 20px 0;
@@ -1618,7 +1618,7 @@ footer > div > div:first-child{
 
 #label-nome-avaliacao > span{
     color: var(--corprimaria);
-    font-size: 35px;
+    font-size: 40px;
 }
 
 #label-nome-avaliacao{
@@ -1700,7 +1700,7 @@ footer > div > div:first-child{
 #input-comentario{
     padding: 15px;
     font: normal normal 20px var(--fonteprimaria);
-    border: 2px solid var(--corprimaria);
+    border: 1px solid #dcdcdc;
     color: var(--corsextiaria);
     border-radius: 4px;
     height: 150px;
